@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghazi - Data Architecture Wizard | Transform Your Data Infrastructure</title>
+    <meta name="description" content="10+ years transforming enterprise data infrastructure. From chaos to clarity, from legacy to cloud-native. Real-time processing expert.">
+    <meta name="keywords" content="Data Engineer, Cloud Architecture, AWS, Big Data, Real-time Processing, Consulting">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        'anonymize_ip': true,
+        'allow_google_signals': false
+      });
+    </script>
+    
+    <!-- LinkedIn Insight Tag -->
+    <script type="text/javascript">
+    _linkedin_partner_id = "XXXXXX";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script><script type="text/javascript">
+    (function(l) {
+    if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+    window.lintrk.q=[]}
+    var s = document.getElementsByTagName("script")[0];
+    var b = document.createElement("script");
+    b.type = "text/javascript";b.async = true;
+    b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+    s.parentNode.insertBefore(b, s);})(window.lintrk);
+    </script>
+    
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "XXXXXXXXXX");
+    </script>
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #1f2937;
+            --darker: #111827;
+            --light: #ffffff;
+            --gray: #6b7280;
+            --gray-light: #9ca3af;
+            --success: #10b981;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            color: #1f2937;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .data-stream {
+            position: absolute;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--primary);
+            animation: stream 15s linear infinite;
+            white-space: nowrap;
+        }
+        
+        @keyframes stream {
+            0% { transform: translateX(-100px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(100vw); opacity: 0; }
+        }
+        
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-shadow: 0 0 10px var(--primary);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { text-shadow: 0 0 10px var(--primary); }
+            50% { text-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary); }
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--light);
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .contact-btn {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+        
+        .contact-btn:hover::before {
+            left: 0;
+        }
+        
+        .contact-btn:hover {
+            color: var(--dark);
+            box-shadow: var(--neon-glow);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            padding: 0 2rem;
+        }
+        
+        .hero-subtitle {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            color: #1e293b;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.5s forwards;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 2s forwards;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .stat-box {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        
+        .hero-cta {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 2.5s forwards;
+        }
+        
+        .cta-primary {
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.25);
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
+        }
+        
+        /* Unique Sections */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+        }
+        
+        /* Data Pipeline Visualization */
+        .pipeline-demo {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pipeline-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .pipeline-node {
+            background: white;
+            border: 2px solid rgba(99, 102, 241, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            min-width: 150px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pipeline-node:hover {
+            background: #f8fafc;
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.2);
+        }
+        
+        .pipeline-node i {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pipeline-node h3 {
+            color: #1f2937;
+            margin: 0.5rem 0;
+        }
+        
+        .pipeline-node p {
+            color: var(--gray);
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .pipeline-arrow {
+            color: var(--primary);
+            font-size: 1.5rem;
+            animation: flow 2s ease-in-out infinite;
+        }
+        
+        @keyframes flow {
+            0%, 100% { transform: translateX(0); opacity: 1; }
+            50% { transform: translateX(10px); opacity: 0.7; }
+        }
+        
+        /* Experience Cards */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .experience-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .experience-card:hover::before {
+            left: 100%;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .company-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .impact-metric {
+            background: rgba(0, 255, 136, 0.2);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        /* Skills Matrix */
+        .skills-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .skill-category {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .skill-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            background: rgba(0, 255, 136, 0.1);
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        /* Terminal Section */
+        .terminal {
+            background: var(--darker);
+            border: 1px solid var(--primary);
+            border-radius: 10px;
+            margin: 3rem 0;
+            overflow: hidden;
+        }
+        
+        .terminal-header {
+            background: var(--gray);
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dot-red { background: var(--secondary); }
+        .dot-yellow { background: #ffd93d; }
+        .dot-green { background: var(--primary); }
+        
+        .terminal-content {
+            font-family: 'JetBrains Mono', monospace;
+            padding: 2rem;
+            color: var(--primary);
+        }
+        
+        .terminal-line {
+            margin: 0.5rem 0;
+        }
+        
+        .prompt {
+            color: var(--accent);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(76, 205, 196, 0.1));
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .contact-method {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .pipeline-flow {
+                flex-direction: column;
+            }
+            
+            .pipeline-arrow {
+                transform: rotate(90deg);
+            }
+            
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Professional subtle background gradient */
+        .subtle-gradient {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subtle-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(99, 102, 241, 0.08) 0%,
+                rgba(16, 185, 129, 0.08) 50%,
+                rgba(245, 158, 11, 0.08) 100%);
+            z-index: -1;
+        }
+
+        /* Tech Stack Styling */
+        .tech-stack {
+            color: var(--gray-light);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        /* Cookie Consent Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(31, 41, 55, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 1rem 2rem;
+            z-index: 10000;
+            border-top: 2px solid var(--primary);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+        
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        
+        .cookie-text {
+            flex: 1;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .cookie-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .cookie-btn.accept {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .cookie-btn.accept:hover {
+            background: var(--primary-dark);
+        }
+        
+        .cookie-btn.decline {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .cookie-btn.decline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            border-top: 1px solid rgba(37, 99, 235, 0.1);
+            padding: 2rem;
+            text-align: center;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- Animated Background -->
+    <div class="bg-animation" id="bgAnimation"></div>
+    
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">GHAZI</div>
+            <ul class="nav-links">
+                <li><a href="#pipeline">Pipeline</a></li>
+                <li><a href="#experience">Wins</a></li>
+                <li><a href="#skills">Stack</a></li>
+                <li><a href="#terminal">Code</a></li>
+            </ul>
+            <a href="contact.html" class="contact-btn">HIRE ME</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero subtle-gradient">
+        <div class="hero-content">
+            <div class="hero-subtitle">Multi-Cloud Architect • On-Premise & Cloud • Custom Solutions</div>
+            <h1 class="hero-title">Data Infrastructure Transformation Expert</h1>
+            <p class="hero-description">
+                Designing, creating and deploying custom data solutions across all cloud platforms (AWS, Azure, GCP) and on-premise infrastructures. Full-stack architect building tailored systems from concept to production, serving clients globally.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">70%</span>
+                    <span class="stat-label">Faster Deployments</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">40%</span>
+                    <span class="stat-label">Cost Reduction</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">System Uptime</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">EN/FR/AR/ES</span>
+                    <span class="stat-label">Global Communication</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="contact.html" class="cta-primary">TRANSFORM YOUR DATA →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pipeline Demo -->
+    <section id="pipeline" class="section">
+        <h2 class="section-title">Data Architecture Approach</h2>
+        <div class="pipeline-demo">
+            <div class="pipeline-flow">
+                <div class="pipeline-node">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Sources</h3>
+                    <p>Various formats</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-node">
+                    <i class="fas fa-filter"></i>
+                    <h3>Processing</h3>
+                    <p>Clean & Transform</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-node">
+                    <i class="fas fa-server"></i>
+                    <h3>Storage</h3>
+                    <p>Optimized structure</p>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-node">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Analytics</h3>
+                    <p>Business value</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; color: var(--gray-light);">
+                Scalable, reliable data architecture tailored to your business needs - serving clients across all continents and time zones.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+        <h2 class="section-title">Global Enterprise Experience</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="company-name">EDF</div>
+                <h3>Energy & Utilities</h3>
+                <div class="impact-metric">
+                    <strong>70% Deployment Time Reduction</strong><br>
+                    <span class="tech-stack">Apache Spark • Airflow • Docker • Kubernetes • Terraform • Python • AWS</span>
+                </div>
+                <p>Designed and implemented 15+ production data pipelines processing 200GB daily with 99.9% uptime. 
+                Cut infrastructure costs by 40% through resource optimization and built self-service data platform enabling teams worldwide.</p>
+            </div>
+            
+            <div class="experience-card">
+                <div class="company-name">Groupe SNCF</div>
+                <h3>Transportation & Logistics</h3>
+                <div class="impact-metric">
+                    <strong>60% API Response Time Improvement • 1M+ Daily Requests</strong><br>
+                    <span class="tech-stack">Scala • AWS MSK • Lambda • Terraform • DDD • Hexagonal Architecture</span>
+                </div>
+                <p>Architected microservices processing 500GB daily rail operations data. Implemented event-driven architecture 
+                reducing system coupling by 80%. Saved €200K annually through AWS optimization - scalable globally.</p>
+            </div>
+            
+            <div class="experience-card">
+                <div class="company-name">Stellantis</div>
+                <h3>Automotive & Manufacturing</h3>
+                <div class="impact-metric">
+                    <strong>2TB Daily Processing • 10M+ Events/Hour</strong><br>
+                    <span class="tech-stack">Spark Streaming • AWS EMR • S3 • Kinesis • Terraform • Python • Scala</span>
+                </div>
+                <p>Built real-time analytics platform for 500K+ connected vehicles across multiple continents. Reduced processing costs by 45% 
+                and implemented predictive maintenance with 87% accuracy, improving vehicle uptime by 23% globally.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="company-name">Groupe SeLoger</div>
+                <h3>Real Estate & PropTech</h3>
+                <div class="impact-metric">
+                    <strong>50M+ Real Estate Listings • 10M+ Monthly Users</strong><br>
+                    <span class="tech-stack">Apache Spark • AWS EMR • S3 • Lambda • CloudFormation • Spring Boot • PostgreSQL</span>
+                </div>
+                <p>Built data lake processing 50M+ real estate listings with 99.9% reliability. Reduced batch processing from 8 hours to 45 minutes. 
+                Implemented ML pipeline for property valuation improving accuracy by 35% - applicable to any market.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="company-name">Le Groupe La Poste</div>
+                <h3>Postal & Logistics Services</h3>
+                <div class="impact-metric">
+                    <strong>300M+ Daily Package Events • 10x Performance Improvement</strong><br>
+                    <span class="tech-stack">Apache Kafka • Spark • Scala • Matryoshka • HDFS • Cassandra</span>
+                </div>
+                <p>Developed generic data ingestion platform with privacy-by-design ensuring global compliance (GDPR, local regulations). 
+                Reduced storage costs by 60% and achieved 10x improvement in ingestion speed.</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="company-name">Orange</div>
+                <h3>Telecommunications</h3>
+                <div class="impact-metric">
+                    <strong>Telecom Network Data Processing</strong><br>
+                    <span class="tech-stack">Big Data • Network Analytics • Performance Monitoring</span>
+                </div>
+                <p>Built comprehensive network performance monitoring and analytics systems for major telecommunications infrastructure. 
+                Experience applicable to any telecom provider globally, with focus on real-time processing and optimization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-matrix">
+            <div class="skill-category">
+                <div class="skill-icon">☁️</div>
+                <h3>Multi-Cloud & Infrastructure</h3>
+                <ul class="skill-list">
+                    <li><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud Platform</li>
+                    <li><strong>On-Premise:</strong> VMware, Hyper-V, Bare metal, Hybrid architectures</li>
+                    <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, ARM Templates</li>
+                    <li><strong>Containers:</strong> Docker, Kubernetes, OpenShift, Container orchestration</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon">⚡</div>
+                <h3>Big Data & Analytics</h3>
+                <ul class="skill-list">
+                    <li><strong>Processing:</strong> Apache Spark, Kafka, Flink, Hadoop</li>
+                    <li><strong>Storage:</strong> HDFS, Delta Lake, Parquet, Avro</li>
+                    <li><strong>Streaming:</strong> Real-time processing, Event-driven architecture</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon">💻</div>
+                <h3>Programming & Databases</h3>
+                <ul class="skill-list">
+                    <li><strong>Languages:</strong> Scala, Python, Java, JavaScript, SQL</li>
+                    <li><strong>Databases:</strong> PostgreSQL, MongoDB, Redis, Elasticsearch</li>
+                    <li><strong>Data Warehousing:</strong> Snowflake, BigQuery, Redshift</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon">🏗️</div>
+                <h3>Solution Architecture & Design</h3>
+                <ul class="skill-list">
+                    <li><strong>Custom Solutions:</strong> End-to-end system design, Tailored architectures</li>
+                    <li><strong>Design Patterns:</strong> Domain Driven Design, Hexagonal Architecture</li>
+                    <li><strong>System Types:</strong> Microservices, Monoliths, Event-Driven, CQRS</li>
+                    <li><strong>Integration:</strong> REST APIs, GraphQL, Message Queues, ETL/ELT</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon">🚀</div>
+                <h3>DevOps & Infrastructure</h3>
+                <ul class="skill-list">
+                    <li><strong>Containers:</strong> Docker, Kubernetes, Container Orchestration</li>
+                    <li><strong>Infrastructure:</strong> Terraform, Ansible, CloudFormation</li>
+                    <li><strong>CI/CD:</strong> Jenkins, GitLab CI, GitHub Actions, GitOps</li>
+                    <li><strong>Monitoring:</strong> Grafana, Prometheus, ELK Stack, Alerting</li>
+                    <li><strong>Network:</strong> Load Balancers, VPC, Security Groups, DNS</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon">🔧</div>
+                <h3>Data Engineering Tools</h3>
+                <ul class="skill-list">
+                    <li><strong>Orchestration:</strong> Apache Airflow, Prefect, Dagster</li>
+                    <li><strong>Quality:</strong> Data lineage, Testing, Validation frameworks</li>
+                    <li><strong>Version Control:</strong> Git, DVC (Data Version Control)</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon">📊</div>
+                <h3>Machine Learning & AI</h3>
+                <ul class="skill-list">
+                    <li><strong>ML Pipeline:</strong> MLflow, Kubeflow, Feature Stores</li>
+                    <li><strong>Libraries:</strong> Scikit-learn, TensorFlow, PyTorch</li>
+                    <li><strong>Deployment:</strong> Model serving, A/B testing, Monitoring</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-icon">🤝</div>
+                <h3>Leadership & Communication</h3>
+                <ul class="skill-list">
+                    <li><strong>Languages:</strong> English, French, Arabic, Spanish</li>
+                    <li><strong>Leadership:</strong> Team management, Mentoring, Code review</li>
+                    <li><strong>Methodologies:</strong> Agile, Scrum, Kanban, TDD/BDD</li>
+                    <li><strong>Communication:</strong> Technical documentation, Stakeholder management</li>
+                    <li><strong>Problem Solving:</strong> System design, Architecture decisions</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terminal Section -->
+    <section id="terminal" class="section">
+        <h2 class="section-title">In The Terminal</h2>
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-dot dot-red"></div>
+                <div class="terminal-dot dot-yellow"></div>
+                <div class="terminal-dot dot-green"></div>
+                <span>ghazi@dataeng-wizard ~ %</span>
+            </div>
+            <div class="terminal-content">
+                <div class="terminal-line">
+                    <span class="prompt">$</span> spark-submit --master yarn --deploy-mode cluster
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">$</span> aws emr create-cluster --name "RealTimeProcessing"
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">$</span> terraform apply -auto-approve
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">$</span> kubectl apply -f kafka-cluster.yaml
+                </div>
+                <div class="terminal-line">
+                    <span class="prompt">$</span> echo "Data transformation complete ✅"
+                </div>
+                <div class="terminal-line" style="color: var(--primary);">
+                    Data transformation complete ✅
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section">
+        <div class="contact-section">
+            <h2 class="section-title">Ready to Transform?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">
+                Your data infrastructure doesn't have to be a nightmare.<br>
+                Let's turn it into your competitive advantage.
+            </p>
+            
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="contact-icon">🌍</div>
+                    <h3>Global Remote</h3>
+                    <p>Available worldwide</p>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-icon">🗣️</div>
+                    <h3>Multilingual</h3>
+                    <p>EN • FR • AR • ES</p>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-icon">⚡</div>
+                    <h3>Fast Response</h3>
+                    <p>24-48h guaranteed</p>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-icon">🎯</div>
+                    <h3>Proven Results</h3>
+                    <p>Enterprise-grade solutions</p>
+                </div>
+            </div>
+            
+            <a href="contact.html" class="cta-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+                START MY TRANSFORMATION →
+            </a>
+        </div>
+    </section>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                We use cookies to analyze website traffic and optimize your experience. By accepting, you consent to our use of cookies for analytics and marketing purposes.
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn accept" onclick="acceptCookies()">Accept All</button>
+                <button class="cookie-btn decline" onclick="declineCookies()">Necessary Only</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ghazi • Data Architecture Wizard • Transforming enterprises worldwide ⚡</p>
+    </footer>
+
+    <script>
+
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.pipeline-demo, .experience-card, .skill-category, .terminal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Terminal typing effect
+        const terminalLines = document.querySelectorAll('.terminal-line');
+        let lineIndex = 0;
+
+        function typeTerminalLine() {
+            if (lineIndex < terminalLines.length) {
+                terminalLines[lineIndex].style.opacity = '0';
+                terminalLines[lineIndex].style.animation = 'fadeInUp 0.5s ease-out forwards';
+                terminalLines[lineIndex].style.animationDelay = (lineIndex * 0.5) + 's';
+                lineIndex++;
+            }
+        }
+
+        // Start terminal animation when section is visible
+        const terminalObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        setInterval(typeTerminalLine, 500);
+                    }, 500);
+                    terminalObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const terminal = document.querySelector('.terminal');
+        if (terminal) {
+            terminalObserver.observe(terminal);
+        }
+
+        // Cookie Consent Management
+        function showCookieBanner() {
+            const banner = document.getElementById('cookieBanner');
+            const consent = localStorage.getItem('cookieConsent');
+            
+            if (!consent) {
+                setTimeout(() => {
+                    banner.classList.add('show');
+                }, 1000);
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('show');
+            
+            // Enable all tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted',
+                    'ad_storage': 'granted'
+                });
+            }
+            
+            // Track consent acceptance
+            trackEvent('cookie_consent', 'accepted', 'user_action');
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').classList.remove('show');
+            
+            // Disable non-essential tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'denied',
+                    'ad_storage': 'denied'
+                });
+            }
+            
+            // Track consent decline
+            trackEvent('cookie_consent', 'declined', 'user_action');
+        }
+
+        // Event Tracking Function
+        function trackEvent(action, category, label = '') {
+            // Google Analytics 4
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    'event_category': category,
+                    'event_label': label
+                });
+            }
+
+            // LinkedIn Insight Tag
+            if (typeof lintrk !== 'undefined') {
+                lintrk('track', { conversion_id: action });
+            }
+
+            // Google Tag Manager
+            if (typeof dataLayer !== 'undefined') {
+                dataLayer.push({
+                    'event': 'custom_event',
+                    'event_action': action,
+                    'event_category': category,
+                    'event_label': label
+                });
+            }
+        }
+
+        // Track Key Actions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show cookie banner
+            showCookieBanner();
+
+            // Track contact button clicks
+            document.querySelectorAll('a[href="contact.html"], .cta-primary').forEach(button => {
+                button.addEventListener('click', function() {
+                    trackEvent('contact_click', 'engagement', this.textContent.trim());
+                });
+            });
+
+            // Track email link clicks (if any)
+            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+                link.addEventListener('click', function() {
+                    trackEvent('email_click', 'contact', this.href);
+                });
+            });
+
+            // Track skill section engagement
+            document.querySelectorAll('.skill-category').forEach(category => {
+                category.addEventListener('click', function() {
+                    const skillName = this.querySelector('h3').textContent;
+                    trackEvent('skill_interest', 'engagement', skillName);
+                });
+            });
+
+            // Track scroll depth
+            let maxScroll = 0;
+            window.addEventListener('scroll', function() {
+                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                if (scrollPercent > maxScroll) {
+                    maxScroll = scrollPercent;
+                    if (maxScroll >= 50 && maxScroll < 75) {
+                        trackEvent('scroll_50', 'engagement', '50% page viewed');
+                    } else if (maxScroll >= 100) {
+                        trackEvent('scroll_100', 'engagement', 'Full page viewed');
+                    }
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
