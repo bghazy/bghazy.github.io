@@ -397,6 +397,23 @@
             50% { transform: translateX(10px); opacity: 0.7; }
         }
         
+        /* Achievement Highlight in Case Studies */
+        .achievement-highlight {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(16, 185, 129, 0.05));
+            border-radius: 8px;
+            padding: 0.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .achievement-highlight strong {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
         /* Case Studies Grid - 2x3 layout */
         .case-studies-grid {
             display: grid;
@@ -1038,6 +1055,341 @@
             .cookie-btn {
                 min-width: 120px;
                 flex: 1;
+            }
+        }
+
+        /* Trusted By Section */
+        .trusted-by {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 4rem 2rem;
+        }
+
+        .trusted-by-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .trusted-by-title {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        .clients-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .client-logo {
+            padding: 1rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .client-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .client-logo img {
+            height: 40px;
+            width: auto;
+            filter: grayscale(50%);
+            transition: filter 0.3s ease;
+        }
+
+        .client-logo:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* My Approach & Capabilities Section */
+        .approach-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+            text-align: center;
+        }
+
+        .approach-description {
+            font-size: 1.25rem;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .capability-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px -8px rgba(0, 0, 0, 0.2);
+        }
+
+        .capability-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .capability-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .capability-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .capability-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .capability-features li {
+            padding: 0.5rem 0;
+            color: var(--gray);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .capability-features li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+
+        /* Enhanced Case Studies */
+        .case-study-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 40px -8px rgba(0, 0, 0, 0.2);
+        }
+
+        .case-study-content {
+            margin-top: 1.5rem;
+        }
+
+        .challenge-section, .solution-section, .result-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .challenge-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+
+        .solution-section {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 4px solid #3b82f6;
+        }
+
+        .result-section {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left: 4px solid #10b981;
+        }
+
+        .case-study-label {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .impact-metrics {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .metric {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .metric strong {
+            font-size: 1.25rem;
+            color: var(--success);
+            display: block;
+        }
+
+        /* Final Call to Action */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .final-cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .final-cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .final-cta-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .final-cta-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .benefit-icon {
+            font-size: 1.25rem;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary-large, .cta-secondary-large {
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .cta-primary-large {
+            background: white;
+            color: var(--primary);
+        }
+
+        .cta-primary-large:hover {
+            background: var(--light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-secondary-large {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-secondary-large:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .final-cta-guarantee {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .clients-logos {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-metrics {
+                justify-content: center;
+            }
+
+            .final-cta-benefits {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .final-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-primary-large, .cta-secondary-large {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .final-cta-title {
+                font-size: 2rem;
+            }
+
+            .trusted-by-title {
+                font-size: 1.75rem;
             }
         }
 
