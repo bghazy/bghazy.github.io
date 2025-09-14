@@ -1,0 +1,125 @@
+// Case Studies Slider JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const caseNavBtns = document.querySelectorAll('.case-nav-btn');
+    const caseSliders = document.querySelectorAll('.case-study-slider');
+
+    let currentCase = 'edf';
+    let currentSlide = 0;
+
+    // Case navigation (company switching)
+    caseNavBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const caseId = this.getAttribute('data-case');
+            switchCase(caseId);
+        });
+    });
+
+    function switchCase(caseId) {
+        // Update navigation buttons
+        caseNavBtns.forEach(btn => btn.classList.remove('active'));
+        document.querySelector(`[data-case="${caseId}"]`).classList.add('active');
+
+        // Update sliders
+        caseSliders.forEach(slider => slider.classList.remove('active'));
+        document.querySelector(`.case-study-slider[data-case="${caseId}"]`).classList.add('active');
+
+        currentCase = caseId;
+        currentSlide = 0;
+        updateSlideIndicators();
+    }
+
+    // Initialize event listeners for slide navigation
+    function initializeSlideListeners() {
+        // Slide indicators
+        const indicators = document.querySelectorAll('.indicator');
+        indicators.forEach(indicator => {
+            indicator.addEventListener('click', function() {
+                const slideIndex = parseInt(this.getAttribute('data-slide'));
+                goToSlide(slideIndex);
+            });
+        });
+
+        // Slide controls
+        const slideControls = document.querySelectorAll('.slide-btn');
+        slideControls.forEach(control => {
+            control.addEventListener('click', function() {
+                const direction = this.getAttribute('data-direction');
+                if (direction === 'next') {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            });
+        });
+    }
+
+    function goToSlide(slideIndex) {
+        const activeSlider = document.querySelector('.case-study-slider.active');
+        if (!activeSlider) return;
+
+        const slides = activeSlider.querySelectorAll('.slide');
+        const indicators = activeSlider.querySelectorAll('.indicator');
+
+        // Remove active classes
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+
+        // Add active classes to current slide
+        slides[slideIndex].classList.add('active');
+        indicators[slideIndex].classList.add('active');
+
+        currentSlide = slideIndex;
+    }
+
+    function nextSlide() {
+        const activeSlider = document.querySelector('.case-study-slider.active');
+        if (!activeSlider) return;
+
+        const slides = activeSlider.querySelectorAll('.slide');
+        const nextIndex = (currentSlide + 1) % slides.length;
+        goToSlide(nextIndex);
+    }
+
+    function prevSlide() {
+        const activeSlider = document.querySelector('.case-study-slider.active');
+        if (!activeSlider) return;
+
+        const slides = activeSlider.querySelectorAll('.slide');
+        const prevIndex = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
+        goToSlide(prevIndex);
+    }
+
+    function updateSlideIndicators() {
+        const activeSlider = document.querySelector('.case-study-slider.active');
+        if (!activeSlider) return;
+
+        const indicators = activeSlider.querySelectorAll('.indicator');
+        const slides = activeSlider.querySelectorAll('.slide');
+
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        slides.forEach(slide => slide.classList.remove('active'));
+
+        if (indicators[0]) indicators[0].classList.add('active');
+        if (slides[0]) slides[0].classList.add('active');
+    }
+
+    // Auto-play functionality (optional)
+    let autoPlay = false;
+    if (autoPlay) {
+        setInterval(() => {
+            nextSlide();
+        }, 5000);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+        }
+    });
+
+    // Initialize slide listeners
+    initializeSlideListeners();
+});

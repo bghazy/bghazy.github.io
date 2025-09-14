@@ -2,11 +2,11 @@
 const translations = {
     en: {
         // Navigation
-        nav_case_studies: "Case Studies",
+        nav_case_studies: "Portfolio",
         nav_testimonials: "Testimonials",
-        nav_skills: "Skills",
+        nav_approach: "Approach",
         nav_contact: "Contact",
-        nav_hire_me: "HIRE ME",
+        nav_hire_me: "SCHEDULE CONVERSATION",
         
         // Hero Section
         hero_title: "Enterprise Data Solutions Architect",
@@ -41,10 +41,39 @@ const translations = {
         result_time_to_market: "60% Faster Time-to-Market",
         result_time_to_market_desc: "Accelerated data product development through automation and DevOps best practices",
 
+        // Trusted By
+        trusted_by_title: "Trusted by Industry Leaders",
+
+        // My Approach & Capabilities
+        section_approach: "My Approach & Capabilities",
+        approach_description: "I deliver enterprise-grade data solutions through a strategic, business-first approach. Every technical decision is driven by your ROI, compliance requirements, and scalability needs.",
+
+        capability_strategic: "Strategic Architecture",
+        capability_strategic_desc: "I start by understanding your business objectives, then design data architectures that directly support your growth goals and competitive advantages.",
+
+        capability_execution: "Rapid Execution",
+        capability_execution_desc: "From concept to production in weeks, not months. I leverage proven patterns and modern tools to deliver working solutions quickly.",
+
+        capability_compliance: "Enterprise Compliance",
+        capability_compliance_desc: "Built-in security, governance, and regulatory compliance from day one. Your data stays secure and audit-ready.",
+
+        capability_cost: "Cost Optimization",
+        capability_cost_desc: "I optimize your infrastructure spend while maximizing performance. Clients typically see 40-60% cost reductions.",
+
         // Case Studies
-        section_case_studies: "Case Studies",
+        section_case_studies: "Work & Portfolio",
         company_edf: "EDF",
+        company_sncf: "Groupe SNCF",
+        company_stellantis: "Stellantis",
+        company_seloger: "Groupe SeLoger",
+        company_laposte: "Le Groupe La Poste",
+        company_beinsports: "BeIN Sports",
         industry_energy: "Energy & Utilities",
+        industry_transport: "Transportation & Logistics",
+        industry_automotive: "Automotive & Manufacturing",
+        industry_realestate: "Real Estate & PropTech",
+        industry_logistics: "Postal & Logistics Services",
+        industry_media: "Media & Entertainment (Streaming)",
         metric_edf: "40% Cost Reduction • 70% Deployment Time Reduction",
         description_edf: "Designed and implemented 15+ production data pipelines processing 200GB daily with 99.9% uptime. Cut infrastructure costs by 40% through resource optimization and built self-service data platform enabling teams worldwide.",
         
@@ -113,16 +142,16 @@ const translations = {
     
     fr: {
         // Navigation
-        nav_case_studies: "Études de Cas",
+        nav_case_studies: "Portfolio",
         nav_testimonials: "Témoignages",
-        nav_skills: "Compétences",
+        nav_approach: "Approche",
         nav_contact: "Contact",
-        nav_hire_me: "EMBAUCHEZ-MOI",
+        nav_hire_me: "PLANIFIER CONVERSATION",
         
         // Hero Section
-        hero_title: "Aidant les entreprises à réduire les coûts data et faire évoluer l'infrastructure",
-        hero_description: "Conception, création et déploiement de solutions data sur mesure sur toutes les plateformes cloud (AWS, Azure, GCP) et infrastructures sur site. Architecte full-stack construisant des systèmes personnalisés du concept à la production, au service de clients dans le monde entier.",
-        hero_cta: "TRANSFORMEZ VOS DONNÉES →",
+        hero_title: "Architecte de Solutions Data Entreprise",
+        hero_description: "Fournissant des infrastructures data critiques pour les entreprises Fortune 500. Spécialisé en gouvernance, conformité et solutions axées ROI dans des environnements multi-cloud et hybrides. Historique prouvé de réduction des coûts opérationnels tout en garantissant sécurité et évolutivité de niveau entreprise.",
+        hero_cta: "PLANIFIER CONSULTATION →",
         
         // Certifications
         cert_aws: "AWS Certified Solutions Architect - Associate",
@@ -151,10 +180,39 @@ const translations = {
         result_time_to_market: "60% de Temps de Mise sur le Marché Plus Rapide",
         result_time_to_market_desc: "Développement de produits data accéléré grâce à l'automatisation et aux meilleures pratiques DevOps",
 
-        // Case Studies
-        section_case_studies: "Études de Cas",
+        // Confiance
+        trusted_by_title: "Fait confiance par les leaders de l'industrie",
+
+        // Mon Approche & Capacités
+        section_approach: "Mon Approche & Capacités",
+        approach_description: "Je livre des solutions data de niveau entreprise grâce à une approche stratégique, axée business. Chaque décision technique est guidée par votre ROI, exigences de conformité et besoins d'évolutivité.",
+
+        capability_strategic: "Architecture Stratégique",
+        capability_strategic_desc: "Je commence par comprendre vos objectifs business, puis conçois des architectures data qui soutiennent directement vos objectifs de croissance et avantages concurrentiels.",
+
+        capability_execution: "Exécution Rapide",
+        capability_execution_desc: "Du concept à la production en semaines, pas en mois. J'exploite des modèles éprouvés et outils modernes pour livrer des solutions fonctionnelles rapidement.",
+
+        capability_compliance: "Conformité Entreprise",
+        capability_compliance_desc: "Sécurité, gouvernance et conformité réglementaire intégrées dès le premier jour. Vos données restent sécurisées et prêtes pour l'audit.",
+
+        capability_cost: "Optimisation des Coûts",
+        capability_cost_desc: "J'optimise vos dépenses d'infrastructure tout en maximisant les performances. Les clients voient typiquement 40-60% de réductions de coûts.",
+
+        // Études de Cas
+        section_case_studies: "Travail & Portfolio",
         company_edf: "EDF",
+        company_sncf: "Groupe SNCF",
+        company_stellantis: "Stellantis",
+        company_seloger: "Groupe SeLoger",
+        company_laposte: "Le Groupe La Poste",
+        company_beinsports: "BeIN Sports",
         industry_energy: "Énergie et Utilités",
+        industry_transport: "Transport et Logistique",
+        industry_automotive: "Automobile et Fabrication",
+        industry_realestate: "Immobilier et PropTech",
+        industry_logistics: "Services Postaux et Logistiques",
+        industry_media: "Médias et Divertissement (Streaming)",
         metric_edf: "40% de Réduction des Coûts • 70% de Réduction du Temps de Déploiement",
         description_edf: "Conçu et implémenté plus de 15 pipelines de données en production traitant 200 Go quotidiennement avec 99,9% de disponibilité. Réduit les coûts d'infrastructure de 40% grâce à l'optimisation des ressources et construit une plateforme de données en libre-service permettant aux équipes du monde entier.",
         
@@ -223,11 +281,11 @@ const translations = {
     
     ar: {
         // Navigation
-        nav_case_studies: "دراسات الحالة",
+        nav_case_studies: "معرض الأعمال",
         nav_testimonials: "التوصيات",
-        nav_skills: "المهارات",
+        nav_approach: "النهج",
         nav_contact: "التواصل",
-        nav_hire_me: "وظفني",
+        nav_hire_me: "جدولة محادثة",
         
         // Hero Section
         hero_title: "مهندس حلول البيانات المؤسسية",
@@ -240,7 +298,42 @@ const translations = {
         cert_hortonworks: "HDP Certified Developer",
         cert_epfl: "EPFL البرمجة الوظيفية",
         
-        // Results & Outcomes Section
+        // الثقة
+        trusted_by_title: "يثق به رواد الصناعة",
+
+        // نهجي وقدراتي
+        section_approach: "نهجي وقدراتي",
+        approach_description: "أقدم حلول بيانات على مستوى المؤسسات من خلال نهج استراتيجي يركز على الأعمال. كل قرار تقني يوجه بعائد الاستثمار ومتطلبات الامتثال واحتياجات قابلية التوسع.",
+
+        capability_strategic: "الهندسة الاستراتيجية",
+        capability_strategic_desc: "أبدأ بفهم أهدافك التجارية، ثم أصمم هندسة بيانات تدعم بشكل مباشر أهداف نموك وميزاتك التنافسية.",
+
+        capability_execution: "التنفيذ السريع",
+        capability_execution_desc: "من المفهوم إلى الإنتاج في أسابيع، ليس شهور. أستغل الأنماط المثبتة والأدوات الحديثة لتقديم حلول عملية بسرعة.",
+
+        capability_compliance: "امتثال المؤسسات",
+        capability_compliance_desc: "أمان وحوكمة وامتثال رقابي مبني من اليوم الأول. تبقى بياناتك آمنة وجاهزة للتدقيق.",
+
+        capability_cost: "تحسين التكاليف",
+        capability_cost_desc: "أحسن إنفاقك على البنية التحتية مع تعظيم الأداء. يرى العملاء عادة تخفيضات تكاليف 40-60%.",
+
+        // دراسات الحالة
+        section_case_studies: "العمل ومعرض الأعمال",
+        company_edf: "EDF",
+        company_sncf: "Groupe SNCF",
+        company_stellantis: "Stellantis",
+        company_seloger: "Groupe SeLoger",
+        company_laposte: "Le Groupe La Poste",
+        company_beinsports: "BeIN Sports",
+
+        industry_energy: "الطاقة والمرافق",
+        industry_transport: "النقل واللوجستيات",
+        industry_automotive: "السيارات والتصنيع",
+        industry_realestate: "العقارات والتكنولوجيا",
+        industry_logistics: "الخدمات البريدية واللوجستية",
+        industry_media: "الإعلام والترفيه (البث المباشر)",
+
+        // النتائج والإنجازات
         results_title: "الإنجازات الحديثة والنتائج المثبتة",
         result_cost_reduction: "متوسط تقليل التكاليف 40%",
         result_cost_reduction_desc: "تحقيق وفورات كبيرة في التكاليف باستمرار من خلال هندسة البيانات المحسنة وتدفقات العمل المؤتمتة عبر عملاء Fortune 500.",
@@ -327,23 +420,58 @@ const translations = {
     
     es: {
         // Navigation
-        nav_case_studies: "Casos de Estudio",
+        nav_case_studies: "Portafolio",
         nav_testimonials: "Testimonios",
-        nav_skills: "Habilidades",
+        nav_approach: "Enfoque",
         nav_contact: "Contacto",
-        nav_hire_me: "CONTRÁTAME",
+        nav_hire_me: "PROGRAMAR CONVERSACIÓN",
         
         // Hero Section
-        hero_title: "Ayudando a empresas a reducir costos de datos y escalar infraestructura",
-        hero_description: "Diseñando, creando y desplegando soluciones de datos personalizadas en todas las plataformas cloud (AWS, Azure, GCP) e infraestructuras on-premise. Arquitecto full-stack construyendo sistemas personalizados desde el concepto hasta producción, sirviendo clientes globalmente.",
-        hero_cta: "TRANSFORMA TUS DATOS →",
+        hero_title: "Arquitecto de Soluciones de Datos Empresariales",
+        hero_description: "Entregando infraestructura de datos crítica para empresas Fortune 500. Especializado en gobernanza, cumplimiento y soluciones impulsadas por ROI en entornos multi-nube e híbridos. Historial comprobado de reducción de costos operacionales mientras garantiza seguridad y escalabilidad de nivel empresarial.",
+        hero_cta: "PROGRAMAR CONSULTA →",
         
         // Certifications
         cert_aws: "AWS Certified Solutions Architect - Associate",
         cert_hortonworks: "HDP Certified Developer",
         cert_epfl: "EPFL Programación Funcional",
         
-        // Results & Outcomes Section
+        // Confianza
+        trusted_by_title: "Confiado por Líderes de la Industria",
+
+        // Mi Enfoque y Capacidades
+        section_approach: "Mi Enfoque y Capacidades",
+        approach_description: "Entrego soluciones de datos de nivel empresarial a través de un enfoque estratégico centrado en el negocio. Cada decisión técnica se guía por su ROI, requisitos de cumplimiento y necesidades de escalabilidad.",
+
+        capability_strategic: "Arquitectura Estratégica",
+        capability_strategic_desc: "Comienzo entendiendo sus objetivos de negocio, luego diseño arquitecturas de datos que apoyan directamente sus metas de crecimiento y ventajas competitivas.",
+
+        capability_execution: "Ejecución Rápida",
+        capability_execution_desc: "Del concepto a producción en semanas, no meses. Aprovecho patrones probados y herramientas modernas para entregar soluciones funcionales rápidamente.",
+
+        capability_compliance: "Cumplimiento Empresarial",
+        capability_compliance_desc: "Seguridad, gobernanza y cumplimiento regulatorio integrados desde el día uno. Sus datos permanecen seguros y listos para auditoría.",
+
+        capability_cost: "Optimización de Costos",
+        capability_cost_desc: "Optimizo su gasto en infraestructura mientras maximizo el rendimiento. Los clientes típicamente ven reducciones de costos del 40-60%.",
+
+        // Casos de Estudio
+        section_case_studies: "Trabajo y Portafolio",
+        company_edf: "EDF",
+        company_sncf: "Groupe SNCF",
+        company_stellantis: "Stellantis",
+        company_seloger: "Groupe SeLoger",
+        company_laposte: "Le Groupe La Poste",
+        company_beinsports: "BeIN Sports",
+
+        industry_energy: "Energía y Servicios Públicos",
+        industry_transport: "Transporte y Logística",
+        industry_automotive: "Automotriz y Manufactura",
+        industry_realestate: "Bienes Raíces y PropTech",
+        industry_logistics: "Servicios Postales y Logísticos",
+        industry_media: "Medios y Entretenimiento (Streaming)",
+
+        // Resultados y Logros
         results_title: "Logros Recientes y Resultados Comprobados",
         result_cost_reduction: "40% Reducción de Costos Promedio",
         result_cost_reduction_desc: "Entrega consistente de ahorros significativos a través de arquitecturas de datos optimizadas y flujos de trabajo automatizados en clientes Fortune 500.",
