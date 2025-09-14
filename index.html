@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghazi - Data Architecture Wizard | Transform Your Data Infrastructure</title>
-    <meta name="description" content="10+ years transforming enterprise data infrastructure. From chaos to clarity, from legacy to cloud-native. Real-time processing expert.">
-    <meta name="keywords" content="Data Engineer, Cloud Architecture, AWS, Big Data, Real-time Processing, Consulting">
+    <title>Ghazi - Enterprise Data Solutions Architect | Transform Your Data Infrastructure</title>
+    <meta name="description" content="Delivering mission-critical data infrastructure for Fortune 500 companies. Specialized in governance, compliance, and ROI-driven solutions across multi-cloud environments.">
+    <meta name="keywords" content="Enterprise Data Engineer, Cloud Architecture, AWS Solutions Architect, Big Data, Real-time Processing, Data Governance, Compliance, ROI">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"></noscript>
     
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/translations.js"></script>
     
     <!-- Google Tag Manager -->
@@ -57,986 +59,6 @@
         })(window, document, "clarity", "script", "XXXXXXXXXX");
     </script>
     
-    <style>
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #10b981;
-            --accent: #f59e0b;
-            --dark: #1f2937;
-            --darker: #111827;
-            --light: #ffffff;
-            --gray: #6b7280;
-            --gray-light: #9ca3af;
-            --success: #10b981;
-            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            color: #1f2937;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Animated Background */
-        .bg-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.1;
-        }
-        
-        .data-stream {
-            position: absolute;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: var(--primary);
-            animation: stream 15s linear infinite;
-            white-space: nowrap;
-        }
-        
-        @keyframes stream {
-            0% { transform: translateX(-100px); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateX(100vw); opacity: 0; }
-        }
-        
-        
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(37, 99, 235, 0.1);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .logo {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-shadow: 0 0 10px var(--primary);
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { text-shadow: 0 0 10px var(--primary); }
-            50% { text-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary); }
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--light);
-            font-weight: 500;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        .contact-btn {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 0.5rem 1.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: var(--primary);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-        
-        .contact-btn:hover::before {
-            left: 0;
-        }
-        
-        .contact-btn:hover {
-            color: var(--dark);
-            box-shadow: var(--neon-glow);
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
-            padding-top: 80px;
-        }
-        
-        .hero-content {
-            max-width: 1000px;
-            padding: 0 2rem;
-        }
-        
-        .hero-subtitle {
-            color: var(--primary);
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.5s forwards;
-        }
-        
-        .hero-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 2rem;
-            color: #1e293b;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 1s forwards;
-        }
-        
-        .hero-description {
-            font-size: 1.2rem;
-            color: #475569;
-            margin-bottom: 3rem;
-            max-width: 600px;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 1.5s forwards;
-        }
-        
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 2s forwards;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero-stats {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .stat-box {
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .stat-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: #64748b;
-        }
-        
-        .hero-cta {
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 2.5s forwards;
-        }
-        
-        .cta-primary {
-            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.25);
-        }
-        
-        .cta-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
-        }
-
-        /* Certifications Strip */
-        .certifications-strip {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            margin: 3rem 0;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 1.5s forwards;
-        }
-
-        .cert-badge {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-
-        .cert-badge:hover {
-            transform: translateY(-5px);
-        }
-
-        .cert-badge img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            margin-bottom: 0.5rem;
-        }
-
-        .cert-badge span {
-            font-size: 0.9rem;
-            color: var(--gray);
-            font-weight: 500;
-        }
-        
-        /* Unique Sections */
-        .section {
-            padding: 5rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            font-size: 3rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(45deg, var(--primary), var(--accent));
-        }
-        
-        /* Data Pipeline Visualization */
-        .pipeline-demo {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 3rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .pipeline-flow {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        
-        .pipeline-node {
-            background: white;
-            border: 2px solid rgba(99, 102, 241, 0.2);
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            min-width: 150px;
-            position: relative;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        
-        .pipeline-node:hover {
-            background: #f8fafc;
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.2);
-        }
-        
-        .pipeline-node i {
-            color: var(--primary);
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .pipeline-node h3 {
-            color: #1f2937;
-            margin: 0.5rem 0;
-        }
-        
-        .pipeline-node p {
-            color: var(--gray);
-            margin: 0;
-            font-size: 0.9rem;
-        }
-        
-        .pipeline-arrow {
-            color: var(--primary);
-            font-size: 1.5rem;
-            animation: flow 2s ease-in-out infinite;
-        }
-        
-        @keyframes flow {
-            0%, 100% { transform: translateX(0); opacity: 1; }
-            50% { transform: translateX(10px); opacity: 0.7; }
-        }
-        
-        /* Case Studies Grid - 2x3 layout */
-        .case-studies-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        @media (max-width: 1024px) {
-            .case-studies-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .case-studies-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .experience-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            border-radius: 20px;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .experience-card:hover::before {
-            left: 100%;
-        }
-        
-        .experience-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .company-name {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .impact-metric {
-            background: rgba(0, 255, 136, 0.2);
-            border-left: 4px solid var(--primary);
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0 10px 10px 0;
-        }
-
-        /* Recommendations Section */
-        .recommendations-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            .recommendations-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .recommendation-card {
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 15px;
-            padding: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .recommendation-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
-        }
-
-        .recommendation-screenshot {
-            width: 100%;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .recommendation-screenshot img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .role {
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .company {
-            color: var(--gray);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .snippet {
-            font-style: italic;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .linkedin-link {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        .linkedin-link:hover {
-            text-decoration: underline;
-        }
-
-        .translation {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(99, 102, 241, 0.1);
-        }
-
-        .arabic {
-            font-size: 0.85rem;
-            color: var(--gray);
-            font-style: italic;
-            direction: rtl;
-            text-align: right;
-        }
-
-        /* Skills Matrix */
-        .skills-matrix {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .skill-category {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        .skill-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .skill-list {
-            list-style: none;
-        }
-        
-        .skill-list li {
-            background: rgba(0, 255, 136, 0.1);
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            border-radius: 8px;
-            border-left: 3px solid var(--primary);
-        }
-        
-        
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(76, 205, 196, 0.1));
-            border-radius: 30px;
-            padding: 4rem 2rem;
-            text-align: center;
-            margin: 3rem 0;
-        }
-        
-        .contact-methods {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .contact-method {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            border-radius: 15px;
-            padding: 2rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .contact-method:hover {
-            transform: translateY(-5px);
-        }
-        
-        .contact-icon {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Buttons */
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            .contact-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-        }
-
-        .contact-btn-action {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .contact-btn-action.whatsapp {
-            background: linear-gradient(45deg, #25D366, #128C7E);
-            color: white;
-        }
-
-        .contact-btn-action.whatsapp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-        }
-
-        .contact-btn-action.email {
-            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
-            color: white;
-        }
-
-        .contact-btn-action.email:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
-        }
-
-        .contact-btn-action.contact-form {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .contact-btn-action.contact-form:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero {
-                height: auto;
-                min-height: 100vh;
-                padding: 120px 0 60px 0;
-            }
-            
-            .hero-content {
-                padding: 0 1.5rem;
-            }
-            
-            .hero-title {
-                font-size: 2.5rem;
-                line-height: 1.3;
-                margin-bottom: 1.5rem;
-            }
-            
-            .hero-description {
-                font-size: 1.1rem;
-                margin-bottom: 2.5rem;
-            }
-            
-            .hero-stats {
-                margin-bottom: 2.5rem;
-                gap: 1rem;
-            }
-            
-            .stat-box {
-                padding: 1rem;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
-            
-            .pipeline-flow {
-                flex-direction: column;
-            }
-            
-            .pipeline-arrow {
-                transform: rotate(90deg);
-            }
-            
-            .experience-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero {
-                padding: 100px 0 40px 0;
-            }
-            
-            .hero-content {
-                padding: 0 1rem;
-            }
-            
-            .hero-title {
-                font-size: 2rem;
-                margin-bottom: 1rem;
-            }
-            
-            .hero-description {
-                font-size: 1rem;
-                margin-bottom: 2rem;
-            }
-            
-            .hero-stats {
-                margin-bottom: 2rem;
-            }
-            
-            .stat-box {
-                padding: 0.8rem;
-            }
-            
-            .stat-number {
-                font-size: 1.8rem;
-            }
-            
-            .stat-label {
-                font-size: 0.8rem;
-            }
-        }
-        
-        /* Professional subtle background gradient */
-        .subtle-gradient {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .subtle-gradient::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, 
-                rgba(99, 102, 241, 0.08) 0%,
-                rgba(16, 185, 129, 0.08) 50%,
-                rgba(245, 158, 11, 0.08) 100%);
-            z-index: -1;
-        }
-
-        /* Tech Stack Styling */
-        .tech-stack {
-            color: var(--gray-light);
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-top: 0.5rem;
-        }
-
-        /* Language Switcher */
-        .language-switcher {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .language-selector {
-            display: flex;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 0.2rem;
-            backdrop-filter: blur(10px);
-        }
-        
-        .lang-option {
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--primary);
-            background: transparent;
-            border: none;
-        }
-        
-        .lang-option:hover {
-            background: rgba(99, 102, 241, 0.2);
-        }
-        
-        .lang-option.active {
-            background: var(--primary);
-            color: white;
-        }
-        
-        /* RTL Support */
-        [dir="rtl"] {
-            text-align: right;
-        }
-        
-        [dir="rtl"] .nav-links {
-            flex-direction: row-reverse;
-        }
-        
-        [dir="rtl"] .hero-content {
-            text-align: right;
-        }
-        
-        [dir="rtl"] .hero-title,
-        [dir="rtl"] .hero-description {
-            text-align: right;
-        }
-        
-        [dir="rtl"] .certifications-strip {
-            flex-direction: row-reverse;
-        }
-        
-        [dir="rtl"] .recommendations-grid,
-        [dir="rtl"] .case-studies-grid,
-        [dir="rtl"] .skills-matrix {
-            direction: rtl;
-        }
-        
-        [dir="rtl"] .recommendation-card,
-        [dir="rtl"] .experience-card,
-        [dir="rtl"] .skill-category {
-            text-align: right;
-        }
-        
-        [dir="rtl"] .impact-metric {
-            border-left: none;
-            border-right: 4px solid var(--primary);
-        }
-        
-        [dir="rtl"] .skill-list li {
-            border-left: none;
-            border-right: 3px solid var(--primary);
-        }
-        
-        /* Mobile RTL adjustments */
-        @media (max-width: 768px) {
-            [dir="rtl"] .nav-links {
-                flex-direction: column;
-                text-align: right;
-            }
-            
-            [dir="rtl"] .language-switcher {
-                justify-content: flex-end;
-            }
-        }
-        
-        /* Cookie Consent Banner */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(31, 41, 55, 0.95);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 1rem 2rem;
-            z-index: 10000;
-            border-top: 2px solid var(--primary);
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        
-        .cookie-banner.show {
-            transform: translateY(0);
-        }
-        
-        .cookie-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-        
-        .cookie-text {
-            flex: 1;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-        
-        .cookie-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .cookie-btn {
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .cookie-btn.accept {
-            background: var(--primary);
-            color: white;
-        }
-        
-        .cookie-btn.accept:hover {
-            background: var(--primary-dark);
-        }
-        
-        .cookie-btn.decline {
-            background: transparent;
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .cookie-btn.decline:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        /* Footer */
-        footer {
-            background: #1e293b;
-            border-top: 1px solid rgba(37, 99, 235, 0.1);
-            padding: 2rem;
-            text-align: center;
-            color: #94a3b8;
-        }
-    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -1072,9 +94,10 @@
     <!-- Hero Section -->
     <section class="hero subtle-gradient">
         <div class="hero-content">
-            <h1 class="hero-title" data-translate="hero_title">Helping companies cut data costs and scale infrastructure</h1>
+            <h1 class="hero-title" data-translate="hero_title">Enterprise Data Solutions Architect</h1>
+            <p class="hero-subtitle" data-translate="hero_subtitle">Architecting scalable, compliant data platforms for enterprise growth</p>
             <p class="hero-description" data-translate="hero_description">
-                Designing, creating and deploying custom data solutions across all cloud platforms (AWS, Azure, GCP) and on-premise infrastructures. Full-stack architect building tailored systems from concept to production, serving clients globally.
+                Delivering mission-critical data infrastructure for Fortune 500 companies. Specialized in governance, compliance, and ROI-driven solutions across multi-cloud and hybrid environments. Proven track record of reducing operational costs while ensuring enterprise-grade security and scalability.
             </p>
             
             <!-- Certifications Strip -->
@@ -1094,7 +117,7 @@
             </div>
             
             <div class="hero-cta">
-                <a href="contact.html" class="cta-primary" data-translate="hero_cta">TRANSFORM YOUR DATA →</a>
+                <a href="contact.html" class="cta-primary" data-translate="hero_cta">SCHEDULE CONSULTATION →</a>
             </div>
         </div>
     </section>
@@ -1103,71 +126,125 @@
     <section id="case-studies" class="section">
         <h2 class="section-title" data-translate="section_case_studies">Case Studies</h2>
         <div class="case-studies-grid">
-            <div class="experience-card">
-                <div class="company-name" data-translate="company_edf">EDF</div>
-                <h3 data-translate="industry_energy">Energy & Utilities</h3>
-                <div class="impact-metric">
-                    <strong data-translate="metric_edf">70% Deployment Time Reduction</strong><br>
-                    <span class="tech-stack">Apache Spark • Airflow • Docker • Kubernetes • Terraform • Python • AWS</span>
+            <div class="experience-card" data-company="edf">
+                <div class="company-header">
+                    <img src="images/edf-logo.svg" alt="EDF Logo" class="company-logo">
+                    <div class="company-info">
+                        <div class="company-name" data-translate="company_edf">EDF</div>
+                        <h3 data-translate="industry_energy">Energy & Utilities</h3>
+                    </div>
                 </div>
-                <p data-translate="description_edf">Designed and implemented 15+ production data pipelines processing 200GB daily with 99.9% uptime. 
-                Cut infrastructure costs by 40% through resource optimization and built self-service data platform enabling teams worldwide.</p>
+                <div class="card-summary">
+                    <div class="impact-metric">
+                        <strong data-translate="metric_edf">70% Deployment Time Reduction</strong>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="tech-stack">Apache Spark • Airflow • Docker • Kubernetes • Terraform • Python • AWS</div>
+                    <p data-translate="description_edf">Designed and implemented 15+ production data pipelines processing 200GB daily with 99.9% uptime. 
+Cut infrastructure costs by 40% through resource optimization and built self-service data platform enabling teams worldwide.</p>
+                </div>
             </div>
             
-            <div class="experience-card">
-                <div class="company-name" data-translate="company_sncf">Groupe SNCF</div>
-                <h3 data-translate="industry_transport">Transportation & Logistics</h3>
-                <div class="impact-metric">
-                    <strong data-translate="metric_sncf">60% API Response Time Improvement • 1M+ Daily Requests</strong><br>
-                    <span class="tech-stack">Scala • AWS MSK • Lambda • Terraform • DDD • Hexagonal Architecture</span>
+            <div class="experience-card" data-company="sncf">
+                <div class="company-header">
+                    <img src="images/sncf-logo.svg" alt="SNCF Logo" class="company-logo">
+                    <div class="company-info">
+                        <div class="company-name" data-translate="company_sncf">Groupe SNCF</div>
+                        <h3 data-translate="industry_transport">Transportation & Logistics</h3>
+                    </div>
                 </div>
-                <p data-translate="description_sncf">Architected microservices processing 500GB daily rail operations data. Implemented event-driven architecture 
-                reducing system coupling by 80%. Saved €200K annually through AWS optimization - scalable globally.</p>
+                <div class="card-summary">
+                    <div class="impact-metric">
+                        <strong data-translate="metric_sncf">60% API Response Time Improvement • 1M+ Daily Requests</strong>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="tech-stack">Scala • AWS MSK • Lambda • Terraform • DDD • Hexagonal Architecture</div>
+                    <p data-translate="description_sncf">Architected microservices processing 500GB daily rail operations data. Implemented event-driven architecture 
+reducing system coupling by 80%. Saved €200K annually through AWS optimization - scalable globally.</p>
+                </div>
             </div>
             
-            <div class="experience-card">
-                <div class="company-name" data-translate="company_stellantis">Stellantis</div>
-                <h3 data-translate="industry_automotive">Automotive & Manufacturing</h3>
-                <div class="impact-metric">
-                    <strong data-translate="metric_stellantis">2TB Daily Processing • 10M+ Events/Hour</strong><br>
-                    <span class="tech-stack">Spark Streaming • AWS EMR • S3 • Kinesis • Terraform • Python • Scala</span>
+            <div class="experience-card" data-company="stellantis">
+                <div class="company-header">
+                    <img src="images/stellantis-logo.svg" alt="Stellantis Logo" class="company-logo">
+                    <div class="company-info">
+                        <div class="company-name" data-translate="company_stellantis">Stellantis</div>
+                        <h3 data-translate="industry_automotive">Automotive & Manufacturing</h3>
+                    </div>
                 </div>
-                <p data-translate="description_stellantis">Built real-time analytics platform for 500K+ connected vehicles across multiple continents. Reduced processing costs by 45% 
-                and implemented predictive maintenance with 87% accuracy, improving vehicle uptime by 23% globally.</p>
+                <div class="card-summary">
+                    <div class="impact-metric">
+                        <strong data-translate="metric_stellantis">2TB Daily Processing • 10M+ Events/Hour</strong>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="tech-stack">Spark Streaming • AWS EMR • S3 • Kinesis • Terraform • Python • Scala</div>
+                    <p data-translate="description_stellantis">Built real-time analytics platform for 500K+ connected vehicles across multiple continents. Reduced processing costs by 45% 
+and implemented predictive maintenance with 87% accuracy, improving vehicle uptime by 23% globally.</p>
+                </div>
             </div>
 
-            <div class="experience-card">
-                <div class="company-name" data-translate="company_seloger">Groupe SeLoger</div>
-                <h3 data-translate="industry_realestate">Real Estate & PropTech</h3>
-                <div class="impact-metric">
-                    <strong data-translate="metric_seloger">50M+ Real Estate Listings • 10M+ Monthly Users</strong><br>
-                    <span class="tech-stack">Apache Spark • AWS EMR • S3 • Lambda • CloudFormation • Spring Boot • PostgreSQL</span>
+            <div class="experience-card" data-company="seloger">
+                <div class="company-header">
+                    <img src="images/seloger-logo.svg" alt="SeLoger Logo" class="company-logo">
+                    <div class="company-info">
+                        <div class="company-name" data-translate="company_seloger">Groupe SeLoger</div>
+                        <h3 data-translate="industry_realestate">Real Estate & PropTech</h3>
+                    </div>
                 </div>
-                <p data-translate="description_seloger">Built data lake processing 50M+ real estate listings with 99.9% reliability. Reduced batch processing from 8 hours to 45 minutes. 
-                Implemented ML pipeline for property valuation improving accuracy by 35% - applicable to any market.</p>
+                <div class="card-summary">
+                    <div class="impact-metric">
+                        <strong data-translate="metric_seloger">50M+ Real Estate Listings • 10M+ Monthly Users</strong>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="tech-stack">Apache Spark • AWS EMR • S3 • Lambda • CloudFormation • Spring Boot • PostgreSQL</div>
+                    <p data-translate="description_seloger">Built data lake processing 50M+ real estate listings with 99.9% reliability. Reduced batch processing from 8 hours to 45 minutes. 
+Implemented ML pipeline for property valuation improving accuracy by 35% - applicable to any market.</p>
+                </div>
             </div>
 
-            <div class="experience-card">
-                <div class="company-name" data-translate="company_laposte">Le Groupe La Poste</div>
-                <h3 data-translate="industry_postal">Postal & Logistics Services</h3>
-                <div class="impact-metric">
-                    <strong data-translate="metric_laposte">300M+ Daily Package Events • 10x Performance Improvement</strong><br>
-                    <span class="tech-stack">Apache Kafka • Spark • Scala • Matryoshka • HDFS • Cassandra</span>
+            <div class="experience-card" data-company="laposte">
+                <div class="company-header">
+                    <img src="images/laposte-logo.svg" alt="La Poste Logo" class="company-logo">
+                    <div class="company-info">
+                        <div class="company-name" data-translate="company_laposte">Le Groupe La Poste</div>
+                        <h3 data-translate="industry_postal">Postal & Logistics Services</h3>
+                    </div>
                 </div>
-                <p data-translate="description_laposte">Developed generic data ingestion platform with privacy-by-design ensuring global compliance (GDPR, local regulations). 
-                Reduced storage costs by 60% and achieved 10x improvement in ingestion speed.</p>
+                <div class="card-summary">
+                    <div class="impact-metric">
+                        <strong data-translate="metric_laposte">300M+ Daily Package Events • 10x Performance Improvement</strong>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="tech-stack">Apache Kafka • Spark • Scala • Matryoshka • HDFS • Cassandra</div>
+                    <p data-translate="description_laposte">Developed generic data ingestion platform with privacy-by-design ensuring global compliance (GDPR, local regulations). 
+Reduced storage costs by 60% and achieved 10x improvement in ingestion speed.</p>
+                </div>
             </div>
 
-        <div class="experience-card">
-            <div class="company-name" data-translate="company_bein">BeIN Sports</div>
-            <h3 data-translate="industry_media">Media & Entertainment (Streaming)</h3>
-            <div class="impact-metric">
-                <strong data-translate="metric_bein">Live Streaming & Data Pipeline Optimization</strong><br>
-                <span class="tech-stack">Big Data • Real-Time Analytics • Streaming Performance</span>
-            </div>
-            <p data-translate="description_bein">Contributed to scaling BeIN Sports live streaming platform to support millions of concurrent viewers across the Europe/MENA region. 
+            <div class="experience-card" data-company="bein">
+                <div class="company-header">
+                    <img src="images/bein-logo.svg" alt="BeIN Sports Logo" class="company-logo">
+                    <div class="company-info">
+                        <div class="company-name" data-translate="company_bein">BeIN Sports</div>
+                        <h3 data-translate="industry_media">Media & Entertainment (Streaming)</h3>
+                    </div>
+                </div>
+                <div class="card-summary">
+                    <div class="impact-metric">
+                        <strong data-translate="metric_bein">Live Streaming & Data Pipeline Optimization</strong>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="tech-stack">Big Data • Real-Time Analytics • Streaming Performance</div>
+                    <p data-translate="description_bein">Contributed to scaling BeIN Sports live streaming platform to support millions of concurrent viewers across the Europe/MENA region. 
             Optimized data pipelines and monitoring systems to ensure real-time performance and reliability during high-traffic broadcasts.</p>
-        </div>
+                </div>
+            </div>
 
         </div>
     </section>
@@ -1237,7 +314,7 @@
                 <ul class="skill-list">
                     <li><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud Platform</li>
                     <li><strong>On-Premise:</strong> VMware, Hyper-V, Bare metal, Hybrid architectures</li>
-                    <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, ARM Templates</li>
+                    <li><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, ARM Templates, Ansible</li>
                     <li><strong>Containers:</strong> Docker, Kubernetes, OpenShift, Container orchestration</li>
                 </ul>
             </div>
@@ -1322,7 +399,7 @@
     <!-- Contact -->
     <section id="contact" class="section">
         <div class="contact-section">
-            <h2 class="section-title" data-translate="section_contact">Available for 15-min discovery calls</h2>
+            <h2 class="section-title" data-translate="section_contact">Available for 30-min discovery calls</h2>
             
             <div class="contact-buttons">
                 <a href="contact.html" class="contact-btn-action contact-form">
@@ -1350,187 +427,6 @@
         <p>&copy; 2025 Ghazi • <span data-translate="footer_text">Data Architecture Wizard • Transforming enterprises worldwide ⚡</span></p>
     </footer>
 
-    <script>
-
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements
-        document.querySelectorAll('.pipeline-demo, .experience-card, .skill-category, .terminal').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Terminal typing effect
-        const terminalLines = document.querySelectorAll('.terminal-line');
-        let lineIndex = 0;
-
-        function typeTerminalLine() {
-            if (lineIndex < terminalLines.length) {
-                terminalLines[lineIndex].style.opacity = '0';
-                terminalLines[lineIndex].style.animation = 'fadeInUp 0.5s ease-out forwards';
-                terminalLines[lineIndex].style.animationDelay = (lineIndex * 0.5) + 's';
-                lineIndex++;
-            }
-        }
-
-        // Start terminal animation when section is visible
-        const terminalObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        setInterval(typeTerminalLine, 500);
-                    }, 500);
-                    terminalObserver.unobserve(entry.target);
-                }
-            });
-        });
-
-        const terminal = document.querySelector('.terminal');
-        if (terminal) {
-            terminalObserver.observe(terminal);
-        }
-
-        // Cookie Consent Management
-        function showCookieBanner() {
-            const banner = document.getElementById('cookieBanner');
-            const consent = localStorage.getItem('cookieConsent');
-            
-            if (!consent) {
-                setTimeout(() => {
-                    banner.classList.add('show');
-                }, 1000);
-            }
-        }
-
-        function acceptCookies() {
-            localStorage.setItem('cookieConsent', 'accepted');
-            document.getElementById('cookieBanner').classList.remove('show');
-            
-            // Enable all tracking
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'granted',
-                    'ad_storage': 'granted'
-                });
-            }
-            
-            // Track consent acceptance
-            trackEvent('cookie_consent', 'accepted', 'user_action');
-        }
-
-        function declineCookies() {
-            localStorage.setItem('cookieConsent', 'declined');
-            document.getElementById('cookieBanner').classList.remove('show');
-            
-            // Disable non-essential tracking
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'denied',
-                    'ad_storage': 'denied'
-                });
-            }
-            
-            // Track consent decline
-            trackEvent('cookie_consent', 'declined', 'user_action');
-        }
-
-        // Event Tracking Function
-        function trackEvent(action, category, label = '') {
-            // Google Analytics 4
-            if (typeof gtag !== 'undefined') {
-                gtag('event', action, {
-                    'event_category': category,
-                    'event_label': label
-                });
-            }
-
-            // LinkedIn Insight Tag
-            if (typeof lintrk !== 'undefined') {
-                lintrk('track', { conversion_id: action });
-            }
-
-            // Google Tag Manager
-            if (typeof dataLayer !== 'undefined') {
-                dataLayer.push({
-                    'event': 'custom_event',
-                    'event_action': action,
-                    'event_category': category,
-                    'event_label': label
-                });
-            }
-        }
-
-        // Track Key Actions
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize language
-            initializeLanguage();
-            
-            // Show cookie banner
-            showCookieBanner();
-
-            // Track contact button clicks
-            document.querySelectorAll('a[href="contact.html"], .cta-primary').forEach(button => {
-                button.addEventListener('click', function() {
-                    trackEvent('contact_click', 'engagement', this.textContent.trim());
-                });
-            });
-
-            // Track email link clicks (if any)
-            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    trackEvent('email_click', 'contact', this.href);
-                });
-            });
-
-            // Track skill section engagement
-            document.querySelectorAll('.skill-category').forEach(category => {
-                category.addEventListener('click', function() {
-                    const skillName = this.querySelector('h3').textContent;
-                    trackEvent('skill_interest', 'engagement', skillName);
-                });
-            });
-
-            // Track scroll depth
-            let maxScroll = 0;
-            window.addEventListener('scroll', function() {
-                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-                if (scrollPercent > maxScroll) {
-                    maxScroll = scrollPercent;
-                    if (maxScroll >= 50 && maxScroll < 75) {
-                        trackEvent('scroll_50', 'engagement', '50% page viewed');
-                    } else if (maxScroll >= 100) {
-                        trackEvent('scroll_100', 'engagement', 'Full page viewed');
-                    }
-                }
-            });
-        });
-
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
