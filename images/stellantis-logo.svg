@@ -1,0 +1,6 @@
+<svg width="120" height="60" viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="60" rx="6" fill="#1F4B99"/>
+  <text x="60" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">STELLANTIS</text>
+  <circle cx="25" cy="45" r="2" fill="white"/>
+  <circle cx="95" cy="45" r="2" fill="white"/>
+</svg>
