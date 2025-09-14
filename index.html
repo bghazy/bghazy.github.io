@@ -10,6 +10,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/translations.js"></script>
     
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -20,12 +21,12 @@
     <!-- End Google Tag Manager -->
     
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_MEASUREMENT_ID_HERE"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-59JXX36JM2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-YOUR_MEASUREMENT_ID_HERE', {
+      gtag('config', 'G-59JXX36JM2', {
         'anonymize_ip': true,
         'allow_google_signals': false
       });
@@ -327,6 +328,42 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
         }
+
+        /* Certifications Strip */
+        .certifications-strip {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.5s forwards;
+        }
+
+        .cert-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-badge:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-badge img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-badge span {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
         
         /* Unique Sections */
         .section {
@@ -420,12 +457,24 @@
             50% { transform: translateX(10px); opacity: 0.7; }
         }
         
-        /* Experience Cards */
-        .experience-grid {
+        /* Case Studies Grid - 2x3 layout */
+        .case-studies-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 3rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .case-studies-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         .experience-card {
@@ -472,7 +521,92 @@
             margin: 1rem 0;
             border-radius: 0 10px 10px 0;
         }
-        
+
+        /* Recommendations Section */
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .recommendations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .recommendation-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
+        }
+
+        .recommendation-screenshot {
+            width: 100%;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .recommendation-screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .role {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .snippet {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .linkedin-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .linkedin-link:hover {
+            text-decoration: underline;
+        }
+
+        .translation {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .arabic {
+            font-size: 0.85rem;
+            color: var(--gray);
+            font-style: italic;
+            direction: rtl;
+            text-align: right;
+        }
+
         /* Skills Matrix */
         .skills-matrix {
             display: grid;
@@ -507,46 +641,6 @@
             border-left: 3px solid var(--primary);
         }
         
-        /* Terminal Section */
-        .terminal {
-            background: var(--darker);
-            border: 1px solid var(--primary);
-            border-radius: 10px;
-            margin: 3rem 0;
-            overflow: hidden;
-        }
-        
-        .terminal-header {
-            background: var(--gray);
-            padding: 0.5rem 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .terminal-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-        
-        .dot-red { background: var(--secondary); }
-        .dot-yellow { background: #ffd93d; }
-        .dot-green { background: var(--primary); }
-        
-        .terminal-content {
-            font-family: 'JetBrains Mono', monospace;
-            padding: 2rem;
-            color: var(--primary);
-        }
-        
-        .terminal-line {
-            margin: 0.5rem 0;
-        }
-        
-        .prompt {
-            color: var(--accent);
-        }
         
         /* Contact Section */
         .contact-section {
@@ -580,6 +674,68 @@
             font-size: 2rem;
             color: var(--primary);
             margin-bottom: 1rem;
+        }
+
+        /* Contact Buttons */
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+        .contact-btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .contact-btn-action.whatsapp {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+        }
+
+        .contact-btn-action.whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .contact-btn-action.email {
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+
+        .contact-btn-action.email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+        }
+
+        .contact-btn-action.contact-form {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .contact-btn-action.contact-form:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
         }
         
         /* Animations */
@@ -711,6 +867,98 @@
             margin-top: 0.5rem;
         }
 
+        /* Language Switcher */
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .language-selector {
+            display: flex;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 0.2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lang-option {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--primary);
+            background: transparent;
+            border: none;
+        }
+        
+        .lang-option:hover {
+            background: rgba(99, 102, 241, 0.2);
+        }
+        
+        .lang-option.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* RTL Support */
+        [dir="rtl"] {
+            text-align: right;
+        }
+        
+        [dir="rtl"] .nav-links {
+            flex-direction: row-reverse;
+        }
+        
+        [dir="rtl"] .hero-content {
+            text-align: right;
+        }
+        
+        [dir="rtl"] .hero-title,
+        [dir="rtl"] .hero-description {
+            text-align: right;
+        }
+        
+        [dir="rtl"] .certifications-strip {
+            flex-direction: row-reverse;
+        }
+        
+        [dir="rtl"] .recommendations-grid,
+        [dir="rtl"] .case-studies-grid,
+        [dir="rtl"] .skills-matrix {
+            direction: rtl;
+        }
+        
+        [dir="rtl"] .recommendation-card,
+        [dir="rtl"] .experience-card,
+        [dir="rtl"] .skill-category {
+            text-align: right;
+        }
+        
+        [dir="rtl"] .impact-metric {
+            border-left: none;
+            border-right: 4px solid var(--primary);
+        }
+        
+        [dir="rtl"] .skill-list li {
+            border-left: none;
+            border-right: 3px solid var(--primary);
+        }
+        
+        /* Mobile RTL adjustments */
+        @media (max-width: 768px) {
+            [dir="rtl"] .nav-links {
+                flex-direction: column;
+                text-align: right;
+            }
+            
+            [dir="rtl"] .language-switcher {
+                justify-content: flex-end;
+            }
+        }
+        
         /* Cookie Consent Banner */
         .cookie-banner {
             position: fixed;
@@ -804,171 +1052,188 @@
         <nav>
             <div class="logo">GHAZI</div>
             <ul class="nav-links">
-                <li><a href="#pipeline">Pipeline</a></li>
-                <li><a href="#experience">Wins</a></li>
-                <li><a href="#skills">Stack</a></li>
-                <li><a href="#terminal">Code</a></li>
+                <li><a href="#case-studies" data-translate="nav_case_studies">Case Studies</a></li>
+                <li><a href="#recommendations" data-translate="nav_testimonials">Testimonials</a></li>
+                <li><a href="#skills" data-translate="nav_skills">Skills</a></li>
+                <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
             </ul>
-            <a href="contact.html" class="contact-btn">HIRE ME</a>
+            <div class="language-switcher">
+                <div class="language-selector">
+                    <button class="lang-option active" data-lang="en" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+                    <button class="lang-option" data-lang="ar" onclick="setLanguage('ar')">AR</button>
+                    <button class="lang-option" data-lang="es" onclick="setLanguage('es')">ES</button>
+                </div>
+            </div>
+            <a href="contact.html" class="contact-btn" data-translate="nav_hire_me">HIRE ME</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero subtle-gradient">
         <div class="hero-content">
-            <div class="hero-subtitle">On-Premise and Multi-Cloud Architecture • Data Pipelines • Software Craftsmanship</div>
-            <h1 class="hero-title">Data Infrastructure Transformation Expert</h1>
-            <p class="hero-description">
+            <h1 class="hero-title" data-translate="hero_title">Helping companies cut data costs and scale infrastructure</h1>
+            <p class="hero-description" data-translate="hero_description">
                 Designing, creating and deploying custom data solutions across all cloud platforms (AWS, Azure, GCP) and on-premise infrastructures. Full-stack architect building tailored systems from concept to production, serving clients globally.
             </p>
             
-            <div class="hero-stats">
-                <div class="stat-box">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projects Delivered</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">70%</span>
-                    <span class="stat-label">Faster Deployments</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">40%</span>
-                    <span class="stat-label">Cost Reduction</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">99.9%</span>
-                    <span class="stat-label">System Uptime</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">4</span>
-                    <span class="stat-label">Languages</span>
-                </div>
+            <!-- Certifications Strip -->
+            <div class="certifications-strip">
+                <a href="https://www.credly.com/badges/8df7ebb8-dedd-4845-b3c5-aee24ac37ce0" target="_blank" class="cert-badge">
+                    <img src="images/aws-certified-solutions-architect.png" alt="AWS Certified Solutions Architect" />
+                    <span data-translate="cert_aws">AWS Certified Solutions Architect - Associate</span>
+                </a>
+                <a href="https://bcert.me/bc/html/show-badge.html?b=xefowur" target="_blank" class="cert-badge">
+                    <img src="images/hortonworks-hdp-certified.png" alt="Hortonworks Certified" />
+                    <span data-translate="cert_hortonworks">HDP Certified Developer</span>
+                </a>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/7GWUPPK4SRM9" target="_blank" class="cert-badge">
+                    <img src="images/epfl-functional-programming.png" alt="EPFL Certified" />
+                    <span data-translate="cert_epfl">EPFL Functional Programming</span>
+                </a>
             </div>
             
             <div class="hero-cta">
-                <a href="contact.html" class="cta-primary">TRANSFORM YOUR DATA →</a>
+                <a href="contact.html" class="cta-primary" data-translate="hero_cta">TRANSFORM YOUR DATA →</a>
             </div>
         </div>
     </section>
 
-    <!-- Pipeline Demo -->
-    <section id="pipeline" class="section">
-        <h2 class="section-title">Data Architecture Approach</h2>
-        <div class="pipeline-demo">
-            <div class="pipeline-flow">
-                <div class="pipeline-node">
-                    <i class="fas fa-database"></i>
-                    <h3>Data Sources</h3>
-                    <p>Various formats</p>
-                </div>
-                <div class="pipeline-arrow">→</div>
-                <div class="pipeline-node">
-                    <i class="fas fa-filter"></i>
-                    <h3>Processing</h3>
-                    <p>Clean & Transform</p>
-                </div>
-                <div class="pipeline-arrow">→</div>
-                <div class="pipeline-node">
-                    <i class="fas fa-server"></i>
-                    <h3>Storage</h3>
-                    <p>Optimized structure</p>
-                </div>
-                <div class="pipeline-arrow">→</div>
-                <div class="pipeline-node">
-                    <i class="fas fa-chart-bar"></i>
-                    <h3>Analytics</h3>
-                    <p>Business value</p>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 2rem; color: var(--gray-light);">
-                Scalable, reliable data architecture tailored to your business needs - serving clients across all continents and time zones.
-            </p>
-        </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="section">
-        <h2 class="section-title">Global Enterprise Experience</h2>
-        <div class="experience-grid">
+    <!-- Case Studies -->
+    <section id="case-studies" class="section">
+        <h2 class="section-title" data-translate="section_case_studies">Case Studies</h2>
+        <div class="case-studies-grid">
             <div class="experience-card">
-                <div class="company-name">EDF</div>
-                <h3>Energy & Utilities</h3>
+                <div class="company-name" data-translate="company_edf">EDF</div>
+                <h3 data-translate="industry_energy">Energy & Utilities</h3>
                 <div class="impact-metric">
-                    <strong>70% Deployment Time Reduction</strong><br>
+                    <strong data-translate="metric_edf">70% Deployment Time Reduction</strong><br>
                     <span class="tech-stack">Apache Spark • Airflow • Docker • Kubernetes • Terraform • Python • AWS</span>
                 </div>
-                <p>Designed and implemented 15+ production data pipelines processing 200GB daily with 99.9% uptime. 
+                <p data-translate="description_edf">Designed and implemented 15+ production data pipelines processing 200GB daily with 99.9% uptime. 
                 Cut infrastructure costs by 40% through resource optimization and built self-service data platform enabling teams worldwide.</p>
             </div>
             
             <div class="experience-card">
-                <div class="company-name">Groupe SNCF</div>
-                <h3>Transportation & Logistics</h3>
+                <div class="company-name" data-translate="company_sncf">Groupe SNCF</div>
+                <h3 data-translate="industry_transport">Transportation & Logistics</h3>
                 <div class="impact-metric">
-                    <strong>60% API Response Time Improvement • 1M+ Daily Requests</strong><br>
+                    <strong data-translate="metric_sncf">60% API Response Time Improvement • 1M+ Daily Requests</strong><br>
                     <span class="tech-stack">Scala • AWS MSK • Lambda • Terraform • DDD • Hexagonal Architecture</span>
                 </div>
-                <p>Architected microservices processing 500GB daily rail operations data. Implemented event-driven architecture 
+                <p data-translate="description_sncf">Architected microservices processing 500GB daily rail operations data. Implemented event-driven architecture 
                 reducing system coupling by 80%. Saved €200K annually through AWS optimization - scalable globally.</p>
             </div>
             
             <div class="experience-card">
-                <div class="company-name">Stellantis</div>
-                <h3>Automotive & Manufacturing</h3>
+                <div class="company-name" data-translate="company_stellantis">Stellantis</div>
+                <h3 data-translate="industry_automotive">Automotive & Manufacturing</h3>
                 <div class="impact-metric">
-                    <strong>2TB Daily Processing • 10M+ Events/Hour</strong><br>
+                    <strong data-translate="metric_stellantis">2TB Daily Processing • 10M+ Events/Hour</strong><br>
                     <span class="tech-stack">Spark Streaming • AWS EMR • S3 • Kinesis • Terraform • Python • Scala</span>
                 </div>
-                <p>Built real-time analytics platform for 500K+ connected vehicles across multiple continents. Reduced processing costs by 45% 
+                <p data-translate="description_stellantis">Built real-time analytics platform for 500K+ connected vehicles across multiple continents. Reduced processing costs by 45% 
                 and implemented predictive maintenance with 87% accuracy, improving vehicle uptime by 23% globally.</p>
             </div>
 
             <div class="experience-card">
-                <div class="company-name">Groupe SeLoger</div>
-                <h3>Real Estate & PropTech</h3>
+                <div class="company-name" data-translate="company_seloger">Groupe SeLoger</div>
+                <h3 data-translate="industry_realestate">Real Estate & PropTech</h3>
                 <div class="impact-metric">
-                    <strong>50M+ Real Estate Listings • 10M+ Monthly Users</strong><br>
+                    <strong data-translate="metric_seloger">50M+ Real Estate Listings • 10M+ Monthly Users</strong><br>
                     <span class="tech-stack">Apache Spark • AWS EMR • S3 • Lambda • CloudFormation • Spring Boot • PostgreSQL</span>
                 </div>
-                <p>Built data lake processing 50M+ real estate listings with 99.9% reliability. Reduced batch processing from 8 hours to 45 minutes. 
+                <p data-translate="description_seloger">Built data lake processing 50M+ real estate listings with 99.9% reliability. Reduced batch processing from 8 hours to 45 minutes. 
                 Implemented ML pipeline for property valuation improving accuracy by 35% - applicable to any market.</p>
             </div>
 
             <div class="experience-card">
-                <div class="company-name">Le Groupe La Poste</div>
-                <h3>Postal & Logistics Services</h3>
+                <div class="company-name" data-translate="company_laposte">Le Groupe La Poste</div>
+                <h3 data-translate="industry_postal">Postal & Logistics Services</h3>
                 <div class="impact-metric">
-                    <strong>300M+ Daily Package Events • 10x Performance Improvement</strong><br>
+                    <strong data-translate="metric_laposte">300M+ Daily Package Events • 10x Performance Improvement</strong><br>
                     <span class="tech-stack">Apache Kafka • Spark • Scala • Matryoshka • HDFS • Cassandra</span>
                 </div>
-                <p>Developed generic data ingestion platform with privacy-by-design ensuring global compliance (GDPR, local regulations). 
+                <p data-translate="description_laposte">Developed generic data ingestion platform with privacy-by-design ensuring global compliance (GDPR, local regulations). 
                 Reduced storage costs by 60% and achieved 10x improvement in ingestion speed.</p>
             </div>
 
-            <div class="experience-card">
-                <div class="company-name">Orange</div>
-                <h3>Telecommunications</h3>
-                <div class="impact-metric">
-                    <strong>Telecom Network Data Processing</strong><br>
-                    <span class="tech-stack">Big Data • Network Analytics • Performance Monitoring</span>
-                </div>
-                <p>Built comprehensive network performance monitoring and analytics systems for major telecommunications infrastructure. 
-                Experience applicable to any telecom provider globally, with focus on real-time processing and optimization.</p>
+        <div class="experience-card">
+            <div class="company-name" data-translate="company_bein">BeIN Sports</div>
+            <h3 data-translate="industry_media">Media & Entertainment (Streaming)</h3>
+            <div class="impact-metric">
+                <strong data-translate="metric_bein">Live Streaming & Data Pipeline Optimization</strong><br>
+                <span class="tech-stack">Big Data • Real-Time Analytics • Streaming Performance</span>
             </div>
+            <p data-translate="description_bein">Contributed to scaling BeIN Sports live streaming platform to support millions of concurrent viewers across the Europe/MENA region. 
+            Optimized data pipelines and monitoring systems to ensure real-time performance and reliability during high-traffic broadcasts.</p>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section id="recommendations" class="section">
+        <h2 class="section-title" data-translate="section_recommendations">What clients & colleagues say</h2>
+        <div class="recommendations-grid">
+            <!-- First row -->
+            <div class="recommendation-card">
+                <div class="recommendation-screenshot">
+                    <img src="images/arnauld-recommendation.png" alt="Arnauld LinkedIn Recommendation Screenshot" />
+                </div>
+                <div class="role" data-translate="rec_role_head_data">Head of Data</div>
+                <div class="company">Arnauld</div>
+                <p class="snippet" data-translate="rec_arnauld">"Very good freelance. He build the whole Data AWS architecture, Terraform included 👌"</p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:6948554977384542208?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6948554977384542208%2C6948571302945296385%29" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+            </div>
+            
+            <div class="recommendation-card">
+                <div class="recommendation-screenshot">
+                    <img src="images/amine-recommendation.png" alt="Amine LinkedIn Recommendation Screenshot" />
+                </div>
+                <div class="role" data-translate="rec_role_senior_architect">Senior Architect</div>
+                <div class="company">Amine</div>
+                <p class="snippet" data-translate="rec_amine">"He is simply one of the most talented engineers I've ever worked with. I would highly recommend him."</p>
+                <a href="https://www.linkedin.com/in/ghazybenahmed/details/recommendations/" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+            </div>
+            
+            <!-- Second row -->
+            <div class="recommendation-card">
+                <div class="recommendation-screenshot">
+                    <img src="images/antoine-recommendation.png" alt="Antoine LinkedIn Recommendation Screenshot" />
+                </div>
+                <div class="role" data-translate="rec_role_senior_engineer">Senior Engineer</div>
+                <div class="company">Antoine</div>
+                <p class="snippet" data-translate="rec_antoine">"Ghazi is a true senior data engineer with strong knowledge to resolve any big data problem. It's a pleasure to work with him, and I wouldn't hesitate to do so again. I deeply recommend him."</p>
+                <a href="https://www.linkedin.com/in/ghazybenahmed/details/recommendations/" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+            </div>
+            
+            <div class="recommendation-card">
+                <div class="recommendation-screenshot">
+                    <img src="images/maryline-recommendation.png" alt="Marilyne LinkedIn Recommendation Screenshot" />
+                </div>
+                <div class="role" data-translate="rec_role_sales">Sales Professional</div>
+                <div class="company">Marilyne</div>
+                <p class="snippet" data-translate="rec_maryline">"I highly recommend him, Respects deadlines and budgets, offering expertise for the successful delivery of your projects."</p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7148248770978226176?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7148248770978226176%2C7149335575282544640%29" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+            </div>
+        </div>
+        
+        <!-- Contact CTA after Recommendations -->
+        <div class="recommendations-contact-cta">
+            <a href="contact.html" class="cta-primary">
+                <span data-translate="recommendations_cta">Get In Touch →</span>
+            </a>
         </div>
     </section>
 
     <!-- Skills Matrix -->
     <section id="skills" class="section">
-        <h2 class="section-title">Technical Expertise</h2>
+        <h2 class="section-title" data-translate="section_skills">Technical Expertise</h2>
         <div class="skills-matrix">
             <div class="skill-category">
                 <div class="skill-icon">☁️</div>
-                <h3>Multi-Cloud & Infrastructure</h3>
+                <h3 data-translate="skill_multicloud">Multi-Cloud & Infrastructure</h3>
                 <ul class="skill-list">
                     <li><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud Platform</li>
                     <li><strong>On-Premise:</strong> VMware, Hyper-V, Bare metal, Hybrid architectures</li>
@@ -979,7 +1244,7 @@
             
             <div class="skill-category">
                 <div class="skill-icon">⚡</div>
-                <h3>Big Data & Analytics</h3>
+                <h3 data-translate="skill_bigdata">Big Data & Analytics</h3>
                 <ul class="skill-list">
                     <li><strong>Processing:</strong> Apache Spark, Kafka, Flink, Hadoop</li>
                     <li><strong>Storage:</strong> HDFS, Delta Lake, Parquet, Avro</li>
@@ -989,7 +1254,7 @@
             
             <div class="skill-category">
                 <div class="skill-icon">💻</div>
-                <h3>Programming & Databases</h3>
+                <h3 data-translate="skill_programming">Programming & Databases</h3>
                 <ul class="skill-list">
                     <li><strong>Languages:</strong> Scala, Python, Java, JavaScript, SQL</li>
                     <li><strong>Databases:</strong> PostgreSQL, MongoDB, Redis, Elasticsearch</li>
@@ -999,7 +1264,7 @@
             
             <div class="skill-category">
                 <div class="skill-icon">🏗️</div>
-                <h3>Solution Architecture & Design</h3>
+                <h3 data-translate="skill_architecture">Solution Architecture & Design</h3>
                 <ul class="skill-list">
                     <li><strong>Custom Solutions:</strong> End-to-end system design, Tailored architectures</li>
                     <li><strong>Design Patterns:</strong> Domain Driven Design, Hexagonal Architecture</li>
@@ -1010,7 +1275,7 @@
             
             <div class="skill-category">
                 <div class="skill-icon">🚀</div>
-                <h3>DevOps & Infrastructure</h3>
+                <h3 data-translate="skill_devops">DevOps & Infrastructure</h3>
                 <ul class="skill-list">
                     <li><strong>Containers:</strong> Docker, Kubernetes, Container Orchestration</li>
                     <li><strong>Infrastructure:</strong> Terraform, Ansible, CloudFormation</li>
@@ -1022,7 +1287,7 @@
             
             <div class="skill-category">
                 <div class="skill-icon">🔧</div>
-                <h3>Data Engineering Tools</h3>
+                <h3 data-translate="skill_datatools">Data Engineering Tools</h3>
                 <ul class="skill-list">
                     <li><strong>Orchestration:</strong> Apache Airflow, Prefect, Dagster</li>
                     <li><strong>Quality:</strong> Data lineage, Testing, Validation frameworks</li>
@@ -1032,7 +1297,7 @@
             
             <div class="skill-category">
                 <div class="skill-icon">📊</div>
-                <h3>Machine Learning & AI</h3>
+                <h3 data-translate="skill_ml">Machine Learning & AI</h3>
                 <ul class="skill-list">
                     <li><strong>ML Pipeline:</strong> MLflow, Kubeflow, Feature Stores</li>
                     <li><strong>Libraries:</strong> Scikit-learn, TensorFlow, PyTorch</li>
@@ -1042,7 +1307,7 @@
             
             <div class="skill-category">
                 <div class="skill-icon">🤝</div>
-                <h3>Leadership & Communication</h3>
+                <h3 data-translate="skill_leadership">Leadership & Communication</h3>
                 <ul class="skill-list">
                     <li><strong>Languages:</strong> English, French, Arabic, Spanish</li>
                     <li><strong>Leadership:</strong> Team management, Mentoring, Code review</li>
@@ -1054,93 +1319,35 @@
         </div>
     </section>
 
-    <!-- Terminal Section -->
-    <section id="terminal" class="section">
-        <h2 class="section-title">In The Terminal</h2>
-        <div class="terminal">
-            <div class="terminal-header">
-                <div class="terminal-dot dot-red"></div>
-                <div class="terminal-dot dot-yellow"></div>
-                <div class="terminal-dot dot-green"></div>
-                <span>ghazi@dataeng-wizard ~ %</span>
-            </div>
-            <div class="terminal-content">
-                <div class="terminal-line">
-                    <span class="prompt">$</span> spark-submit --master yarn --deploy-mode cluster
-                </div>
-                <div class="terminal-line">
-                    <span class="prompt">$</span> aws emr create-cluster --name "RealTimeProcessing"
-                </div>
-                <div class="terminal-line">
-                    <span class="prompt">$</span> terraform apply -auto-approve
-                </div>
-                <div class="terminal-line">
-                    <span class="prompt">$</span> kubectl apply -f kafka-cluster.yaml
-                </div>
-                <div class="terminal-line">
-                    <span class="prompt">$</span> echo "Data transformation complete ✅"
-                </div>
-                <div class="terminal-line" style="color: var(--primary);">
-                    Data transformation complete ✅
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact -->
-    <section class="section">
+    <section id="contact" class="section">
         <div class="contact-section">
-            <h2 class="section-title">Ready to Transform?</h2>
-            <p style="font-size: 1.3rem; margin-bottom: 2rem;">
-                Your data infrastructure doesn't have to be a nightmare.<br>
-                Let's turn it into your competitive advantage.
-            </p>
+            <h2 class="section-title" data-translate="section_contact">Available for 15-min discovery calls</h2>
             
-            <div class="contact-methods">
-                <div class="contact-method">
-                    <div class="contact-icon">🌍</div>
-                    <h3>Global Remote</h3>
-                    <p>Available worldwide</p>
-                </div>
-                <div class="contact-method">
-                    <div class="contact-icon">🗣️</div>
-                    <h3>Multilingual</h3>
-                    <p>EN • FR • AR • ES</p>
-                </div>
-                <div class="contact-method">
-                    <div class="contact-icon">⚡</div>
-                    <h3>Fast Response</h3>
-                    <p>24-48h guaranteed</p>
-                </div>
-                <div class="contact-method">
-                    <div class="contact-icon">🎯</div>
-                    <h3>Proven Results</h3>
-                    <p>Enterprise-grade solutions</p>
-                </div>
+            <div class="contact-buttons">
+                <a href="contact.html" class="contact-btn-action contact-form">
+                    <span>📋</span> <span data-translate="contact_form_btn">Contact Form</span>
+                </a>
             </div>
-            
-            <a href="contact.html" class="cta-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
-                START MY TRANSFORMATION →
-            </a>
         </div>
     </section>
 
     <!-- Cookie Consent Banner -->
     <div id="cookieBanner" class="cookie-banner">
         <div class="cookie-content">
-            <div class="cookie-text">
+            <div class="cookie-text" data-translate="cookie_text">
                 We use cookies to analyze website traffic and optimize your experience. By accepting, you consent to our use of cookies for analytics and marketing purposes.
             </div>
             <div class="cookie-buttons">
-                <button class="cookie-btn accept" onclick="acceptCookies()">Accept All</button>
-                <button class="cookie-btn decline" onclick="declineCookies()">Necessary Only</button>
+                <button class="cookie-btn accept" onclick="acceptCookies()" data-translate="cookie_accept">Accept All</button>
+                <button class="cookie-btn decline" onclick="declineCookies()" data-translate="cookie_decline">Necessary Only</button>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Ghazi • Data Architecture Wizard • Transforming enterprises worldwide ⚡</p>
+        <p>&copy; 2025 Ghazi • <span data-translate="footer_text">Data Architecture Wizard • Transforming enterprises worldwide ⚡</span></p>
     </footer>
 
     <script>
@@ -1281,6 +1488,9 @@
 
         // Track Key Actions
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize language
+            initializeLanguage();
+            
             // Show cookie banner
             showCookieBanner();
 
