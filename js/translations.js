@@ -117,6 +117,7 @@ const translations = {
         ownership_feature_1: "Program management & stakeholder alignment",
         ownership_feature_2: "CI/CD for data pipelines",
         ownership_feature_3: "Proactive maintenance & support",
+        ownership_feature_4: "Roadmap development for future innovation",
 
         // Case Studies Content
         slide_challenge: "📊 Challenge",
@@ -386,6 +387,7 @@ const translations = {
         ownership_feature_1: "Gestion de programme et alignement des parties prenantes",
         ownership_feature_2: "CI/CD pour pipelines de données",
         ownership_feature_3: "Maintenance proactive et support",
+        ownership_feature_4: "Développement de feuille de route pour l'innovation future",
 
         // Case Studies Content
         slide_challenge: "📊 Défi",
@@ -653,6 +655,10 @@ const translations = {
         capability_ownership: "ملكية البيانات والحوكمة",
         capability_ownership_desc: "ضمان جودة البيانات والامتثال والأمان من خلال أطر الحوكمة الشاملة وأنظمة إدارة البيانات الرئيسية.",
         capability_ownership_features: "فهرسة البيانات • نسب البيانات • ضوابط الوصول القائمة على الأدوار",
+        ownership_feature_1: "إدارة البرنامج وتنسيق أصحاب المصلحة",
+        ownership_feature_2: "CI/CD لخطوط أنابيب البيانات",
+        ownership_feature_3: "الصيانة الاستباقية والدعم",
+        ownership_feature_4: "تطوير خارطة الطريق للابتكار المستقبلي",
 
         capability_cost: "تحسين التكلفة والأداء",
         capability_cost_desc: "تحقيق وفورات كبيرة في التكاليف من خلال الهندسة المعمارية المحسنة وتحسين استخدام الموارد السحابية واستراتيجيات التسعير الذكية.",
@@ -822,7 +828,7 @@ const translations = {
         approach_compliance: "الامتثال المؤسسي",
         approach_compliance_desc: "أمان وحوكمة وامتثال تنظيمي مُدمج من اليوم الأول. بياناتك تبقى آمنة وجاهزة للتدقيق.",
         approach_cost: "تحسين التكلفة",
-        approach_cost_desc: "أحسّن إنفاقك على البنية التحتية مع تعظيم الأداء. يرى العملاء عادة تخفيضات تكلفة 40-60%.",
+        approach_cost_desc: "أحسّن إنفاقك على البنية التحتية مع تعظيم الأداء. يرى العملاء عادة تخفيضات تكلفة 15-25%.",
 
         // Case Studies Content - المحتوى الأصلي المفقود
         slide_challenge: "📊 التحدي",
@@ -869,6 +875,15 @@ const translations = {
         enablement_feature_2: "فهارس البيانات الموحدة والحوكمة",
         enablement_feature_3: "خطوط أنابيب MLOps للذكاء الاصطناعي/التعلم الآلي",
         enablement_feature_4: "إدارة التغيير والتدريب",
+
+        // Final CTA
+        final_cta_title: "تحويل البنية التحتية للبيانات المؤسسية",
+        final_cta_subtitle: "شارك مع الخبرة المُثبتة الموثوقة من قِبل المؤسسات العالمية. حقق تقليل كبير في التكاليف وتحسينات أداء مهمة من خلال حلول هندسة البيانات الاستراتيجية.",
+        cta_benefit_1: "استشارة استراتيجية مجانية",
+        cta_benefit_2: "خارطة طريق هندسية مخصصة",
+        cta_benefit_3: "إطار امتثال مؤسسي",
+        cta_button_text: "جدولة استشارة استراتيجية",
+        cta_guarantee: "✅ لا يوجد التزام مطلوب • ✅ أمان مؤسسي عالي الجودة • ✅ نتائج ROI مُثبتة",
 
         // Cookie Banner
         cookie_text: "نستخدم الكوكيز لتحليل حركة مرور الموقع وتحسين تجربتك. بالقبول، توافق على استخدامنا للكوكيز لأغراض التحليل والتسويق.",
@@ -991,6 +1006,10 @@ const translations = {
         capability_ownership: "Propiedad de Datos y Gobernanza",
         capability_ownership_desc: "Asegurar la calidad, cumplimiento y seguridad de los datos a través de marcos de gobernanza integral y sistemas de gestión de datos maestros.",
         capability_ownership_features: "Catálogo de datos • Linaje de datos • Controles de acceso basados en roles",
+        ownership_feature_1: "Gestión de programa y alineación de stakeholders",
+        ownership_feature_2: "CI/CD para pipelines de datos",
+        ownership_feature_3: "Mantenimiento proactivo y soporte",
+        ownership_feature_4: "Desarrollo de hoja de ruta para innovación futura",
 
         capability_cost: "Optimización de Costos y Rendimiento",
         capability_cost_desc: "Lograr ahorros significativos en costos a través de arquitectura optimizada, utilización de recursos en la nube mejorada y estrategias inteligentes de precios.",
@@ -1124,7 +1143,7 @@ const translations = {
         approach_compliance: "Cumplimiento Empresarial",
         approach_compliance_desc: "Seguridad, gobernanza y cumplimiento regulatorio integrados desde el día uno. Tus datos permanecen seguros y listos para auditoría.",
         approach_cost: "Optimización de Costos",
-        approach_cost_desc: "Optimizo tu gasto en infraestructura mientras maximizo el rendimiento. Los clientes típicamente ven reducciones de costo del 40-60%.",
+        approach_cost_desc: "Optimizo tu gasto en infraestructura mientras maximizo el rendimiento. Los clientes típicamente ven reducciones de costo del 15-25%.",
 
         // Case Studies Content - Contenido Original Faltante
         slide_challenge: "📊 Desafío",
@@ -1203,7 +1222,16 @@ const translations = {
         
         // Footer
         footer_text: "Arquitecto de Soluciones de Datos Empresariales • Entregando infraestructura escalable mundialmente",
-        
+
+        // Final CTA
+        final_cta_title: "Transformación de Infraestructura de Datos Empresariales",
+        final_cta_subtitle: "Asóciate con expertise probado de confianza para empresas globales. Logra reducción sustancial de costos y mejoras significativas de rendimiento a través de soluciones estratégicas de arquitectura de datos.",
+        cta_benefit_1: "Consulta estratégica gratuita",
+        cta_benefit_2: "Hoja de ruta de arquitectura personalizada",
+        cta_benefit_3: "Marco de cumplimiento empresarial",
+        cta_button_text: "PROGRAMAR CONSULTA ESTRATÉGICA",
+        cta_guarantee: "✅ Sin compromiso requerido • ✅ Seguridad de grado empresarial • ✅ Resultados ROI comprobados",
+
         // Cookie Banner
         cookie_text: "Usamos cookies para analizar el tráfico del sitio web y optimizar tu experiencia. Al aceptar, consientes nuestro uso de cookies para propósitos de análisis y marketing.",
         cookie_accept: "Aceptar Todo",
