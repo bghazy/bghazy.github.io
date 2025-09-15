@@ -11,7 +11,7 @@ const translations = {
         // Hero Section
         hero_title: "Data Engineering & Software Architecture Expert",
         hero_subtitle: "Data Engineering • Software Development • DevOps • Cloud Architecture",
-        hero_description: "Data engineer & software architect delivering comprehensive solutions across the technology stack. Expertise in data engineering, software development, DevOps automation, and cloud architecture. Proven track record with Fortune 500 companies including EDF, SNCF, Stellantis, and BeIN Sports.",
+        hero_description: "Data engineer & software architect delivering comprehensive solutions across the technology stack. Expertise in data engineering, software development, DevOps automation, and cloud architecture. Proven track record with major enterprises including EDF, SNCF, Stellantis, and BeIN Sports.",
         hero_cta: "SCHEDULE STRATEGIC CONSULTATION →",
 
         // Certifications
@@ -272,7 +272,7 @@ const translations = {
         // Hero Section
         hero_title: "Expert en Ingénierie Data & Architecture Logicielle",
         hero_subtitle: "Ingénierie Data • Développement Logiciel • DevOps • Architecture Cloud",
-        hero_description: "Ingénieur data & architecte logiciel livrant des solutions complètes sur toute la pile technologique. Expertise en ingénierie data, développement logiciel, automatisation DevOps et architecture cloud. Track record prouvé avec les entreprises Fortune 500 incluant EDF, SNCF, Stellantis et BeIN Sports.",
+        hero_description: "Ingénieur data & architecte logiciel livrant des solutions complètes sur toute la pile technologique. Expertise en ingénierie data, développement logiciel, automatisation DevOps et architecture cloud. Track record prouvé avec des entreprises majeures incluant EDF, SNCF, Stellantis et BeIN Sports.",
         hero_cta: "PLANIFIER CONSULTATION STRATÉGIQUE →",
 
         // Certifications
@@ -533,7 +533,7 @@ const translations = {
         // Hero Section
         hero_title: "خبير هندسة البيانات وهندسة البرمجيات",
         hero_subtitle: "هندسة بيانات • تطوير برمجيات • DevOps • هندسة سحابية",
-        hero_description: "مهندس بيانات ومهندس برمجيات يقدم حلول شاملة عبر المكدس التقني. خبرة في هندسة البيانات، تطوير البرمجيات، أتمتة DevOps، وهندسة السحابة. سجل مُثبت مع شركات Fortune 500 مثل EDF، SNCF، Stellantis، وBeIN Sports.",
+        hero_description: "مهندس بيانات ومهندس برمجيات يقدم حلول شاملة عبر المكدس التقني. خبرة في هندسة البيانات، تطوير البرمجيات، أتمتة DevOps، وهندسة السحابة. سجل مُثبت مع شركات كبرى مثل EDF، SNCF، Stellantis، وBeIN Sports.",
         hero_cta: "← جدولة استشارة استراتيجية",
         
         // Certifications
@@ -909,7 +909,7 @@ const translations = {
         // Hero Section
         hero_title: "Arquitecto de Datos y Artesanía de Software",
         hero_subtitle: "Ingeniería de Datos • Desarrollo de Software • DevOps • Arquitectura Cloud",
-        hero_description: "Ingeniero de datos y arquitecto de software entregando soluciones comprehensivas a través del stack tecnológico. Experiencia en ingeniería de datos, desarrollo de software, automatización DevOps y arquitectura cloud. Track record comprobado con empresas Fortune 500 incluyendo EDF, SNCF, Stellantis y BeIN Sports.",
+        hero_description: "Ingeniero de datos y arquitecto de software entregando soluciones comprehensivas a través del stack tecnológico. Experiencia en ingeniería de datos, desarrollo de software, automatización DevOps y arquitectura cloud. Track record comprobado con empresas líderes incluyendo EDF, SNCF, Stellantis y BeIN Sports.",
         hero_cta: "PROGRAMAR CONSULTA ESTRATÉGICA →",
         
         // Certifications
