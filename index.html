@@ -2,17 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Ghazi - Enterprise Data Solutions Architect | Transform Your Data Infrastructure</title>
     <meta name="description" content="Delivering mission-critical data infrastructure for Fortune 500 companies. Specialized in governance, compliance, and ROI-driven solutions across multi-cloud environments.">
     <meta name="keywords" content="Enterprise Data Engineer, Cloud Architecture, AWS Solutions Architect, Big Data, Real-time Processing, Data Governance, Compliance, ROI">
+
+    <!-- Performance hints -->
+    <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width">
+    <link rel="modulepreload" href="js/main.js">
+    <link rel="modulepreload" href="js/case-studies-slider.js">
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://px.ads.linkedin.com">
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
+
+    <!-- Critical CSS inline -->
+    <style>
+        /* Critical above-the-fold CSS */
+        body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+        .hero { min-height: 100vh; display: flex; align-items: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .hero-content { max-width: 1200px; margin: 0 auto; padding: 2rem; text-align: center; color: white; }
+        .hero-title { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; font-weight: 700; }
+        .hero-subtitle { font-size: clamp(1rem, 3vw, 1.5rem); margin-bottom: 1.5rem; opacity: 0.9; }
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        nav { display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: #333; }
+    </style>
+
+    <!-- Async load fonts -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"></noscript>
-    
+
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Defer non-critical FontAwesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/translations.js"></script>
     
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -231,6 +265,53 @@
         </div>
     </section>
 
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+        <h2 class="section-title" data-translate="section_recommendations">What clients & colleagues say</h2>
+        <div class="recommendations-grid">
+            <!-- First row -->
+            <div class="recommendation-card">
+                <div class="recommendation-screenshot">
+                    <img src="images/arnauld-recommendation.png" alt="Arnauld LinkedIn Recommendation Screenshot" loading="lazy" />
+                </div>
+                <div class="role" data-translate="rec_role_head_data">Head of Data</div>
+                <div class="company">Arnauld</div>
+                <p class="snippet" data-translate="rec_arnauld">"Very good freelance. He build the whole Data AWS architecture, Terraform included 👌"</p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:6948554977384542208?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6948554977384542208%2C6948571302945296385%29" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+            </div>
+
+            <div class="recommendation-card">
+                <div class="recommendation-screenshot">
+                    <img src="images/amine-recommendation.png" alt="Amine LinkedIn Recommendation Screenshot" loading="lazy" />
+                </div>
+                <div class="role" data-translate="rec_role_senior_architect">Senior Architect</div>
+                <div class="company">Amine</div>
+                <p class="snippet" data-translate="rec_amine">"He is simply one of the most talented engineers I've ever worked with. I would highly recommend him."</p>
+                <a href="https://www.linkedin.com/in/ghazybenahmed/details/recommendations/" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+            </div>
+
+            <!-- Second row -->
+            <div class="recommendation-card">
+                <div class="recommendation-screenshot">
+                    <img src="images/antoine-recommendation.png" alt="Antoine LinkedIn Recommendation Screenshot" loading="lazy" />
+                </div>
+                <div class="role" data-translate="rec_role_senior_engineer">Senior Engineer</div>
+                <div class="company">Antoine</div>
+                <p class="snippet" data-translate="rec_antoine">"Ghazi is a true senior data engineer with strong knowledge to resolve any big data problem. It's a pleasure to work with him, and I wouldn't hesitate to do so again. I deeply recommend him."</p>
+                <a href="https://www.linkedin.com/in/ghazybenahmed/details/recommendations/" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+            </div>
+
+            <div class="recommendation-card">
+                <div class="recommendation-screenshot">
+                    <img src="images/maryline-recommendation.png" alt="Marilyne LinkedIn Recommendation Screenshot" loading="lazy" />
+                </div>
+                <div class="role" data-translate="rec_role_sales">Sales Professional</div>
+                <div class="company">Marilyne</div>
+                <p class="snippet" data-translate="rec_maryline">"I highly recommend him, Respects deadlines and budgets, offering expertise for the successful delivery of your projects."</p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7148248770978226176?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7148248770978226176%2C7149335575282544640%29" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Case Studies -->
     <section id="case-studies" class="section">
@@ -259,7 +340,7 @@
                         <div class="slide active" data-slide="0">
                             <div class="slide-content company-slide">
                                 <div class="company-header">
-                                    <img src="images/edf-logo.svg" alt="EDF Logo" class="company-logo-large">
+                                    <img src="images/edf-logo.svg" alt="EDF Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
                                         <h2 class="company-name" data-translate="company_edf">EDF</h2>
                                         <h3 class="industry" data-translate="industry_energy">Energy & Utilities</h3>
@@ -346,7 +427,7 @@
                         <div class="slide active" data-slide="0">
                             <div class="slide-content company-slide">
                                 <div class="company-header">
-                                    <img src="images/sncf-logo.svg" alt="SNCF Logo" class="company-logo-large">
+                                    <img src="images/sncf-logo.svg" alt="SNCF Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
                                         <h2 class="company-name" data-translate="company_sncf">Groupe SNCF</h2>
                                         <h3 class="industry" data-translate="industry_transport">Transportation & Logistics</h3>
@@ -430,7 +511,7 @@
                         <div class="slide active" data-slide="0">
                             <div class="slide-content company-slide">
                                 <div class="company-header">
-                                    <img src="images/stellantis-logo.svg" alt="Stellantis Logo" class="company-logo-large">
+                                    <img src="images/stellantis-logo.svg" alt="Stellantis Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
                                         <h2 class="company-name" data-translate="company_stellantis">Stellantis</h2>
                                         <h3 class="industry" data-translate="industry_automotive">Automotive & Manufacturing</h3>
@@ -514,7 +595,7 @@
                         <div class="slide active" data-slide="0">
                             <div class="slide-content company-slide">
                                 <div class="company-header">
-                                    <img src="images/sg-logo.svg" alt="Société Générale Logo" class="company-logo-large">
+                                    <img src="images/sg-logo.svg" alt="Société Générale Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
                                         <h2 class="company-name" data-translate="company_societe_generale">Société Générale</h2>
                                         <h3 class="industry" data-translate="industry_banking">Banking & Financial Services</h3>
@@ -598,7 +679,7 @@
                         <div class="slide active" data-slide="0">
                             <div class="slide-content company-slide">
                                 <div class="company-header">
-                                    <img src="images/laposte-logo.svg" alt="Le Groupe La Poste Logo" class="company-logo-large">
+                                    <img src="images/laposte-logo.svg" alt="Le Groupe La Poste Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
                                         <h2 class="company-name" data-translate="company_laposte">Le Groupe La Poste</h2>
                                         <h3 class="industry" data-translate="industry_logistics">Postal & Logistics Services</h3>
@@ -682,7 +763,7 @@
                         <div class="slide active" data-slide="0">
                             <div class="slide-content company-slide">
                                 <div class="company-header">
-                                    <img src="images/bein-logo.svg" alt="BeIN Sports Logo" class="company-logo-large">
+                                    <img src="images/bein-logo.svg" alt="BeIN Sports Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
                                         <h2 class="company-name" data-translate="company_beinsports">BeIN Sports</h2>
                                         <h3 class="industry" data-translate="industry_media">Media & Entertainment (Streaming)</h3>
@@ -756,75 +837,26 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="section">
-        <h2 class="section-title" data-translate="section_recommendations">What clients & colleagues say</h2>
-        <div class="recommendations-grid">
-            <!-- First row -->
-            <div class="recommendation-card">
-                <div class="recommendation-screenshot">
-                    <img src="images/arnauld-recommendation.png" alt="Arnauld LinkedIn Recommendation Screenshot" />
-                </div>
-                <div class="role" data-translate="rec_role_head_data">Head of Data</div>
-                <div class="company">Arnauld</div>
-                <p class="snippet" data-translate="rec_arnauld">"Very good freelance. He build the whole Data AWS architecture, Terraform included 👌"</p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:6948554977384542208?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6948554977384542208%2C6948571302945296385%29" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
-            </div>
-
-            <div class="recommendation-card">
-                <div class="recommendation-screenshot">
-                    <img src="images/amine-recommendation.png" alt="Amine LinkedIn Recommendation Screenshot" />
-                </div>
-                <div class="role" data-translate="rec_role_senior_architect">Senior Architect</div>
-                <div class="company">Amine</div>
-                <p class="snippet" data-translate="rec_amine">"He is simply one of the most talented engineers I've ever worked with. I would highly recommend him."</p>
-                <a href="https://www.linkedin.com/in/ghazybenahmed/details/recommendations/" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
-            </div>
-
-            <!-- Second row -->
-            <div class="recommendation-card">
-                <div class="recommendation-screenshot">
-                    <img src="images/antoine-recommendation.png" alt="Antoine LinkedIn Recommendation Screenshot" />
-                </div>
-                <div class="role" data-translate="rec_role_senior_engineer">Senior Engineer</div>
-                <div class="company">Antoine</div>
-                <p class="snippet" data-translate="rec_antoine">"Ghazi is a true senior data engineer with strong knowledge to resolve any big data problem. It's a pleasure to work with him, and I wouldn't hesitate to do so again. I deeply recommend him."</p>
-                <a href="https://www.linkedin.com/in/ghazybenahmed/details/recommendations/" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
-            </div>
-
-            <div class="recommendation-card">
-                <div class="recommendation-screenshot">
-                    <img src="images/maryline-recommendation.png" alt="Marilyne LinkedIn Recommendation Screenshot" />
-                </div>
-                <div class="role" data-translate="rec_role_sales">Sales Professional</div>
-                <div class="company">Marilyne</div>
-                <p class="snippet" data-translate="rec_maryline">"I highly recommend him, Respects deadlines and budgets, offering expertise for the successful delivery of your projects."</p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7148248770978226176?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7148248770978226176%2C7149335575282544640%29" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
-            </div>
-        </div>
-    </section>
-
-
     <!-- Final Call to Action -->
     <section class="final-cta section">
         <div class="final-cta-content">
-            <h2 class="final-cta-title">Ready to Transform Your Data Infrastructure?</h2>
+            <h2 class="final-cta-title">Enterprise Data Infrastructure Transformation</h2>
             <p class="final-cta-subtitle">
-                Join Fortune 500 companies who've achieved 30-50% cost savings and 3-5x performance improvements with proven data solutions.
+                Partner with proven expertise trusted by Fortune 500 companies. Achieve 30-50% cost reduction and 3-5x performance improvements through strategic data architecture solutions.
             </p>
 
             <div class="final-cta-benefits">
                 <div class="cta-benefit">
                     <span class="benefit-icon">⚡</span>
-                    <span>30-min free consultation</span>
+                    <span>Complimentary strategic consultation</span>
                 </div>
                 <div class="cta-benefit">
                     <span class="benefit-icon">📈</span>
-                    <span>Custom architecture roadmap</span>
+                    <span>Tailored architecture roadmap</span>
                 </div>
                 <div class="cta-benefit">
                     <span class="benefit-icon">🛡️</span>
-                    <span>Compliance-first approach</span>
+                    <span>Enterprise compliance framework</span>
                 </div>
             </div>
 
@@ -832,10 +864,6 @@
                 <a href="contact.html" class="cta-primary-large">
                     <span>📞</span>
                     SCHEDULE CONSULTATION
-                </a>
-                <a href="mailto:ghazi@example.com" class="cta-secondary-large">
-                    <span>✉️</span>
-                    EMAIL DIRECTLY
                 </a>
             </div>
 
@@ -864,9 +892,52 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Ghazi • <span data-translate="footer_text">Data Architecture Wizard • Transforming enterprises worldwide ⚡</span></p>
+        <p>&copy; 2025 Ghazi • <span data-translate="footer_text">Enterprise Data Solutions Architect • Delivering scalable infrastructure worldwide</span></p>
     </footer>
 
-    <script src="js/main.js"></script>\n    <script src="js/case-studies-slider.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/case-studies-slider.js" defer></script>
+
+    <!-- Performance optimization script -->
+    <script>
+    // Register service worker for caching
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('SW registered with scope: ', registration.scope);
+                }, function(err) {
+                    console.log('SW registration failed: ', err);
+                });
+        });
+    }
+
+    // Defer non-critical animations and features
+    window.addEventListener('load', function() {
+        // Initialize background animation after page load
+        if (typeof initBackgroundAnimation === 'function') {
+            requestAnimationFrame(initBackgroundAnimation);
+        }
+
+        // Lazy load any remaining non-critical resources
+        const lazyElements = document.querySelectorAll('[data-lazy]');
+        if (lazyElements.length > 0 && 'IntersectionObserver' in window) {
+            const lazyObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        element.src = element.dataset.lazy;
+                        element.classList.remove('lazy');
+                        lazyObserver.unobserve(element);
+                    }
+                });
+            });
+            lazyElements.forEach(function(element) {
+                lazyObserver.observe(element);
+            });
+        }
+    });
+    </script>
 </body>
 </html>
