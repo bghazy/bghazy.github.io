@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const caseNavBtns = document.querySelectorAll('.case-nav-btn');
     const caseSliders = document.querySelectorAll('.case-study-slider');
 
-    let currentCase = 'edf';
+    let currentCase = null; // No case selected initially
     let currentSlide = 0;
 
     // Case navigation (company switching)
@@ -21,7 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update sliders
         caseSliders.forEach(slider => slider.classList.remove('active'));
-        document.querySelector(`.case-study-slider[data-case="${caseId}"]`).classList.add('active');
+        const newActiveSlider = document.querySelector(`.case-study-slider[data-case="${caseId}"]`);
+        newActiveSlider.classList.add('active');
+
+        // Ensure new slider starts collapsed
+        if (!newActiveSlider.classList.contains('collapsed')) {
+            newActiveSlider.classList.add('collapsed');
+        }
 
         currentCase = caseId;
         currentSlide = 0;
@@ -126,3 +132,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize slide listeners
     initializeSlideListeners();
 });
+

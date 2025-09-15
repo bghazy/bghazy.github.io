@@ -43,6 +43,39 @@
             .certifications-strip { gap: 0.5rem; }
             .cert-badge { font-size: 0.8rem; padding: 0.5rem; }
         }
+
+        /* Case Study Expand/Collapse */
+        .case-study-slider.collapsed .slide:not(.active) { display: none; }
+        .case-study-slider.collapsed .slide-indicators { display: none; }
+
+        /* Hide all case studies by default - only show when active */
+        .case-study-slider:not(.active) { display: none; }
+
+        /* Show slide controls only when case study is active (allow navigation in collapsed mode) */
+        .case-study-slider .slide-controls { display: none; }
+        .case-study-slider.active .slide-controls { display: flex; }
+
+        .case-study-preview { position: relative; }
+
+        /* Keep icon and title on same line in approach section */
+        .capability-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: nowrap;
+        }
+        .capability-header .capability-icon {
+            flex-shrink: 0;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        .capability-header h3 {
+            margin: 0;
+            flex-grow: 1;
+            line-height: 1.2;
+            min-width: 0; /* Allow text to shrink if needed */
+        }
     </style>
 
     <!-- Async load fonts -->
@@ -77,12 +110,12 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo" data-translate="name_ghazi">GHAZI</div>
+            <div class="logo" data-translate="name_ghazi"></div>
             <ul class="nav-links">
-                <li><a href="#case-studies" data-translate="nav_case_studies">Portfolio</a></li>
-                <li><a href="#testimonials" data-translate="nav_testimonials">Testimonials</a></li>
-                <li><a href="#approach" data-translate="nav_approach">Approach</a></li>
-                <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+                <li><a href="#case-studies" data-translate="nav_case_studies"></a></li>
+                <li><a href="#testimonials" data-translate="nav_testimonials"></a></li>
+                <li><a href="#approach" data-translate="nav_approach"></a></li>
+                <li><a href="#contact" data-translate="nav_contact"></a></li>
             </ul>
             <div class="language-switcher">
                 <div class="language-selector">
@@ -92,37 +125,35 @@
                     <button class="lang-option" data-lang="es" onclick="setLanguage('es')">ES</button>
                 </div>
             </div>
-            <a href="contact.html" class="contact-btn" data-translate="nav_hire_me">SCHEDULE CONVERSATION</a>
+            <a href="contact.html" class="contact-btn" data-translate="nav_hire_me"></a>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero subtle-gradient">
         <div class="hero-content">
-            <h1 class="hero-title" data-translate="hero_title">Enterprise Data Solutions Architect</h1>
-            <p class="hero-subtitle" data-translate="hero_subtitle">Architecting scalable, compliant data platforms for enterprise growth</p>
-            <p class="hero-description" data-translate="hero_description">
-                Delivering mission-critical data infrastructure for Fortune 500 companies. Specialized in governance, compliance, and ROI-driven solutions across multi-cloud and hybrid environments. Proven track record of reducing operational costs while ensuring enterprise-grade security and scalability.
-            </p>
+            <h1 class="hero-title" data-translate="hero_title"></h1>
+            <p class="hero-subtitle" data-translate="hero_subtitle"></p>
+            <p class="hero-description" data-translate="hero_description"></p>
             
             <!-- Certifications Strip -->
             <div class="certifications-strip">
                 <a href="https://www.credly.com/badges/8df7ebb8-dedd-4845-b3c5-aee24ac37ce0" target="_blank" class="cert-badge">
                     <img src="images/aws-certified-solutions-architect.png" alt="AWS Certified Solutions Architect" />
-                    <span data-translate="cert_aws">AWS Certified Solutions Architect - Associate</span>
+                    <span data-translate="cert_aws"></span>
                 </a>
                 <a href="https://bcert.me/bc/html/show-badge.html?b=xefowur" target="_blank" class="cert-badge">
                     <img src="images/hortonworks-hdp-certified.png" alt="Hortonworks Certified" />
-                    <span data-translate="cert_hortonworks">HDP Certified Developer</span>
+                    <span data-translate="cert_hortonworks"></span>
                 </a>
                 <a href="https://www.coursera.org/account/accomplishments/specialization/7GWUPPK4SRM9" target="_blank" class="cert-badge">
                     <img src="images/epfl-functional-programming.png" alt="EPFL Certified" />
-                    <span data-translate="cert_epfl">EPFL Functional Programming</span>
+                    <span data-translate="cert_epfl"></span>
                 </a>
             </div>
             
             <div class="hero-cta">
-                <a href="contact.html" class="cta-primary" data-translate="hero_cta">SCHEDULE CONSULTATION →</a>
+                <a href="contact.html" class="cta-primary" data-translate="hero_cta"></a>
             </div>
         </div>
     </section>
@@ -130,7 +161,7 @@
     <!-- Trusted By Section -->
     <section class="trusted-by section">
         <div class="trusted-by-content">
-            <h2 class="trusted-by-title" data-translate="trusted_by_title">Trusted by Industry Leaders</h2>
+            <h2 class="trusted-by-title" data-translate="trusted_by_title"></h2>
             <div class="clients-logos">
                 <div class="client-logo">
                     <img src="images/edf-logo.svg" alt="EDF" />
@@ -157,79 +188,89 @@
 
     <!-- My Approach & Capabilities -->
     <section id="approach" class="section">
-        <h2 class="section-title" data-translate="section_approach">My Approach & Capabilities</h2>
+        <h2 class="section-title" data-translate="section_approach"></h2>
         <div class="approach-intro">
-            <p class="approach-description" data-translate="approach_description">
-                I deliver enterprise-grade data solutions through a strategic, business-first approach. Every technical decision is driven by your ROI, compliance requirements, and scalability needs.
-            </p>
+            <p class="approach-description" data-translate="approach_description"></p>
         </div>
 
         <div class="capabilities-grid">
             <div class="capability-card">
-                <div class="capability-icon">🎯</div>
-                <h3 data-translate="capability_strategic">Strategic Architecture</h3>
-                <p data-translate="capability_strategic_desc">I start by understanding your business objectives, then design data architectures that directly support your growth goals and competitive advantages.</p>
+                <div class="capability-header">
+                    <div class="capability-icon">🎯</div>
+                    <h3 data-translate="capability_strategic"></h3>
+                </div>
+                <p data-translate="capability_strategic_desc"></p>
                 <ul class="capability-features">
-                    <li data-translate="strategic_feature_1">Business-driven technical decisions</li>
-                    <li data-translate="strategic_feature_2">ROI-focused solution design</li>
-                    <li data-translate="strategic_feature_3">Scalable, future-proof architectures</li>
+                    <li data-translate="strategic_feature_1"></li>
+                    <li data-translate="strategic_feature_2"></li>
+                    <li data-translate="strategic_feature_3"></li>
                 </ul>
             </div>
 
             <div class="capability-card">
-                <div class="capability-icon">⚡</div>
-                <h3 data-translate="capability_execution">Rapid Execution</h3>
-                <p data-translate="capability_execution_desc">From concept to production in weeks, not months. I leverage proven patterns and modern tools to deliver working solutions quickly.</p>
+                <div class="capability-header">
+                    <div class="capability-icon">⚡</div>
+                    <h3 data-translate="capability_execution"></h3>
+                </div>
+                <p data-translate="capability_execution_desc"></p>
                 <ul class="capability-features">
-                    <li data-translate="execution_feature_1">Infrastructure as Code for rapid deployment</li>
-                    <li data-translate="execution_feature_2">Multi-cloud expertise (AWS, Azure, GCP)</li>
-                    <li data-translate="execution_feature_3">Real-time & batch processing at scale</li>
+                    <li data-translate="execution_feature_1"></li>
+                    <li data-translate="execution_feature_2"></li>
+                    <li data-translate="execution_feature_3"></li>
                 </ul>
             </div>
 
             <div class="capability-card">
-                <div class="capability-icon">🛡️</div>
-                <h3 data-translate="capability_compliance">Enterprise Compliance</h3>
-                <p data-translate="capability_compliance_desc">Built-in security, governance, and regulatory compliance from day one. Your data stays secure and audit-ready.</p>
+                <div class="capability-header">
+                    <div class="capability-icon">🛡️</div>
+                    <h3 data-translate="capability_compliance"></h3>
+                </div>
+                <p data-translate="capability_compliance_desc"></p>
                 <ul class="capability-features">
-                    <li data-translate="compliance_feature_1">GDPR, SOC2, ISO 27001 compliance</li>
-                    <li data-translate="compliance_feature_2">Privacy-by-design architectures</li>
-                    <li data-translate="compliance_feature_3">Comprehensive monitoring & alerting</li>
+                    <li data-translate="compliance_feature_1"></li>
+                    <li data-translate="compliance_feature_2"></li>
+                    <li data-translate="compliance_feature_3"></li>
                 </ul>
             </div>
 
             <div class="capability-card">
-                <div class="capability-icon">💰</div>
-                <h3 data-translate="capability_cost">Cost Optimization</h3>
-                <p data-translate="capability_cost_desc">I optimize your infrastructure spend while maximizing performance. Clients typically see 40-60% cost reductions.</p>
+                <div class="capability-header">
+                    <div class="capability-icon">💰</div>
+                    <h3 data-translate="capability_cost"></h3>
+                </div>
+                <p data-translate="capability_cost_desc"></p>
                 <ul class="capability-features">
-                    <li data-translate="cost_feature_1">Resource optimization strategies</li>
-                    <li data-translate="cost_feature_2">Auto-scaling & rightsizing</li>
-                    <li data-translate="cost_feature_3">Performance monitoring & tuning</li>
+                    <li data-translate="cost_feature_1"></li>
+                    <li data-translate="cost_feature_2"></li>
+                    <li data-translate="cost_feature_3"></li>
                 </ul>
             </div>
 
             <div class="capability-card">
-                <div class="capability-icon">📊</div>
-                <h3 data-translate="capability_enablement">Data-Driven Enablement</h3>
-                <p data-translate="capability_enablement_desc">I build solutions that empower your entire organization to make confident, data-informed decisions, fostering a true data culture.</p>
+                <div class="capability-header">
+                    <div class="capability-icon">📊</div>
+                    <h3 data-translate="capability_enablement"></h3>
+                </div>
+                <p data-translate="capability_enablement_desc"></p>
                 <ul class="capability-features">
-                    <li data-translate="enablement_feature_1">Self-service analytics platforms</li>
-                    <li data-translate="enablement_feature_2">Unified data catalogs & governance</li>
-                    <li data-translate="enablement_feature_3">MLOps pipelines for AI/ML</li>
-                    <li data-translate="enablement_feature_4">Change management & training</li>
+                    <li data-translate="enablement_feature_1"></li>
+                    <li data-translate="enablement_feature_2"></li>
+                    <li data-translate="enablement_feature_3"></li>
+                    <li data-translate="enablement_feature_4"></li>
                 </ul>
             </div>
 
             <div class="capability-card">
-                <div class="capability-icon">🔧</div>
-                <h3 data-translate="capability_ownership">End-to-End Ownership</h3>
-                <p data-translate="capability_ownership_desc">I provide seamless leadership from initial strategy through to long-term evolution, ensuring your data ecosystem continuously delivers value.</p>
+                <div class="capability-header">
+                    <div class="capability-icon">🔧</div>
+                    <h3 data-translate="capability_ownership"></h3>
+                </div>
+                <p data-translate="capability_ownership_desc"></p>
                 <ul class="capability-features">
-                    <li data-translate="ownership_feature_1">Program management & stakeholder alignment</li>
-                    <li data-translate="ownership_feature_2">CI/CD for data pipelines</li>
-                    <li data-translate="ownership_feature_3">Proactive maintenance & support</li>
-                    <li data-translate="ownership_feature_4">Roadmap development for future innovation</li>
+                    <li data-translate="ownership_feature_1"></li>
+                    <li data-translate="ownership_feature_2"></li>
+                    <li data-translate="ownership_feature_3"></li>
+                    <li data-translate="ownership_feature_4"></li>
                 </ul>
             </div>
 
@@ -240,19 +281,19 @@
 
     <!-- Case Studies -->
     <section id="case-studies" class="section">
-        <h2 class="section-title" data-translate="section_case_studies">Work & Portfolio</h2>
+        <h2 class="section-title" data-translate="section_case_studies"></h2>
         <div class="case-studies-slider-container">
             <div class="case-studies-navigation">
-                <button class="case-nav-btn active" data-case="edf">EDF</button>
+                <button class="case-nav-btn" data-case="edf">EDF</button>
                 <button class="case-nav-btn" data-case="sncf">SNCF</button>
                 <button class="case-nav-btn" data-case="stellantis">Stellantis</button>
-                <button class="case-nav-btn" data-case="societe-generale">Société Générale</button>
+                <button class="case-nav-btn" data-case="seloger">SeLoger</button>
                 <button class="case-nav-btn" data-case="laposte">La Poste</button>
                 <button class="case-nav-btn" data-case="beinsports">BeIN Sports</button>
             </div>
             <div class="case-studies-slider">
                 <!-- EDF Case Study Slider -->
-                <div class="case-study-slider active" data-case="edf">
+                <div class="case-study-slider collapsed" data-case="edf">
                     <div class="slide-indicators">
                         <span class="indicator active" data-slide="0"></span>
                         <span class="indicator" data-slide="1"></span>
@@ -267,9 +308,9 @@
                                 <div class="company-header">
                                     <img src="images/edf-logo.svg" alt="EDF Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
-                                        <h2 class="company-name" data-translate="company_edf">EDF</h2>
-                                        <h3 class="industry" data-translate="industry_energy">Energy & Utilities</h3>
-                                        <p class="company-description" data-translate="company_edf_desc">Leading European energy company serving 38 million customers across multiple countries with critical infrastructure requirements.</p>
+                                        <h2 class="company-name" data-translate="company_edf"></h2>
+                                        <h3 class="industry" data-translate="industry_energy"></h3>
+                                        <p class="company-description" data-translate="company_edf_desc"></p>
                                     </div>
                                 </div>
                             </div>
@@ -278,14 +319,14 @@
                         <!-- Slide 2: Challenge -->
                         <div class="slide" data-slide="1">
                             <div class="slide-content challenge-slide">
-                                <h3 class="slide-title" data-translate="slide_challenge">📊 Challenge</h3>
+                                <h3 class="slide-title" data-translate="slide_challenge"></h3>
                                 <div class="challenge-content">
-                                    <p data-translate="edf_challenge_desc">EDF's data team struggled with a fragmented and manual data ingestion process. Their infrastructure relied on a disparate collection of individual scripts with no central oversight, leading to low reliability, poor scalability, and no visibility into data lineage.</p>
+                                    <p data-translate="edf_challenge_desc"></p>
                                     <ul class="challenge-points">
-                                        <li data-translate="edf_challenge_1">Manual data ingestion processes</li>
-                                        <li data-translate="edf_challenge_2">No central oversight or monitoring</li>
-                                        <li data-translate="edf_challenge_3">Poor scalability and reliability</li>
-                                        <li data-translate="edf_challenge_4">Zero visibility into data lineage</li>
+                                        <li data-translate="edf_challenge_1"></li>
+                                        <li data-translate="edf_challenge_2"></li>
+                                        <li data-translate="edf_challenge_3"></li>
+                                        <li data-translate="edf_challenge_4"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -294,16 +335,16 @@
                         <!-- Slide 3: Solution -->
                         <div class="slide" data-slide="2">
                             <div class="slide-content solution-slide">
-                                <h3 class="slide-title" data-translate="slide_solution">⚙️ Solution</h3>
+                                <h3 class="slide-title" data-translate="slide_solution"></h3>
                                 <div class="solution-content">
-                                    <p data-translate="edf_solution_desc">As a key contributor, I solved the core integration and visibility challenges by:</p>
+                                    <p data-translate="edf_solution_desc"></p>
                                     <ul class="solution-points">
-                                        <li data-translate="edf_solution_1">Engineering custom Airflow Providers for proprietary data sources</li>
-                                        <li data-translate="edf_solution_2">Implementing OpenMetadata to automate full data lineage tracking</li>
-                                        <li data-translate="edf_solution_3">Building containerized deployment with Docker and Kubernetes</li>
-                                        <li data-translate="edf_solution_4">Setting up GitOps workflows with ArgoCD</li>
+                                        <li data-translate="edf_solution_1"></li>
+                                        <li data-translate="edf_solution_2"></li>
+                                        <li data-translate="edf_solution_3"></li>
+                                        <li data-translate="edf_solution_4"></li>
                                     </ul>
-                                    <div class="tech-stack" data-translate="edf_tech_stack">Airflow • Docker • Kubernetes • ArgoCD • Python • OpenMetadata</div>
+                                    <div class="tech-stack" data-translate="edf_tech_stack"></div>
                                 </div>
                             </div>
                         </div>
@@ -311,23 +352,23 @@
                         <!-- Slide 4: Results -->
                         <div class="slide" data-slide="3">
                             <div class="slide-content result-slide">
-                                <h3 class="slide-title" data-translate="slide_results">🏆 Results</h3>
+                                <h3 class="slide-title" data-translate="slide_results"></h3>
                                 <div class="result-content">
                                     <div class="impact-metrics">
                                         <div class="metric">
                                             <span class="metric-value">99%</span>
-                                            <span class="metric-label" data-translate="metric_reliability">Reliability</span>
+                                            <span class="metric-label" data-translate="metric_reliability"></span>
                                         </div>
                                         <div class="metric">
                                             <span class="metric-value">75%</span>
-                                            <span class="metric-label" data-translate="metric_less_maintenance">Less Maintenance</span>
+                                            <span class="metric-label" data-translate="metric_less_maintenance"></span>
                                         </div>
                                         <div class="metric">
-                                            <span class="metric-value" data-translate="metric_full">Full</span>
-                                            <span class="metric-label" data-translate="metric_data_lineage">Data Lineage</span>
+                                            <span class="metric-value" data-translate="metric_full"></span>
+                                            <span class="metric-label" data-translate="metric_data_lineage"></span>
                                         </div>
                                     </div>
-                                    <p class="result-description" data-translate="edf_results_desc">Delivered a 99% reliable platform that reduced maintenance overhead by 75% and provided complete data lineage for governance and impact analysis.</p>
+                                    <p class="result-description" data-translate="edf_results_desc"></p>
                                 </div>
                             </div>
                         </div>
@@ -340,7 +381,7 @@
                 </div>
 
                 <!-- SNCF Case Study Slider -->
-                <div class="case-study-slider" data-case="sncf">
+                <div class="case-study-slider collapsed" data-case="sncf">
                     <div class="slide-indicators">
                         <span class="indicator active" data-slide="0"></span>
                         <span class="indicator" data-slide="1"></span>
@@ -354,9 +395,9 @@
                                 <div class="company-header">
                                     <img src="images/sncf-logo.svg" alt="SNCF Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
-                                        <h2 class="company-name" data-translate="company_sncf">Groupe SNCF</h2>
-                                        <h3 class="industry" data-translate="industry_transport">Transportation & Logistics</h3>
-                                        <p class="company-description" data-translate="company_sncf_desc">France's national railway company serving 15 million passengers daily with complex logistics and real-time operational requirements.</p>
+                                        <h2 class="company-name" data-translate="company_sncf"></h2>
+                                        <h3 class="industry" data-translate="industry_transport"></h3>
+                                        <p class="company-description" data-translate="company_sncf_desc"></p>
                                     </div>
                                 </div>
                             </div>
@@ -364,14 +405,14 @@
 
                         <div class="slide" data-slide="1">
                             <div class="slide-content challenge-slide">
-                                <h3 class="slide-title" data-translate="slide_challenge">📊 Challenge</h3>
+                                <h3 class="slide-title" data-translate="slide_challenge"></h3>
                                 <div class="challenge-content">
-                                    <p data-translate="sncf_challenge_desc">SNCF's monolithic system couldn't handle 500GB daily rail operations data efficiently. Slow API responses and tight coupling between systems hindered scalability and innovation.</p>
+                                    <p data-translate="sncf_challenge_desc"></p>
                                     <ul class="challenge-points">
-                                        <li data-translate="sncf_challenge_1">Legacy monolithic architecture</li>
-                                        <li data-translate="sncf_challenge_2">500GB daily data processing bottleneck</li>
-                                        <li data-translate="sncf_challenge_3">Slow API response times</li>
-                                        <li data-translate="sncf_challenge_4">Tight system coupling limiting innovation</li>
+                                        <li data-translate="sncf_challenge_1"></li>
+                                        <li data-translate="sncf_challenge_2"></li>
+                                        <li data-translate="sncf_challenge_3"></li>
+                                        <li data-translate="sncf_challenge_4"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -379,39 +420,39 @@
 
                         <div class="slide" data-slide="2">
                             <div class="slide-content solution-slide">
-                                <h3 class="slide-title" data-translate="slide_solution">⚙️ Solution</h3>
+                                <h3 class="slide-title" data-translate="slide_solution"></h3>
                                 <div class="solution-content">
-                                    <p data-translate="sncf_solution_desc">Redesigned architecture using event-driven microservices with Domain-Driven Design principles:</p>
+                                    <p data-translate="sncf_solution_desc"></p>
                                     <ul class="solution-points">
-                                        <li data-translate="sncf_solution_1">Implemented event-driven microservices architecture</li>
-                                        <li data-translate="sncf_solution_2">Applied Domain-Driven Design principles</li>
-                                        <li data-translate="sncf_solution_3">Built real-time data streaming with AWS MSK</li>
-                                        <li data-translate="sncf_solution_4">Optimized cloud infrastructure for scalability</li>
+                                        <li data-translate="sncf_solution_1"></li>
+                                        <li data-translate="sncf_solution_2"></li>
+                                        <li data-translate="sncf_solution_3"></li>
+                                        <li data-translate="sncf_solution_4"></li>
                                     </ul>
-                                    <div class="tech-stack" data-translate="sncf_tech_stack">Scala • AWS MSK • Lambda • Terraform • DDD • Hexagonal Architecture</div>
+                                    <div class="tech-stack" data-translate="sncf_tech_stack"></div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide" data-slide="3">
                             <div class="slide-content result-slide">
-                                <h3 class="slide-title" data-translate="slide_results">🏆 Results</h3>
+                                <h3 class="slide-title" data-translate="slide_results"></h3>
                                 <div class="result-content">
                                     <div class="impact-metrics">
                                         <div class="metric">
                                             <span class="metric-value">5x</span>
-                                            <span class="metric-label" data-translate="sncf_metric_performance">Performance Gain</span>
+                                            <span class="metric-label" data-translate="sncf_metric_performance"></span>
                                         </div>
                                         <div class="metric">
                                             <span class="metric-value">50%</span>
-                                            <span class="metric-label" data-translate="sncf_metric_apis">Faster APIs</span>
+                                            <span class="metric-label" data-translate="sncf_metric_apis"></span>
                                         </div>
                                         <div class="metric">
                                             <span class="metric-value">€150K</span>
-                                            <span class="metric-label" data-translate="sncf_metric_savings">Annual Savings</span>
+                                            <span class="metric-label" data-translate="sncf_metric_savings"></span>
                                         </div>
                                     </div>
-                                    <p class="result-description" data-translate="sncf_results_desc">Successfully processing 1M+ daily requests with 60% reduction in system coupling, enabling rapid feature deployment and improved scalability.</p>
+                                    <p class="result-description" data-translate="sncf_results_desc"></p>
                                 </div>
                             </div>
                         </div>
@@ -424,7 +465,7 @@
                 </div>
 
                 <!-- Stellantis Case Study Slider -->
-                <div class="case-study-slider" data-case="stellantis">
+                <div class="case-study-slider collapsed" data-case="stellantis">
                     <div class="slide-indicators">
                         <span class="indicator active" data-slide="0"></span>
                         <span class="indicator" data-slide="1"></span>
@@ -438,9 +479,9 @@
                                 <div class="company-header">
                                     <img src="images/stellantis-logo.svg" alt="Stellantis Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
-                                        <h2 class="company-name" data-translate="company_stellantis">Stellantis</h2>
-                                        <h3 class="industry" data-translate="industry_automotive">Automotive & Manufacturing</h3>
-                                        <p class="company-description" data-translate="company_stellantis_desc">Global automotive manufacturer with 500K+ connected vehicles requiring real-time analytics and predictive maintenance across multiple continents.</p>
+                                        <h2 class="company-name" data-translate="company_stellantis"></h2>
+                                        <h3 class="industry" data-translate="industry_automotive"></h3>
+                                        <p class="company-description" data-translate="company_stellantis_desc"></p>
                                     </div>
                                 </div>
                             </div>
@@ -448,14 +489,14 @@
 
                         <div class="slide" data-slide="1">
                             <div class="slide-content challenge-slide">
-                                <h3 class="slide-title" data-translate="slide_challenge">📊 Challenge</h3>
+                                <h3 class="slide-title" data-translate="slide_challenge"></h3>
                                 <div class="challenge-content">
-                                    <p data-translate="stellantis_challenge_desc">Stellantis needed real-time analytics for 500K+ connected vehicles across multiple continents, processing 2TB daily while maintaining cost efficiency and predictive maintenance capabilities.</p>
+                                    <p data-translate="stellantis_challenge_desc"></p>
                                     <ul class="challenge-points">
-                                        <li data-translate="stellantis_challenge_1">500K+ connected vehicles generating massive data</li>
-                                        <li data-translate="stellantis_challenge_2">2TB daily processing requirements</li>
-                                        <li data-translate="stellantis_challenge_3">Multi-continent deployment complexity</li>
-                                        <li data-translate="stellantis_challenge_4">Need for predictive maintenance capabilities</li>
+                                        <li data-translate="stellantis_challenge_1"></li>
+                                        <li data-translate="stellantis_challenge_2"></li>
+                                        <li data-translate="stellantis_challenge_3"></li>
+                                        <li data-translate="stellantis_challenge_4"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -463,39 +504,39 @@
 
                         <div class="slide" data-slide="2">
                             <div class="slide-content solution-slide">
-                                <h3 class="slide-title" data-translate="slide_solution">⚙️ Solution</h3>
+                                <h3 class="slide-title" data-translate="slide_solution"></h3>
                                 <div class="solution-content">
-                                    <p data-translate="stellantis_solution_desc">Architected scalable real-time analytics platform with ML capabilities:</p>
+                                    <p data-translate="stellantis_solution_desc"></p>
                                     <ul class="solution-points">
-                                        <li data-translate="stellantis_solution_1">Built Spark Streaming platform on AWS EMR with auto-scaling</li>
-                                        <li data-translate="stellantis_solution_2">Implemented ML pipeline for predictive maintenance</li>
-                                        <li data-translate="stellantis_solution_3">Designed real-time event processing architecture</li>
-                                        <li data-translate="stellantis_solution_4">Deployed cost-optimized infrastructure across regions</li>
+                                        <li data-translate="stellantis_solution_1"></li>
+                                        <li data-translate="stellantis_solution_2"></li>
+                                        <li data-translate="stellantis_solution_3"></li>
+                                        <li data-translate="stellantis_solution_4"></li>
                                     </ul>
-                                    <div class="tech-stack" data-translate="stellantis_tech_stack">Spark Streaming • AWS EMR • S3 • Kinesis • Terraform • Python • Scala</div>
+                                    <div class="tech-stack" data-translate="stellantis_tech_stack"></div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide" data-slide="3">
                             <div class="slide-content result-slide">
-                                <h3 class="slide-title" data-translate="slide_results">🏆 Results</h3>
+                                <h3 class="slide-title" data-translate="slide_results"></h3>
                                 <div class="result-content">
                                     <div class="impact-metrics">
                                         <div class="metric">
                                             <span class="metric-value">3x</span>
-                                            <span class="metric-label" data-translate="stellantis_metric_scaling">Scaling Capability</span>
+                                            <span class="metric-label" data-translate="stellantis_metric_scaling"></span>
                                         </div>
                                         <div class="metric">
                                             <span class="metric-value">35%</span>
-                                            <span class="metric-label" data-translate="stellantis_metric_cost">Cost Reduction</span>
+                                            <span class="metric-label" data-translate="stellantis_metric_cost"></span>
                                         </div>
                                         <div class="metric">
                                             <span class="metric-value">85%</span>
-                                            <span class="metric-label" data-translate="stellantis_metric_accuracy">Prediction Accuracy</span>
+                                            <span class="metric-label" data-translate="stellantis_metric_accuracy"></span>
                                         </div>
                                     </div>
-                                    <p class="result-description" data-translate="stellantis_results_desc">Platform processes 10M+ events/hour with 15% improvement in vehicle uptime through predictive maintenance, generating significant revenue impact.</p>
+                                    <p class="result-description" data-translate="stellantis_results_desc"></p>
                                 </div>
                             </div>
                         </div>
@@ -507,8 +548,8 @@
                     </div>
                 </div>
 
-                <!-- Société Générale Case Study Slider -->
-                <div class="case-study-slider" data-case="societe-generale">
+                <!-- SeLoger Case Study Slider -->
+                <div class="case-study-slider collapsed" data-case="seloger">
                     <div class="slide-indicators">
                         <span class="indicator active" data-slide="0"></span>
                         <span class="indicator" data-slide="1"></span>
@@ -520,11 +561,11 @@
                         <div class="slide active" data-slide="0">
                             <div class="slide-content company-slide">
                                 <div class="company-header">
-                                    <img src="images/sg-logo.svg" alt="Société Générale Logo" class="company-logo-large" loading="lazy">
+                                    <img src="images/seloger-logo.svg" alt="SeLoger Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
-                                        <h2 class="company-name" data-translate="company_societe_generale">Société Générale</h2>
-                                        <h3 class="industry" data-translate="industry_banking">Banking & Financial Services</h3>
-                                        <p class="company-description" data-translate="company_societe_generale_desc">Leading European bank serving 25 million customers worldwide with critical financial infrastructure requiring high security and compliance.</p>
+                                        <h2 class="company-name" data-translate="company_seloger"></h2>
+                                        <h3 class="industry" data-translate="industry_realestate"></h3>
+                                        <p class="company-description" data-translate="company_seloger_desc"></p>
                                     </div>
                                 </div>
                             </div>
@@ -532,14 +573,14 @@
 
                         <div class="slide" data-slide="1">
                             <div class="slide-content challenge-slide">
-                                <h3 class="slide-title" data-translate="slide_challenge">📊 Challenge</h3>
+                                <h3 class="slide-title" data-translate="slide_challenge"></h3>
                                 <div class="challenge-content">
-                                    <p data-translate="sg_challenge_desc">Société Générale needed to modernize their core banking infrastructure to handle millions of daily transactions while maintaining strict regulatory compliance and zero-downtime requirements for critical financial operations.</p>
+                                    <p data-translate="seloger_challenge_desc"></p>
                                     <ul class="challenge-points">
-                                        <li data-translate="sg_challenge_1">Legacy monolithic banking systems</li>
-                                        <li data-translate="sg_challenge_2">Millions of daily financial transactions</li>
-                                        <li data-translate="sg_challenge_3">Strict regulatory compliance requirements</li>
-                                        <li data-translate="sg_challenge_4">Zero-downtime operational constraints</li>
+                                        <li data-translate="seloger_challenge_1"></li>
+                                        <li data-translate="seloger_challenge_2"></li>
+                                        <li data-translate="seloger_challenge_3"></li>
+                                        <li data-translate="seloger_challenge_4"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -547,39 +588,39 @@
 
                         <div class="slide" data-slide="2">
                             <div class="slide-content solution-slide">
-                                <h3 class="slide-title" data-translate="slide_solution">⚙️ Solution</h3>
+                                <h3 class="slide-title" data-translate="slide_solution"></h3>
                                 <div class="solution-content">
-                                    <p data-translate="sg_solution_desc">Architected modern, resilient banking infrastructure with event-driven architecture:</p>
+                                    <p data-translate="seloger_solution_desc"></p>
                                     <ul class="solution-points">
-                                        <li data-translate="sg_solution_1">Designed event-driven microservices for core banking operations</li>
-                                        <li data-translate="sg_solution_2">Implemented real-time fraud detection and risk management</li>
-                                        <li data-translate="sg_solution_3">Built compliance-first data architecture with audit trails</li>
-                                        <li data-translate="sg_solution_4">Deployed multi-region disaster recovery capabilities</li>
+                                        <li data-translate="seloger_solution_1"></li>
+                                        <li data-translate="seloger_solution_2"></li>
+                                        <li data-translate="seloger_solution_3"></li>
+                                        <li data-translate="seloger_solution_4"></li>
                                     </ul>
-                                    <div class="tech-stack" data-translate="sg_tech_stack">Kafka • Spring Boot • PostgreSQL • Redis • Kubernetes • Terraform • Java</div>
+                                    <div class="tech-stack" data-translate="seloger_tech_stack"></div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide" data-slide="3">
                             <div class="slide-content result-slide">
-                                <h3 class="slide-title" data-translate="slide_results">🏆 Results</h3>
+                                <h3 class="slide-title" data-translate="slide_results"></h3>
                                 <div class="result-content">
                                     <div class="impact-metrics">
                                         <div class="metric">
-                                            <span class="metric-value">99.9%</span>
-                                            <span class="metric-label" data-translate="sg_metric_uptime">System Uptime</span>
-                                        </div>
-                                        <div class="metric">
                                             <span class="metric-value">60%</span>
-                                            <span class="metric-label" data-translate="sg_metric_processing">Faster Processing</span>
+                                            <span class="metric-label" data-translate="seloger_metric_time"></span>
                                         </div>
                                         <div class="metric">
-                                            <span class="metric-value">Full</span>
-                                            <span class="metric-label" data-translate="sg_metric_compliance">Compliance</span>
+                                            <span class="metric-value">50M+</span>
+                                            <span class="metric-label" data-translate="seloger_metric_listings"></span>
+                                        </div>
+                                        <div class="metric">
+                                            <span class="metric-value">10M+</span>
+                                            <span class="metric-label" data-translate="seloger_metric_users"></span>
                                         </div>
                                     </div>
-                                    <p class="result-description" data-translate="sg_results_desc">Achieved 99.9% uptime for critical banking operations with 60% improvement in transaction processing speed while maintaining full regulatory compliance and zero security incidents.</p>
+                                    <p class="result-description" data-translate="seloger_results_desc"></p>
                                 </div>
                             </div>
                         </div>
@@ -592,7 +633,7 @@
                 </div>
 
                 <!-- La Poste Case Study Slider -->
-                <div class="case-study-slider" data-case="laposte">
+                <div class="case-study-slider collapsed" data-case="laposte">
                     <div class="slide-indicators">
                         <span class="indicator active" data-slide="0"></span>
                         <span class="indicator" data-slide="1"></span>
@@ -606,9 +647,9 @@
                                 <div class="company-header">
                                     <img src="images/laposte-logo.svg" alt="Le Groupe La Poste Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
-                                        <h2 class="company-name" data-translate="company_laposte">Le Groupe La Poste</h2>
-                                        <h3 class="industry" data-translate="industry_logistics">Postal & Logistics Services</h3>
-                                        <p class="company-description" data-translate="company_laposte_desc">France's postal service processing 300M+ daily package events with strict privacy compliance requirements across multiple countries.</p>
+                                        <h2 class="company-name" data-translate="company_laposte"></h2>
+                                        <h3 class="industry" data-translate="industry_logistics"></h3>
+                                        <p class="company-description" data-translate="company_laposte_desc"></p>
                                     </div>
                                 </div>
                             </div>
@@ -616,14 +657,14 @@
 
                         <div class="slide" data-slide="1">
                             <div class="slide-content challenge-slide">
-                                <h3 class="slide-title" data-translate="slide_challenge">📊 Challenge</h3>
+                                <h3 class="slide-title" data-translate="slide_challenge"></h3>
                                 <div class="challenge-content">
-                                    <p data-translate="laposte_challenge_desc">Le Groupe La Poste needed to process 300M+ daily package events while ensuring global privacy compliance (GDPR and local regulations), with existing systems struggling with high storage costs and slow ingestion speeds.</p>
+                                    <p data-translate="laposte_challenge_desc"></p>
                                     <ul class="challenge-points">
-                                        <li data-translate="laposte_challenge_1">300M+ daily package events to process</li>
-                                        <li data-translate="laposte_challenge_2">Global privacy compliance (GDPR) requirements</li>
-                                        <li data-translate="laposte_challenge_3">High storage costs with legacy systems</li>
-                                        <li data-translate="laposte_challenge_4">Slow data ingestion impacting operations</li>
+                                        <li data-translate="laposte_challenge_1"></li>
+                                        <li data-translate="laposte_challenge_2"></li>
+                                        <li data-translate="laposte_challenge_3"></li>
+                                        <li data-translate="laposte_challenge_4"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -631,39 +672,39 @@
 
                         <div class="slide" data-slide="2">
                             <div class="slide-content solution-slide">
-                                <h3 class="slide-title" data-translate="slide_solution">⚙️ Solution</h3>
+                                <h3 class="slide-title" data-translate="slide_solution"></h3>
                                 <div class="solution-content">
-                                    <p data-translate="laposte_solution_desc">Developed privacy-by-design data platform with high-throughput processing:</p>
+                                    <p data-translate="laposte_solution_desc"></p>
                                     <ul class="solution-points">
-                                        <li data-translate="laposte_solution_1">Built generic data ingestion platform with privacy-by-design</li>
-                                        <li data-translate="laposte_solution_2">Implemented Apache Kafka for high-throughput event streaming</li>
-                                        <li data-translate="laposte_solution_3">Designed Spark and Scala-based processing for nested data</li>
-                                        <li data-translate="laposte_solution_4">Ensured full compliance with global privacy regulations</li>
+                                        <li data-translate="laposte_solution_1"></li>
+                                        <li data-translate="laposte_solution_2"></li>
+                                        <li data-translate="laposte_solution_3"></li>
+                                        <li data-translate="laposte_solution_4"></li>
                                     </ul>
-                                    <div class="tech-stack" data-translate="laposte_tech_stack">Apache Kafka • Spark • Scala • Matryoshka • HDFS • Cassandra</div>
+                                    <div class="tech-stack" data-translate="laposte_tech_stack"></div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide" data-slide="3">
                             <div class="slide-content result-slide">
-                                <h3 class="slide-title" data-translate="slide_results">🏆 Results</h3>
+                                <h3 class="slide-title" data-translate="slide_results"></h3>
                                 <div class="result-content">
                                     <div class="impact-metrics">
                                         <div class="metric">
-                                            <span class="metric-value">99.5%</span>
-                                            <span class="metric-label" data-translate="laposte_metric_uptime">System Uptime</span>
+                                            <span class="metric-value">60M</span>
+                                            <span class="metric-label" data-translate="laposte_metric_users"></span>
                                         </div>
                                         <div class="metric">
-                                            <span class="metric-value">45%</span>
-                                            <span class="metric-label" data-translate="laposte_metric_storage">Storage Savings</span>
+                                            <span class="metric-value">99.5%</span>
+                                            <span class="metric-label" data-translate="laposte_metric_uptime"></span>
                                         </div>
                                         <div class="metric">
                                             <span class="metric-value">4x</span>
-                                            <span class="metric-label" data-translate="laposte_metric_performance">Performance Gain</span>
+                                            <span class="metric-label" data-translate="laposte_metric_performance"></span>
                                         </div>
                                     </div>
-                                    <p class="result-description" data-translate="laposte_results_desc">The platform processes 300M+ daily package events with 99.5% uptime, reducing storage costs by 45% while achieving 4x improvement in ingestion speed and ensuring full global privacy compliance.</p>
+                                    <p class="result-description" data-translate="laposte_results_desc"></p>
                                 </div>
                             </div>
                         </div>
@@ -676,7 +717,7 @@
                 </div>
 
                 <!-- BeIN Sports Case Study Slider -->
-                <div class="case-study-slider" data-case="beinsports">
+                <div class="case-study-slider collapsed" data-case="beinsports">
                     <div class="slide-indicators">
                         <span class="indicator active" data-slide="0"></span>
                         <span class="indicator" data-slide="1"></span>
@@ -690,9 +731,9 @@
                                 <div class="company-header">
                                     <img src="images/bein-logo.svg" alt="BeIN Sports Logo" class="company-logo-large" loading="lazy">
                                     <div class="company-info">
-                                        <h2 class="company-name" data-translate="company_beinsports">BeIN Sports</h2>
-                                        <h3 class="industry" data-translate="industry_media">Media & Entertainment (Streaming)</h3>
-                                        <p class="company-description" data-translate="company_beinsports_desc">Global sports streaming platform serving millions of concurrent viewers across Europe and MENA regions during high-traffic live events.</p>
+                                        <h2 class="company-name" data-translate="company_beinsports"></h2>
+                                        <h3 class="industry" data-translate="industry_media"></h3>
+                                        <p class="company-description" data-translate="company_beinsports_desc"></p>
                                     </div>
                                 </div>
                             </div>
@@ -700,14 +741,14 @@
 
                         <div class="slide" data-slide="1">
                             <div class="slide-content challenge-slide">
-                                <h3 class="slide-title" data-translate="slide_challenge">📊 Challenge</h3>
+                                <h3 class="slide-title" data-translate="slide_challenge"></h3>
                                 <div class="challenge-content">
-                                    <p data-translate="beinsports_challenge_desc">BeIN Sports needed to scale their live streaming platform to support millions of concurrent viewers across Europe and MENA regions while maintaining real-time performance and reliability during high-traffic events like major sports matches.</p>
+                                    <p data-translate="beinsports_challenge_desc"></p>
                                     <ul class="challenge-points">
-                                        <li data-translate="beinsports_challenge_1">Millions of concurrent viewers during live events</li>
-                                        <li data-translate="beinsports_challenge_2">Multi-region deployment (Europe & MENA)</li>
-                                        <li data-translate="beinsports_challenge_3">Real-time performance requirements</li>
-                                        <li data-translate="beinsports_challenge_4">Regulatory compliance across different countries</li>
+                                        <li data-translate="beinsports_challenge_1"></li>
+                                        <li data-translate="beinsports_challenge_2"></li>
+                                        <li data-translate="beinsports_challenge_3"></li>
+                                        <li data-translate="beinsports_challenge_4"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -715,39 +756,39 @@
 
                         <div class="slide" data-slide="2">
                             <div class="slide-content solution-slide">
-                                <h3 class="slide-title" data-translate="slide_solution">⚙️ Solution</h3>
+                                <h3 class="slide-title" data-translate="slide_solution"></h3>
                                 <div class="solution-content">
-                                    <p data-translate="beinsports_solution_desc">Optimized streaming infrastructure with real-time analytics:</p>
+                                    <p data-translate="beinsports_solution_desc"></p>
                                     <ul class="solution-points">
-                                        <li data-translate="beinsports_solution_1">Optimized streaming infrastructure for massive scale</li>
-                                        <li data-translate="beinsports_solution_2">Built real-time analytics for viewer engagement tracking</li>
-                                        <li data-translate="beinsports_solution_3">Enhanced monitoring systems for proactive issue detection</li>
-                                        <li data-translate="beinsports_solution_4">Implemented solutions for concurrent viewer loads with compliance</li>
+                                        <li data-translate="beinsports_solution_1"></li>
+                                        <li data-translate="beinsports_solution_2"></li>
+                                        <li data-translate="beinsports_solution_3"></li>
+                                        <li data-translate="beinsports_solution_4"></li>
                                     </ul>
-                                    <div class="tech-stack" data-translate="beinsports_tech_stack">Big Data • Real-Time Analytics • Streaming Performance • Cloud Infrastructure</div>
+                                    <div class="tech-stack" data-translate="beinsports_tech_stack"></div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="slide" data-slide="3">
                             <div class="slide-content result-slide">
-                                <h3 class="slide-title" data-translate="slide_results">🏆 Results</h3>
+                                <h3 class="slide-title" data-translate="slide_results"></h3>
                                 <div class="result-content">
                                     <div class="impact-metrics">
                                         <div class="metric">
-                                            <span class="metric-value">2M+</span>
-                                            <span class="metric-label" data-translate="beinsports_metric_viewers">Concurrent Viewers</span>
+                                            <span class="metric-value">500K+</span>
+                                            <span class="metric-label" data-translate="beinsports_metric_viewers"></span>
                                         </div>
                                         <div class="metric">
                                             <span class="metric-value">99.8%</span>
-                                            <span class="metric-label" data-translate="beinsports_metric_uptime">Streaming Uptime</span>
+                                            <span class="metric-label" data-translate="beinsports_metric_uptime"></span>
                                         </div>
                                         <div class="metric">
-                                            <span class="metric-value">25%</span>
-                                            <span class="metric-label" data-translate="beinsports_metric_performance">Performance Gain</span>
+                                            <span class="metric-value">95%</span>
+                                            <span class="metric-label" data-translate="beinsports_metric_performance"></span>
                                         </div>
                                     </div>
-                                    <p class="result-description" data-translate="beinsports_results_desc">Successfully scaled the platform to support 2M+ concurrent viewers across Europe and MENA regions while ensuring full regulatory compliance and significantly improving streaming reliability during peak traffic events.</p>
+                                    <p class="result-description" data-translate="beinsports_results_desc"></p>
                                 </div>
                             </div>
                         </div>
@@ -764,27 +805,27 @@
 
     <!-- Testimonials -->
     <section id="testimonials" class="section">
-        <h2 class="section-title" data-translate="section_recommendations">What clients & colleagues say</h2>
+        <h2 class="section-title" data-translate="section_recommendations"></h2>
         <div class="recommendations-grid">
             <!-- First row -->
             <div class="recommendation-card">
                 <div class="recommendation-screenshot">
                     <img src="images/arnauld-recommendation.png" alt="Arnauld LinkedIn Recommendation Screenshot" loading="lazy" />
                 </div>
-                <div class="role" data-translate="rec_role_head_data">Head of Data</div>
-                <div class="company" data-translate="name_arnauld">Arnauld</div>
-                <p class="snippet" data-translate="rec_arnauld">"Very good freelance. He build the whole Data AWS architecture, Terraform included 👌"</p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:6948554977384542208?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6948554977384542208%2C6948571302945296385%29" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+                <div class="role" data-translate="rec_role_head_data"></div>
+                <div class="company" data-translate="name_arnauld"></div>
+                <p class="snippet" data-translate="rec_arnauld"></p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:6948554977384542208?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6948554977384542208%2C6948571302945296385%29" target="_blank" class="linkedin-link" data-translate="linkedin_link"></a>
             </div>
 
             <div class="recommendation-card">
                 <div class="recommendation-screenshot">
                     <img src="images/amine-recommendation.png" alt="Amine LinkedIn Recommendation Screenshot" loading="lazy" />
                 </div>
-                <div class="role" data-translate="rec_role_senior_architect">Senior Architect</div>
-                <div class="company" data-translate="name_amine">Amine</div>
-                <p class="snippet" data-translate="rec_amine">"He is simply one of the most talented engineers I've ever worked with. I would highly recommend him."</p>
-                <a href="https://www.linkedin.com/in/ghazybenahmed/details/recommendations/" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+                <div class="role" data-translate="rec_role_senior_architect"></div>
+                <div class="company" data-translate="name_amine"></div>
+                <p class="snippet" data-translate="rec_amine"></p>
+                <a href="https://www.linkedin.com/in/ghazybenahmed/details/recommendations/" target="_blank" class="linkedin-link" data-translate="linkedin_link"></a>
             </div>
 
             <!-- Second row -->
@@ -792,20 +833,20 @@
                 <div class="recommendation-screenshot">
                     <img src="images/antoine-recommendation.png" alt="Antoine LinkedIn Recommendation Screenshot" loading="lazy" />
                 </div>
-                <div class="role" data-translate="rec_role_senior_engineer">Senior Engineer</div>
-                <div class="company" data-translate="name_antoine">Antoine</div>
-                <p class="snippet" data-translate="rec_antoine">"Ghazi is a true senior data engineer with strong knowledge to resolve any big data problem. It's a pleasure to work with him, and I wouldn't hesitate to do so again. I deeply recommend him."</p>
-                <a href="https://www.linkedin.com/in/ghazybenahmed/details/recommendations/" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+                <div class="role" data-translate="rec_role_senior_engineer"></div>
+                <div class="company" data-translate="name_antoine"></div>
+                <p class="snippet" data-translate="rec_antoine"></p>
+                <a href="https://www.linkedin.com/in/ghazybenahmed/details/recommendations/" target="_blank" class="linkedin-link" data-translate="linkedin_link"></a>
             </div>
 
             <div class="recommendation-card">
                 <div class="recommendation-screenshot">
                     <img src="images/maryline-recommendation.png" alt="Marilyne LinkedIn Recommendation Screenshot" loading="lazy" />
                 </div>
-                <div class="role" data-translate="rec_role_sales">Sales Professional</div>
-                <div class="company" data-translate="name_marilyne">Marilyne</div>
-                <p class="snippet" data-translate="rec_maryline">"I highly recommend him, Respects deadlines and budgets, offering expertise for the successful delivery of your projects."</p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7148248770978226176?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7148248770978226176%2C7149335575282544640%29" target="_blank" class="linkedin-link" data-translate="linkedin_link">Read full on LinkedIn →</a>
+                <div class="role" data-translate="rec_role_sales"></div>
+                <div class="company" data-translate="name_marilyne"></div>
+                <p class="snippet" data-translate="rec_maryline"></p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7148248770978226176?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7148248770978226176%2C7149335575282544640%29" target="_blank" class="linkedin-link" data-translate="linkedin_link"></a>
             </div>
         </div>
     </section>
@@ -813,63 +854,53 @@
     <!-- Final Call to Action -->
     <section class="final-cta section">
         <div class="final-cta-content">
-            <h2 class="final-cta-title" data-translate="final_cta_title">Enterprise Data Infrastructure Transformation</h2>
-            <p class="final-cta-subtitle" data-translate="final_cta_subtitle">
-                Partner with proven expertise trusted by Fortune 500 companies. Achieve 30-50% cost reduction and 3-5x performance improvements through strategic data architecture solutions.
-            </p>
+            <h2 class="final-cta-title" data-translate="final_cta_title"></h2>
+            <p class="final-cta-subtitle" data-translate="final_cta_subtitle"></p>
 
             <div class="final-cta-benefits">
                 <div class="cta-benefit">
                     <span class="benefit-icon">⚡</span>
-                    <span data-translate="cta_benefit_1">Complimentary strategic consultation</span>
+                    <span data-translate="cta_benefit_1"></span>
                 </div>
                 <div class="cta-benefit">
                     <span class="benefit-icon">📈</span>
-                    <span data-translate="cta_benefit_2">Tailored architecture roadmap</span>
+                    <span data-translate="cta_benefit_2"></span>
                 </div>
                 <div class="cta-benefit">
                     <span class="benefit-icon">🛡️</span>
-                    <span data-translate="cta_benefit_3">Enterprise compliance framework</span>
+                    <span data-translate="cta_benefit_3"></span>
                 </div>
             </div>
 
             <div class="final-cta-buttons">
                 <a href="contact.html" class="cta-primary-large">
                     <span>📞</span>
-                    <span data-translate="cta_button_text">SCHEDULE CONSULTATION</span>
+                    <span data-translate="cta_button_text"></span>
                 </a>
             </div>
 
-            <p class="final-cta-guarantee" data-translate="cta_guarantee">
-                ✅ No commitment required • ✅ Enterprise-grade security • ✅ Proven ROI results
-            </p>
+            <p class="final-cta-guarantee" data-translate="cta_guarantee"></p>
         </div>
     </section>
-
-    </section>
-
-
 
     <!-- Cookie Consent Banner -->
     <div id="cookieBanner" class="cookie-banner">
         <div class="cookie-content">
-            <div class="cookie-text" data-translate="cookie_text">
-                We use cookies to analyze website traffic and optimize your experience. By accepting, you consent to our use of cookies for analytics and marketing purposes.
-            </div>
+            <div class="cookie-text" data-translate="cookie_text"></div>
             <div class="cookie-buttons">
-                <button class="cookie-btn accept" onclick="acceptCookies()" data-translate="cookie_accept">Accept All</button>
-                <button class="cookie-btn decline" onclick="declineCookies()" data-translate="cookie_decline">Necessary Only</button>
+                <button class="cookie-btn accept" onclick="acceptCookies()" data-translate="cookie_accept"></button>
+                <button class="cookie-btn decline" onclick="declineCookies()" data-translate="cookie_decline"></button>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 <span data-translate="name_ghazi">Ghazi</span> • <span data-translate="footer_text">Enterprise Data Solutions Architect • Delivering scalable infrastructure worldwide</span></p>
+        <p>&copy; 2025 <span data-translate="name_ghazi"></span> • <span data-translate="footer_text"></span></p>
     </footer>
 
     <script src="js/translations.js"></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js"></script>
     <script src="js/case-studies-slider.js" defer></script>
 
     <!-- Performance optimization script -->
@@ -879,9 +910,9 @@
         window.addEventListener('load', function() {
             navigator.serviceWorker.register('/sw.js')
                 .then(function(registration) {
-                    console.log('SW registered with scope: ', registration.scope);
+                    // Service Worker registered successfully
                 }, function(err) {
-                    console.log('SW registration failed: ', err);
+                    // Service Worker registration failed
                 });
         });
     }

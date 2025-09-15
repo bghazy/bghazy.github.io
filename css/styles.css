@@ -197,54 +197,6 @@
             animation: fadeInUp 1s ease-out 1.5s forwards;
         }
         
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 2s forwards;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero-stats {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .stat-box {
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-        
-        .stat-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: #64748b;
-        }
         
         .hero-cta {
             opacity: 0;
@@ -439,101 +391,7 @@
 
         
         
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(76, 205, 196, 0.1));
-            border-radius: 30px;
-            padding: 4rem 2rem;
-            text-align: center;
-            margin: 3rem 0;
-        }
-        
-        .contact-methods {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .contact-method {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            border-radius: 15px;
-            padding: 2rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .contact-method:hover {
-            transform: translateY(-5px);
-        }
-        
-        .contact-icon {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
 
-        /* Contact Buttons */
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            .contact-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-        }
-
-        .contact-btn-action {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .contact-btn-action.whatsapp {
-            background: linear-gradient(45deg, #25D366, #128C7E);
-            color: white;
-        }
-
-        .contact-btn-action.whatsapp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-        }
-
-        .contact-btn-action.email {
-            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
-            color: white;
-        }
-
-        .contact-btn-action.email:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
-        }
-
-        .contact-btn-action.contact-form {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .contact-btn-action.contact-form:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
-        }
         
         /* Animations */
         @keyframes fadeInUp {
@@ -574,18 +432,6 @@
                 margin-bottom: 2.5rem;
             }
             
-            .hero-stats {
-                margin-bottom: 2.5rem;
-                gap: 1rem;
-            }
-            
-            .stat-box {
-                padding: 1rem;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
             
         }
         
@@ -608,21 +454,6 @@
                 margin-bottom: 2rem;
             }
             
-            .hero-stats {
-                margin-bottom: 2rem;
-            }
-            
-            .stat-box {
-                padding: 0.8rem;
-            }
-            
-            .stat-number {
-                font-size: 1.8rem;
-            }
-            
-            .stat-label {
-                font-size: 0.8rem;
-            }
         }
         
         /* Professional subtle background gradient */
@@ -959,56 +790,6 @@
             color: var(--success);
         }
 
-        /* Enhanced Case Studies */
-        .case-study-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 2rem;
-        }
-
-        .case-study-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 40px -8px rgba(0, 0, 0, 0.2);
-        }
-
-        .case-study-content {
-            margin-top: 1.5rem;
-        }
-
-        .challenge-section, .solution-section, .result-section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            border-radius: 12px;
-        }
-
-        .challenge-section {
-            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-            border-left: 4px solid #f59e0b;
-        }
-
-        .solution-section {
-            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-            border-left: 4px solid #3b82f6;
-        }
-
-        .result-section {
-            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-            border-left: 4px solid #10b981;
-        }
-
-        .case-study-label {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
 
         .impact-metrics {
             display: flex;
@@ -1285,33 +1066,6 @@
     height: auto;
 }
 
-.company-logo-placeholder {
-    width: 120px;
-    height: 80px;
-    background: linear-gradient(135deg, #e31e24 0%, #d91e2a 100%);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 700;
-    border-radius: 8px;
-    letter-spacing: 2px;
-}
-
-.company-logo-placeholder-small {
-    width: 80px;
-    height: 50px;
-    background: linear-gradient(135deg, #e31e24 0%, #d91e2a 100%);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 6px;
-    letter-spacing: 1px;
-}
 
 .company-slide .company-name {
     font-size: 2.5rem;
