@@ -44,16 +44,39 @@ const translations = {
         // Trusted By
         trusted_by_title: "Trusted by Industry Leaders",
 
+        // My Approach & Capabilities
+        section_approach: "My Approach & Capabilities",
+        approach_description: "I deliver enterprise-grade data solutions through a strategic, business-first approach. Every technical decision is driven by your ROI, compliance requirements, and scalability needs.",
+
+        capability_strategic: "Strategic Architecture",
+        capability_strategic_desc: "I start by understanding your business objectives, then design data architectures that directly support your growth goals and competitive advantages.",
+
+        capability_execution: "Rapid Execution",
+        capability_execution_desc: "From concept to production in weeks, not months. I leverage proven patterns and modern tools to deliver working solutions quickly.",
+
+        capability_compliance: "Enterprise Compliance",
+        capability_compliance_desc: "Built-in security, governance, and regulatory compliance from day one. Your data stays secure and audit-ready.",
+
+        capability_cost: "Cost Optimization",
+        capability_cost_desc: "I optimize your infrastructure spend while maximizing performance. Clients typically see 15-25% cost reductions.",
+
         // Testimonials
         section_testimonials: "What clients & colleagues say",
+        section_recommendations: "What clients & colleagues say",
         rec_role_head_data: "Head of Data",
         rec_role_senior_architect: "Senior Architect",
         rec_role_senior_engineer: "Senior Engineer",
         rec_role_sales: "Sales Professional",
+        name_arnauld: "Arnauld",
+        name_amine: "Amine",
+        name_antoine: "Antoine",
+        name_marilyne: "Marilyne",
+        name_ghazi: "GHAZI",
         rec_arnauld: "Exceptional technical expertise. Delivered comprehensive AWS data architecture with full infrastructure automation 👌",
         rec_amine: "Exceptional technical leadership and architectural vision. Consistently delivers innovative solutions that exceed expectations. Highly recommended.",
         rec_antoine: "Ghazi is a true senior data engineer with strong knowledge to resolve any big data problem. It's a pleasure to work with him, and I wouldn't hesitate to do so again. I deeply recommend him.",
         rec_maryline: "I highly recommend him, Respects deadlines and budgets, offering expertise for the successful delivery of your projects.",
+        linkedin_link: "Read full on LinkedIn →",
 
         // My Approach
         section_my_approach: "My Approach & Capabilities",
@@ -76,12 +99,14 @@ const translations = {
         company_edf: "EDF",
         company_sncf: "Groupe SNCF",
         company_stellantis: "Stellantis",
+        company_societe_generale: "Société Générale",
         company_seloger: "Groupe SeLoger",
         company_laposte: "Le Groupe La Poste",
         company_beinsports: "BeIN Sports",
         industry_energy: "Energy & Utilities",
         industry_transport: "Transportation & Logistics",
         industry_automotive: "Automotive & Manufacturing",
+        industry_banking: "Banking & Financial Services",
         industry_realestate: "Real Estate & PropTech",
         industry_logistics: "Postal & Logistics Services",
         industry_media: "Media & Entertainment (Streaming)",
@@ -314,16 +339,39 @@ const translations = {
         // Trusted By
         trusted_by_title: "Fait confiance par les leaders de l'industrie",
 
+        // My Approach & Capabilities
+        section_approach: "Mon Approche & Capacités",
+        approach_description: "Je livre des solutions data de niveau entreprise grâce à une approche stratégique, axée business. Chaque décision technique est alignée avec vos objectifs ROI, exigences de conformité et impératifs d'évolutivité.",
+
+        capability_strategic: "Architecture Stratégique",
+        capability_strategic_desc: "Je commence par comprendre vos objectifs business, puis conçois des architectures data qui soutiennent directement vos objectifs de croissance et avantages concurrentiels.",
+
+        capability_execution: "Exécution Rapide",
+        capability_execution_desc: "Du concept à la production en semaines, pas en mois. J'exploite des modèles éprouvés et outils modernes pour livrer des solutions fonctionnelles rapidement.",
+
+        capability_compliance: "Conformité Entreprise",
+        capability_compliance_desc: "Sécurité, gouvernance et conformité réglementaire intégrées dès le premier jour. Vos données restent sécurisées et prêtes pour l'audit.",
+
+        capability_cost: "Optimisation des Coûts",
+        capability_cost_desc: "J'optimise vos dépenses d'infrastructure tout en maximisant les performances. Les clients voient typiquement 15-25% de réductions de coûts.",
+
         // Testimonials
         section_testimonials: "Ce que disent les clients et collègues",
         rec_role_head_data: "Responsable Data",
         rec_role_senior_architect: "Architecte Senior",
         rec_role_senior_engineer: "Ingénieur Senior",
         rec_role_sales: "Professionnel Commercial",
+        name_arnauld: "Arnauld",
+        name_amine: "Amine",
+        name_antoine: "Antoine",
+        name_marilyne: "Marilyne",
+        name_ghazi: "GHAZI",
         rec_arnauld: "Très bon freelance. Il a construit toute l'architecture Data AWS, Terraform inclus 👌",
         rec_amine: "C'est tout simplement l'un des ingénieurs les plus talentueux avec qui j'aie jamais travaillé. Je le recommande vivement.",
         rec_antoine: "Ghazi est un véritable ingénieur data senior avec de solides connaissances pour résoudre tout problème de big data. C'est un plaisir de travailler avec lui, et je n'hésiterais pas à le faire à nouveau. Je le recommande vivement.",
         rec_maryline: "Je le recommande vivement, Respecte les délais et les budgets, offrant une expertise pour la livraison réussie de vos projets.",
+        section_recommendations: "Ce que disent les clients et collègues",
+        linkedin_link: "Lire l'intégralité sur LinkedIn →",
 
         // My Approach
         section_my_approach: "Mon Approche & Capacités",
@@ -346,12 +394,14 @@ const translations = {
         company_edf: "EDF",
         company_sncf: "Groupe SNCF",
         company_stellantis: "Stellantis",
+        company_societe_generale: "Société Générale",
         company_seloger: "Groupe SeLoger",
         company_laposte: "Le Groupe La Poste",
         company_beinsports: "BeIN Sports",
         industry_energy: "Énergie et Utilités",
         industry_transport: "Transport et Logistique",
         industry_automotive: "Automobile et Fabrication",
+        industry_banking: "Banque et Services Financiers",
         industry_realestate: "Immobilier et PropTech",
         industry_logistics: "Services Postaux et Logistiques",
         industry_media: "Médias et Divertissement (Streaming)",
@@ -583,6 +633,7 @@ const translations = {
         company_edf: "EDF",
         company_sncf: "Groupe SNCF",
         company_stellantis: "Stellantis",
+        company_societe_generale: "Société Générale",
         company_seloger: "Groupe SeLoger",
         company_laposte: "Le Groupe La Poste",
         company_beinsports: "BeIN Sports",
@@ -590,6 +641,7 @@ const translations = {
         industry_energy: "الطاقة والمرافق",
         industry_transport: "النقل واللوجستيات",
         industry_automotive: "السيارات والتصنيع",
+        industry_banking: "الخدمات المصرفية والمالية",
         industry_realestate: "العقارات والتكنولوجيا",
         industry_logistics: "الخدمات البريدية واللوجستية",
         industry_media: "الإعلام والترفيه (البث المباشر)",
@@ -797,10 +849,16 @@ const translations = {
 
         // Recommendations
         section_recommendations: "ما يقوله العملاء والزملاء",
+        section_testimonials: "ما يقوله العملاء والزملاء",
         rec_role_head_data: "رئيس البيانات",
         rec_role_senior_architect: "كبير مهندسي هندسة البيانات",
         rec_role_senior_engineer: "مهندس أول",
         rec_role_sales: "محترف المبيعات",
+        name_arnauld: "أرنولد",
+        name_amine: "أمين",
+        name_antoine: "أنطوان",
+        name_marilyne: "ماريلين",
+        name_ghazi: "غازي",
         rec_arnauld: "مستقل ممتاز جداً. لقد بنى كامل هندسة AWS للبيانات، تيرافورم مشمول 👌",
         rec_amine: "إنه ببساطة واحد من أكثر المهندسين موهبة عملت معهم على الإطلاق. أوصي به بشدة.",
         rec_antoine: "غازي مهندس بيانات أول حقيقي مع معرفة قوية لحل أي مشكلة بيانات ضخمة. إنه لمن دواعي سروري العمل معه، ولن أتردد في القيام بذلك مرة أخرى. أوصي به بشدة.",
@@ -934,6 +992,7 @@ const translations = {
         company_edf: "EDF",
         company_sncf: "Groupe SNCF",
         company_stellantis: "Stellantis",
+        company_societe_generale: "Société Générale",
         company_seloger: "Groupe SeLoger",
         company_laposte: "Le Groupe La Poste",
         company_beinsports: "BeIN Sports",
@@ -941,6 +1000,7 @@ const translations = {
         industry_energy: "Energía y Servicios Públicos",
         industry_transport: "Transporte y Logística",
         industry_automotive: "Automotriz y Manufactura",
+        industry_banking: "Banca y Servicios Financieros",
         industry_realestate: "Bienes Raíces y PropTech",
         industry_logistics: "Servicios Postales y Logísticos",
         industry_media: "Medios y Entretenimiento (Streaming)",
@@ -1193,10 +1253,16 @@ const translations = {
 
         // Recommendations
         section_recommendations: "Lo que dicen clientes y colegas",
+        section_testimonials: "Lo que dicen clientes y colegas",
         rec_role_head_data: "Jefe de Datos",
         rec_role_senior_architect: "Arquitecto Senior",
         rec_role_senior_engineer: "Ingeniero Senior",
         rec_role_sales: "Profesional de Ventas",
+        name_arnauld: "Arnauld",
+        name_amine: "Amine",
+        name_antoine: "Antoine",
+        name_marilyne: "Marilyne",
+        name_ghazi: "GHAZI",
         rec_arnauld: "Muy buen freelance. Él construyó toda la arquitectura de Datos AWS, Terraform incluido 👌",
         rec_amine: "Él es simplemente uno de los ingenieros más talentosos con los que he trabajado. Lo recomiendo altamente.",
         rec_antoine: "Ghazi es un verdadero ingeniero senior de datos con conocimiento sólido para resolver cualquier problema de big data. Es un placer trabajar con él, y no dudaría en hacerlo de nuevo. Lo recomiendo profundamente.",
@@ -1243,6 +1309,7 @@ const translations = {
 let currentLanguage = 'en';
 
 function setLanguage(lang) {
+    console.log(`Switching language from "${currentLanguage}" to "${lang}"`);
     currentLanguage = lang;
     localStorage.setItem('selectedLanguage', lang);
     
@@ -1255,10 +1322,15 @@ function setLanguage(lang) {
     
     // Also update the document title with language info
     updateDocumentTitle(lang);
-    
+
     updateContent();
     updateLanguageSelector();
     updateDirection(lang);
+
+    // Force update for any dynamically shown/hidden elements
+    setTimeout(() => {
+        updateContent();
+    }, 100);
     
     // Track language change
     if (typeof gtag !== 'undefined') {
@@ -1275,12 +1347,20 @@ function setLanguage(lang) {
 
 function updateContent() {
     const t = translations[currentLanguage];
-    
+    const elements = document.querySelectorAll('[data-translate]');
+    console.log(`Updating ${elements.length} elements for language "${currentLanguage}"`);
+
     // Update all elements with data-translate attribute
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
         if (t[key]) {
             element.textContent = t[key];
+        } else {
+            console.warn(`Missing translation for key "${key}" in language "${currentLanguage}"`);
+            // Fallback to English if available
+            if (translations.en[key]) {
+                element.textContent = translations.en[key];
+            }
         }
     });
     
@@ -1366,8 +1446,14 @@ function getAllLanguageURLs(baseUrl) {
     };
 }
 
+// Function to re-translate elements (useful for dynamic content)
+function retranslate() {
+    updateContent();
+}
+
 // Export functions for use in HTML
 window.setLanguage = setLanguage;
 window.initializeLanguage = initializeLanguage;
+window.retranslate = retranslate;
 window.generateLanguageURL = generateLanguageURL;
 window.getAllLanguageURLs = getAllLanguageURLs;

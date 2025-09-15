@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
         currentCase = caseId;
         currentSlide = 0;
         updateSlideIndicators();
+
+        // Re-translate elements when case study changes
+        if (typeof window.retranslate === 'function') {
+            setTimeout(() => window.retranslate(), 50);
+        }
     }
 
     // Initialize event listeners for slide navigation
@@ -69,6 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
         indicators[slideIndex].classList.add('active');
 
         currentSlide = slideIndex;
+
+        // Re-translate elements when slide changes
+        if (typeof window.retranslate === 'function') {
+            setTimeout(() => window.retranslate(), 50);
+        }
     }
 
     function nextSlide() {
@@ -103,13 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (slides[0]) slides[0].classList.add('active');
     }
 
-    // Auto-play functionality (optional)
-    let autoPlay = false;
-    if (autoPlay) {
-        setInterval(() => {
-            nextSlide();
-        }, 5000);
-    }
 
     // Keyboard navigation
     document.addEventListener('keydown', function(e) {
