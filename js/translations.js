@@ -9,9 +9,9 @@ const translations = {
         nav_hire_me: "SCHEDULE CONVERSATION",
 
         // Hero Section
-        hero_title: "Data Engineering & Software Architecture Expert",
-        hero_subtitle: "Data Engineering • Software Development • DevOps • Cloud Architecture",
-        hero_description: "Data engineer & software architect delivering comprehensive solutions across the technology stack. Expertise in data engineering, software development, DevOps automation, and cloud architecture. Proven track record with major enterprises including EDF, SNCF, Stellantis, and BeIN Sports.",
+        hero_title: "Enterprise Solutions Expert",
+        hero_subtitle: "Data Engineering • Software Development • DevOps • Cloud • Architecture",
+        hero_description: "Specialized in building scalable data platforms, robust software systems, and cloud-native architectures. I help enterprises modernize their technology stack, optimize costs, and accelerate time-to-market through proven engineering expertise across the full technology spectrum.",
         hero_cta: "SCHEDULE STRATEGIC CONSULTATION →",
 
         // Certifications
@@ -26,13 +26,13 @@ const translations = {
 
         // My Approach & Capabilities
         section_approach: "My Approach & Capabilities",
-        approach_description: "I deliver enterprise-grade data solutions through a strategic, business-first approach. Every technical decision is driven by your ROI, compliance requirements, and scalability needs.",
+        approach_description: "I partner with enterprises to transform their technology infrastructure through strategic engineering solutions. Whether you need data platforms, software modernization, DevOps automation, or cloud migration - I deliver measurable business outcomes.",
 
         capability_strategic: "Strategic Architecture",
-        capability_strategic_desc: "I craft enterprise-grade solutions across data engineering, software architecture, and DevOps that directly align with your business objectives and competitive advantages.",
+        capability_strategic_desc: "I architect comprehensive technology solutions that drive business growth. From data strategy to software architecture, cloud infrastructure to DevOps practices - every decision is aligned with your business objectives and competitive positioning.",
 
         capability_execution: "Rapid Execution",
-        capability_execution_desc: "Comprehensive software craftsmanship from concept to production. I deliver scalable data pipelines, robust software systems, and automated DevOps workflows using proven engineering patterns.",
+        capability_execution_desc: "End-to-end delivery from architecture to production. I build scalable data platforms, modern software applications, automated CI/CD pipelines, and resilient cloud infrastructure using industry best practices and proven technologies.",
 
         capability_compliance: "Enterprise Compliance",
         capability_compliance_desc: "Enterprise-grade security, data governance, and regulatory compliance (GDPR, HIPAA, SOC2, CCPA) engineered into every solution from architecture to deployment.",
@@ -101,9 +101,9 @@ const translations = {
         footer_text: "Enterprise Data Solutions Architect • Delivering scalable infrastructure worldwide",
 
         // My Approach & Capabilities
-        strategic_feature_1: "Business-driven technical decisions",
-        strategic_feature_2: "ROI-focused solution design",
-        strategic_feature_3: "Scalable, future-proof architectures",
+        strategic_feature_1: "Data strategy & software architecture roadmaps",
+        strategic_feature_2: "Cloud migration & modernization planning",
+        strategic_feature_3: "DevOps transformation & automation strategy",
         execution_feature_1: "Infrastructure as Code for rapid deployment",
         execution_feature_2: "Multi-cloud expertise (AWS, Azure, GCP)",
         execution_feature_3: "Real-time & batch processing at scale",
@@ -270,9 +270,9 @@ const translations = {
         nav_hire_me: "PLANIFIER CONVERSATION",
 
         // Hero Section
-        hero_title: "Expert en Ingénierie Data & Architecture Logicielle",
-        hero_subtitle: "Ingénierie Data • Développement Logiciel • DevOps • Architecture Cloud",
-        hero_description: "Ingénieur data & architecte logiciel livrant des solutions complètes sur toute la pile technologique. Expertise en ingénierie data, développement logiciel, automatisation DevOps et architecture cloud. Track record prouvé avec des entreprises majeures incluant EDF, SNCF, Stellantis et BeIN Sports.",
+        hero_title: "Expert en Solutions Entreprise",
+        hero_subtitle: "Ingénierie Data • Développement Logiciel • DevOps • Cloud • Architecture",
+        hero_description: "Spécialisé dans la construction de plateformes data scalables, systèmes logiciels robustes et architectures cloud-native. J'aide les entreprises à moderniser leur stack technologique, optimiser les coûts et accélérer le time-to-market grâce à une expertise ingénierie prouvée.",
         hero_cta: "PLANIFIER CONSULTATION STRATÉGIQUE →",
 
         // Certifications
@@ -287,13 +287,13 @@ const translations = {
 
         // My Approach & Capabilities
         section_approach: "Mon Approche & Capacités",
-        approach_description: "Je livre des solutions data de niveau entreprise grâce à une approche stratégique, axée business. Chaque décision technique est alignée avec vos objectifs ROI, exigences de conformité et impératifs d'évolutivité.",
+        approach_description: "Je collabore avec les entreprises pour transformer leur infrastructure technologique grâce à des solutions d'ingénierie stratégiques. Que vous ayez besoin de plateformes data, modernisation logicielle, automatisation DevOps ou migration cloud - je livre des résultats business mesurables.",
 
         capability_strategic: "Architecture Stratégique",
-        capability_strategic_desc: "Je conçois des solutions d'entreprise en ingénierie des données, architecture logicielle et DevOps qui s'alignent directement avec vos objectifs business et avantages concurrentiels.",
+        capability_strategic_desc: "J'architecte des solutions technologiques complètes qui stimulent la croissance business. De la stratégie data à l'architecture logicielle, infrastructure cloud aux pratiques DevOps - chaque décision est alignée avec vos objectifs business.",
 
         capability_execution: "Exécution Rapide",
-        capability_execution_desc: "Artisanat logiciel complet du concept à la production. Je livre des pipelines de données scalables, systèmes logiciels robustes et workflows DevOps automatisés avec des patterns d'ingénierie éprouvés.",
+        capability_execution_desc: "Livraison end-to-end de l'architecture à la production. Je construis des plateformes data scalables, applications logicielles modernes, pipelines CI/CD automatisés et infrastructure cloud résiliente avec les meilleures pratiques industrie.",
 
         capability_compliance: "Conformité Entreprise",
         capability_compliance_desc: "Sécurité de niveau entreprise, gouvernance des données et conformité réglementaire (RGPD, HIPAA, SOC2, CCPA) intégrées dans chaque solution de l'architecture au déploiement.",
@@ -531,9 +531,9 @@ const translations = {
         nav_hire_me: "جدولة محادثة",
         
         // Hero Section
-        hero_title: "خبير هندسة البيانات وهندسة البرمجيات",
-        hero_subtitle: "هندسة بيانات • تطوير برمجيات • DevOps • هندسة سحابية",
-        hero_description: "مهندس بيانات ومهندس برمجيات يقدم حلول شاملة عبر المكدس التقني. خبرة في هندسة البيانات، تطوير البرمجيات، أتمتة DevOps، وهندسة السحابة. سجل مُثبت مع شركات كبرى مثل EDF، SNCF، Stellantis، وBeIN Sports.",
+        hero_title: "خبير حلول المؤسسات",
+        hero_subtitle: "هندسة بيانات • تطوير برمجيات • DevOps • سحابة • هندسة",
+        hero_description: "متخصص في بناء منصات بيانات قابلة للتوسع، أنظمة برمجيات قوية، وهندسة معمارية سحابية أصيلة. أساعد المؤسسات على تحديث مكدسها التقني، تحسين التكاليف، وتسريع الوصول للسوق.",
         hero_cta: "← جدولة استشارة استراتيجية",
         
         // Certifications
@@ -546,7 +546,7 @@ const translations = {
 
         // نهجي وقدراتي
         section_approach: "نهجي وقدراتي",
-        approach_description: "أقدم حلول بيانات على مستوى المؤسسات من خلال نهج استراتيجي يركز على الأعمال. كل قرار تقني يوجه بعائد الاستثمار ومتطلبات الامتثال واحتياجات قابلية التوسع.",
+        approach_description: "أتعاون مع المؤسسات لتحويل بنيتها التقنية من خلال حلول هندسية استراتيجية. سواء كنتم تحتاجون منصات بيانات، تحديث البرمجيات، أتمتة DevOps أو هجرة سحابية - أقدم نتائج عمل قابلة للقياس.",
 
         capability_strategic: "الهندسة الاستراتيجية",
         capability_strategic_desc: "أصمم حلول مؤسسية في هندسة البيانات وهندسة البرمجيات وDevOps تتماشى مباشرة مع أهدافك التجارية وميزاتك التنافسية.",
@@ -907,9 +907,9 @@ const translations = {
         nav_hire_me: "PROGRAMAR CONVERSACIÓN",
         
         // Hero Section
-        hero_title: "Arquitecto de Datos y Artesanía de Software",
-        hero_subtitle: "Ingeniería de Datos • Desarrollo de Software • DevOps • Arquitectura Cloud",
-        hero_description: "Ingeniero de datos y arquitecto de software entregando soluciones comprehensivas a través del stack tecnológico. Experiencia en ingeniería de datos, desarrollo de software, automatización DevOps y arquitectura cloud. Track record comprobado con empresas líderes incluyendo EDF, SNCF, Stellantis y BeIN Sports.",
+        hero_title: "Experto en Soluciones Empresariales",
+        hero_subtitle: "Ingeniería de Datos • Desarrollo de Software • DevOps • Cloud • Arquitectura",
+        hero_description: "Especializado en construir plataformas de datos escalables, sistemas de software robustos y arquitecturas cloud-nativas. Ayudo a empresas a modernizar su stack tecnológico, optimizar costos y acelerar el time-to-market a través de experiencia en ingeniería comprobada.",
         hero_cta: "PROGRAMAR CONSULTA ESTRATÉGICA →",
         
         // Certifications
@@ -922,10 +922,10 @@ const translations = {
 
         // Mi Enfoque y Capacidades
         section_approach: "Mi Enfoque y Capacidades",
-        approach_description: "Entrego soluciones de datos de nivel empresarial a través de un enfoque estratégico centrado en el negocio. Cada decisión técnica se guía por su ROI, requisitos de cumplimiento y necesidades de escalabilidad.",
+        approach_description: "Colaboro con empresas para transformar su infraestructura tecnológica a través de soluciones de ingeniería estratégicas. Ya sea que necesite plataformas de datos, modernización de software, automatización DevOps o migración cloud - entrego resultados de negocio medibles.",
 
         capability_strategic: "Arquitectura Estratégica",
-        capability_strategic_desc: "Diseño soluciones empresariales en ingeniería de datos, arquitectura de software y DevOps que se alinean directamente con sus objetivos de negocio y ventajas competitivas.",
+        capability_strategic_desc: "Arquitecto soluciones tecnológicas integrales que impulsan el crecimiento del negocio. Desde estrategia de datos hasta arquitectura de software, infraestructura cloud hasta prácticas DevOps - cada decisión se alinea con sus objetivos empresariales.",
 
         capability_execution: "Ejecución Rápida",
         capability_execution_desc: "Artesanía de software comprehensiva del concepto a producción. Entrego pipelines de datos escalables, sistemas de software robustos y flujos DevOps automatizados usando patrones de ingeniería probados.",
