@@ -331,71 +331,7 @@
             background: linear-gradient(45deg, var(--primary), var(--accent));
         }
         
-        /* Data Pipeline Visualization */
-        .pipeline-demo {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 3rem 0;
-            position: relative;
-            overflow: hidden;
-        }
         
-        .pipeline-flow {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        
-        .pipeline-node {
-            background: white;
-            border: 2px solid rgba(99, 102, 241, 0.2);
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            min-width: 150px;
-            position: relative;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        
-        .pipeline-node:hover {
-            background: #f8fafc;
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.2);
-        }
-        
-        .pipeline-node i {
-            color: var(--primary);
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .pipeline-node h3 {
-            color: #1f2937;
-            margin: 0.5rem 0;
-        }
-        
-        .pipeline-node p {
-            color: var(--gray);
-            margin: 0;
-            font-size: 0.9rem;
-        }
-        
-        .pipeline-arrow {
-            color: var(--primary);
-            font-size: 1.5rem;
-            animation: flow 2s ease-in-out infinite;
-        }
-        
-        @keyframes flow {
-            0%, 100% { transform: translateX(0); opacity: 1; }
-            50% { transform: translateX(10px); opacity: 0.7; }
-        }
         
         /* Achievement Highlight in Case Studies */
         .achievement-highlight {
@@ -414,113 +350,7 @@
             font-family: 'JetBrains Mono', monospace;
         }
 
-        /* Case Studies Grid - 2x3 layout */
-        .case-studies-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
         
-        @media (max-width: 1024px) {
-            .case-studies-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .case-studies-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .experience-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            border-radius: 20px;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .company-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .company-logo {
-            width: 60px;
-            height: 30px;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-        
-        .company-info {
-            flex: 1;
-        }
-        
-        .card-summary {
-            display: block;
-        }
-        
-        .card-details {
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            margin-top: 0;
-        }
-        
-        .experience-card:hover .card-details {
-            max-height: 200px;
-            opacity: 1;
-            margin-top: 1rem;
-        }
-        
-        .experience-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 255, 136, 0.2);
-            border-color: var(--primary);
-        }
-        
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .experience-card:hover::before {
-            left: 100%;
-        }
-        
-        .experience-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .company-name {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .impact-metric {
-            background: rgba(0, 255, 136, 0.2);
-            border-left: 4px solid var(--primary);
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0 10px 10px 0;
-        }
 
         /* Recommendations Section */
         .recommendations-grid {
@@ -607,39 +437,6 @@
             text-align: right;
         }
 
-        /* Skills Matrix */
-        .skills-matrix {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .skill-category {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        .skill-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .skill-list {
-            list-style: none;
-        }
-        
-        .skill-list li {
-            background: rgba(0, 255, 136, 0.1);
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            border-radius: 8px;
-            border-left: 3px solid var(--primary);
-        }
         
         
         /* Contact Section */
@@ -790,17 +587,6 @@
                 font-size: 2rem;
             }
             
-            .pipeline-flow {
-                flex-direction: column;
-            }
-            
-            .pipeline-arrow {
-                transform: rotate(90deg);
-            }
-            
-            .experience-grid {
-                grid-template-columns: 1fr;
-            }
         }
         
         @media (max-width: 480px) {
@@ -925,15 +711,11 @@
             flex-direction: row-reverse;
         }
         
-        [dir="rtl"] .recommendations-grid,
-        [dir="rtl"] .case-studies-grid,
-        [dir="rtl"] .skills-matrix {
+        [dir="rtl"] .recommendations-grid {
             direction: rtl;
         }
-        
-        [dir="rtl"] .recommendation-card,
-        [dir="rtl"] .experience-card,
-        [dir="rtl"] .skill-category {
+
+        [dir="rtl"] .recommendation-card {
             text-align: right;
         }
         
@@ -942,10 +724,6 @@
             border-right: 4px solid var(--primary);
         }
         
-        [dir="rtl"] .skill-list li {
-            border-left: none;
-            border-right: 3px solid var(--primary);
-        }
         
         /* Mobile RTL adjustments */
         @media (max-width: 768px) {

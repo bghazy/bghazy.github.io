@@ -7,58 +7,69 @@ const translations = {
         nav_approach: "Approach",
         nav_contact: "Contact",
         nav_hire_me: "SCHEDULE CONVERSATION",
-        
+
         // Hero Section
         hero_title: "Enterprise Data Solutions Architect",
         hero_subtitle: "Architecting scalable, compliant data platforms for enterprise growth",
         hero_description: "Delivering mission-critical data infrastructure for Fortune 500 companies. Specialized in governance, compliance, and ROI-driven solutions across multi-cloud and hybrid environments. Proven track record of reducing operational costs while ensuring enterprise-grade security and scalability.",
         hero_cta: "SCHEDULE CONSULTATION →",
-        
+
         // Certifications
         cert_aws: "AWS Certified Solutions Architect - Associate",
         cert_hortonworks: "HDP Certified Developer",
         cert_epfl: "EPFL Functional Programming",
-        
+
         // Results & Outcomes
         section_results: "Recent Achievements & Proven Results",
         results_subtitle: "Measurable Impact Delivered in 2024-2025",
-        
+
         result_cost_reduction: "40% Average Cost Reduction",
         result_cost_desc: "Across 15+ enterprise implementations through infrastructure optimization and cloud-native architectures",
-        
+
         result_performance: "10x Performance Improvement",
         result_performance_desc: "Real-time data processing with sub-second latency for mission-critical applications",
-        
+
         result_compliance: "100% Compliance Achievement",
         result_compliance_desc: "GDPR, SOX, and industry-specific regulations across global Fortune 500 implementations",
-        
+
         result_scaling: "500% Scaling Capability",
         result_scaling_desc: "Seamless horizontal scaling from startup to enterprise-grade data volumes",
-        
+
         result_uptime: "99.9% System Uptime",
         result_uptime_desc: "Enterprise-grade reliability with automated failover and disaster recovery",
-        
+
         result_time_to_market: "60% Faster Time-to-Market",
         result_time_to_market_desc: "Accelerated data product development through automation and DevOps best practices",
 
         // Trusted By
         trusted_by_title: "Trusted by Industry Leaders",
 
-        // My Approach & Capabilities
-        section_approach: "My Approach & Capabilities",
-        approach_description: "I deliver enterprise-grade data solutions through a strategic, business-first approach. Every technical decision is driven by your ROI, compliance requirements, and scalability needs.",
+        // Testimonials
+        section_testimonials: "What clients & colleagues say",
+        rec_role_head_data: "Head of Data",
+        rec_role_senior_architect: "Senior Architect",
+        rec_role_senior_engineer: "Senior Engineer",
+        rec_role_sales: "Sales Professional",
+        rec_arnauld: "Very good freelance. He build the whole Data AWS architecture, Terraform included 👌",
+        rec_amine: "He is simply one of the most talented engineers I've ever worked with. I would highly recommend him.",
+        rec_antoine: "Ghazi is a true senior data engineer with strong knowledge to resolve any big data problem. It's a pleasure to work with him, and I wouldn't hesitate to do so again. I deeply recommend him.",
+        rec_maryline: "I highly recommend him, Respects deadlines and budgets, offering expertise for the successful delivery of your projects.",
 
-        capability_strategic: "Strategic Architecture",
-        capability_strategic_desc: "I start by understanding your business objectives, then design data architectures that directly support your growth goals and competitive advantages.",
+        // My Approach
+        section_my_approach: "My Approach & Capabilities",
+        approach_subtitle: "I deliver enterprise-grade data solutions through a strategic, business-first approach. Every technical decision is driven by your ROI, compliance requirements, and scalability needs.",
 
-        capability_execution: "Rapid Execution",
-        capability_execution_desc: "From concept to production in weeks, not months. I leverage proven patterns and modern tools to deliver working solutions quickly.",
+        approach_strategic: "Strategic Architecture",
+        approach_strategic_desc: "I start by understanding your business objectives, then design data architectures that directly support your growth goals and competitive advantages.",
 
-        capability_compliance: "Enterprise Compliance",
-        capability_compliance_desc: "Built-in security, governance, and regulatory compliance from day one. Your data stays secure and audit-ready.",
+        approach_execution: "Rapid Execution",
+        approach_execution_desc: "From concept to production in weeks, not months. I leverage proven patterns and modern tools to deliver working solutions quickly.",
 
-        capability_cost: "Cost Optimization",
-        capability_cost_desc: "I optimize your infrastructure spend while maximizing performance. Clients typically see 40-60% cost reductions.",
+        approach_compliance: "Enterprise Compliance",
+        approach_compliance_desc: "Built-in security, governance, and regulatory compliance from day one. Your data stays secure and audit-ready.",
+
+        approach_cost: "Cost Optimization",
+        approach_cost_desc: "I optimize your infrastructure spend while maximizing performance. Clients typically see 40-60% cost reductions.",
 
         // Case Studies
         section_case_studies: "Work & Portfolio",
@@ -74,72 +85,20 @@ const translations = {
         industry_realestate: "Real Estate & PropTech",
         industry_logistics: "Postal & Logistics Services",
         industry_media: "Media & Entertainment (Streaming)",
-        metric_edf: "40% Cost Reduction • 70% Deployment Time Reduction",
-        description_edf: "Designed and implemented 15+ production data pipelines processing 200GB daily with 99.9% uptime. Cut infrastructure costs by 40% through resource optimization and built self-service data platform enabling teams worldwide.",
-        
-        company_sncf: "Groupe SNCF",
-        industry_transport: "Transportation & Logistics",
-        metric_sncf: "10x Performance Improvement • 60% API Response Time • 1M+ Daily Requests",
-        description_sncf: "Architected microservices processing 500GB daily rail operations data. Implemented event-driven architecture reducing system coupling by 80%. Saved €200K annually through AWS optimization - scalable globally.",
-        
-        company_stellantis: "Stellantis",
-        industry_automotive: "Automotive & Manufacturing",
-        metric_stellantis: "500% Scaling Capability • 2TB Daily Processing • 10M+ Events/Hour",
-        description_stellantis: "Built real-time analytics platform for 500K+ connected vehicles across multiple continents. Reduced processing costs by 45% and implemented predictive maintenance with 87% accuracy, improving vehicle uptime by 23% globally.",
-        
-        company_seloger: "Groupe SeLoger",
-        industry_realestate: "Real Estate & PropTech",
-        metric_seloger: "60% Faster Time-to-Market • 50M+ Real Estate Listings • 10M+ Monthly Users",
-        description_seloger: "Built data lake processing 50M+ real estate listings with 99.9% reliability. Reduced batch processing from 8 hours to 45 minutes. Implemented ML pipeline for property valuation improving accuracy by 35% - applicable to any market.",
-        
-        company_laposte: "Le Groupe La Poste",
-        industry_postal: "Postal & Logistics Services",
-        metric_laposte: "99.9% System Uptime • 300M+ Daily Package Events • 10x Performance Improvement",
-        description_laposte: "Developed generic data ingestion platform with privacy-by-design ensuring global compliance (GDPR, local regulations). Reduced storage costs by 60% and achieved 10x improvement in ingestion speed.",
-        
-        company_bein: "BeIN Sports",
-        industry_media: "Media & Entertainment (Streaming)",
-        metric_bein: "100% Compliance Achievement • Live Streaming & Data Pipeline Optimization",
-        description_bein: "Contributed to scaling BeIN Sports live streaming platform to support millions of concurrent viewers across the Europe/MENA region. Optimized data pipelines and monitoring systems to ensure real-time performance and reliability during high-traffic broadcasts.",
-        
-        // Recommendations
-        section_recommendations: "What clients & colleagues say",
-        rec_role_head_data: "Head of Data",
-        rec_role_senior_architect: "Senior Architect",
-        rec_role_senior_engineer: "Senior Engineer",
-        rec_role_sales: "Sales Professional",
-        rec_arnauld: "Very good freelance. He build the whole Data AWS architecture, Terraform included 👌",
-        rec_amine: "He is simply one of the most talented engineers I've ever worked with. I would highly recommend him.",
-        rec_antoine: "Ghazi is a true senior data engineer with strong knowledge to resolve any big data problem. It's a pleasure to work with him, and I wouldn't hesitate to do so again. I deeply recommend him.",
-        rec_maryline: "I highly recommend him, Respects deadlines and budgets, offering expertise for the successful delivery of your projects.",
-        linkedin_link: "Read full on LinkedIn →",
-        
-        recommendations_cta: "Get In Touch →",
-        
-        // Skills
-        section_skills: "Technical Expertise",
-        skill_multicloud: "Multi-Cloud & Infrastructure",
-        skill_bigdata: "Big Data & Analytics",
-        skill_programming: "Programming & Databases",
-        skill_architecture: "Solution Architecture & Design",
-        skill_devops: "DevOps & Infrastructure",
-        skill_datatools: "Data Engineering Tools",
-        skill_ml: "Machine Learning & AI",
-        skill_leadership: "Leadership & Communication",
-        
+
         // Contact
         section_contact: "Available for 15-min discovery calls",
         contact_form_btn: "Contact Form",
-        
+
         // Footer
-        footer_text: "Enterprise Data Solutions Architect • Transforming enterprises worldwide ⚡",
-        
+        footer_text: "Enterprise Data Solutions Architect • Delivering scalable infrastructure worldwide",
+
         // Cookie Banner
         cookie_text: "We use cookies to analyze website traffic and optimize your experience. By accepting, you consent to our use of cookies for analytics and marketing purposes.",
         cookie_accept: "Accept All",
         cookie_decline: "Necessary Only"
     },
-    
+
     fr: {
         // Navigation
         nav_case_studies: "Portfolio",
@@ -147,59 +106,71 @@ const translations = {
         nav_approach: "Approche",
         nav_contact: "Contact",
         nav_hire_me: "PLANIFIER CONVERSATION",
-        
+
         // Hero Section
         hero_title: "Architecte de Solutions Data Entreprise",
+        hero_subtitle: "Architecting scalable, compliant data platforms for enterprise growth",
         hero_description: "Fournissant des infrastructures data critiques pour les entreprises Fortune 500. Spécialisé en gouvernance, conformité et solutions axées ROI dans des environnements multi-cloud et hybrides. Historique prouvé de réduction des coûts opérationnels tout en garantissant sécurité et évolutivité de niveau entreprise.",
         hero_cta: "PLANIFIER CONSULTATION →",
-        
+
         // Certifications
         cert_aws: "AWS Certified Solutions Architect - Associate",
         cert_hortonworks: "HDP Certified Developer",
         cert_epfl: "EPFL Programmation Fonctionnelle",
-        
+
         // Results & Outcomes
         section_results: "Réalisations Récentes & Résultats Prouvés",
         results_subtitle: "Impact Mesurable Livré en 2024-2025",
-        
+
         result_cost_reduction: "40% de Réduction des Coûts en Moyenne",
         result_cost_desc: "Sur 15+ implémentations d'entreprise grâce à l'optimisation d'infrastructure et aux architectures cloud-natives",
-        
+
         result_performance: "10x d'Amélioration des Performances",
         result_performance_desc: "Traitement de données en temps réel avec latence sub-seconde pour applications mission-critiques",
-        
+
         result_compliance: "100% de Conformité Atteinte",
         result_compliance_desc: "RGPD, SOX et réglementations sectorielles spécifiques dans les implémentations Fortune 500 mondiales",
-        
+
         result_scaling: "500% de Capacité d'Évolutivité",
         result_scaling_desc: "Mise à l'échelle horizontale transparente du startup au niveau des volumes de données d'entreprise",
-        
+
         result_uptime: "99,9% de Disponibilité Système",
         result_uptime_desc: "Fiabilité de niveau entreprise avec basculement automatique et récupération après sinistre",
-        
+
         result_time_to_market: "60% de Temps de Mise sur le Marché Plus Rapide",
         result_time_to_market_desc: "Développement de produits data accéléré grâce à l'automatisation et aux meilleures pratiques DevOps",
 
-        // Confiance
+        // Trusted By
         trusted_by_title: "Fait confiance par les leaders de l'industrie",
 
-        // Mon Approche & Capacités
-        section_approach: "Mon Approche & Capacités",
-        approach_description: "Je livre des solutions data de niveau entreprise grâce à une approche stratégique, axée business. Chaque décision technique est guidée par votre ROI, exigences de conformité et besoins d'évolutivité.",
+        // Testimonials
+        section_testimonials: "Ce que disent les clients et collègues",
+        rec_role_head_data: "Responsable Data",
+        rec_role_senior_architect: "Architecte Senior",
+        rec_role_senior_engineer: "Ingénieur Senior",
+        rec_role_sales: "Professionnel Commercial",
+        rec_arnauld: "Très bon freelance. Il a construit toute l'architecture Data AWS, Terraform inclus 👌",
+        rec_amine: "C'est tout simplement l'un des ingénieurs les plus talentueux avec qui j'aie jamais travaillé. Je le recommande vivement.",
+        rec_antoine: "Ghazi est un véritable ingénieur data senior avec de solides connaissances pour résoudre tout problème de big data. C'est un plaisir de travailler avec lui, et je n'hésiterais pas à le faire à nouveau. Je le recommande vivement.",
+        rec_maryline: "Je le recommande vivement, Respecte les délais et les budgets, offrant une expertise pour la livraison réussie de vos projets.",
 
-        capability_strategic: "Architecture Stratégique",
-        capability_strategic_desc: "Je commence par comprendre vos objectifs business, puis conçois des architectures data qui soutiennent directement vos objectifs de croissance et avantages concurrentiels.",
+        // My Approach
+        section_my_approach: "Mon Approche & Capacités",
+        approach_subtitle: "Je livre des solutions data de niveau entreprise grâce à une approche stratégique, axée business. Chaque décision technique est guidée par votre ROI, exigences de conformité et besoins d'évolutivité.",
 
-        capability_execution: "Exécution Rapide",
-        capability_execution_desc: "Du concept à la production en semaines, pas en mois. J'exploite des modèles éprouvés et outils modernes pour livrer des solutions fonctionnelles rapidement.",
+        approach_strategic: "Architecture Stratégique",
+        approach_strategic_desc: "Je commence par comprendre vos objectifs business, puis conçois des architectures data qui soutiennent directement vos objectifs de croissance et avantages concurrentiels.",
 
-        capability_compliance: "Conformité Entreprise",
-        capability_compliance_desc: "Sécurité, gouvernance et conformité réglementaire intégrées dès le premier jour. Vos données restent sécurisées et prêtes pour l'audit.",
+        approach_execution: "Exécution Rapide",
+        approach_execution_desc: "Du concept à la production en semaines, pas en mois. J'exploite des modèles éprouvés et outils modernes pour livrer des solutions fonctionnelles rapidement.",
 
-        capability_cost: "Optimisation des Coûts",
-        capability_cost_desc: "J'optimise vos dépenses d'infrastructure tout en maximisant les performances. Les clients voient typiquement 40-60% de réductions de coûts.",
+        approach_compliance: "Conformité Entreprise",
+        approach_compliance_desc: "Sécurité, gouvernance et conformité réglementaire intégrées dès le premier jour. Vos données restent sécurisées et prêtes pour l'audit.",
 
-        // Études de Cas
+        approach_cost: "Optimisation des Coûts",
+        approach_cost_desc: "J'optimise vos dépenses d'infrastructure tout en maximisant les performances. Les clients voient typiquement 40-60% de réductions de coûts.",
+
+        // Case Studies
         section_case_studies: "Travail & Portfolio",
         company_edf: "EDF",
         company_sncf: "Groupe SNCF",
@@ -213,66 +184,14 @@ const translations = {
         industry_realestate: "Immobilier et PropTech",
         industry_logistics: "Services Postaux et Logistiques",
         industry_media: "Médias et Divertissement (Streaming)",
-        metric_edf: "40% de Réduction des Coûts • 70% de Réduction du Temps de Déploiement",
-        description_edf: "Conçu et implémenté plus de 15 pipelines de données en production traitant 200 Go quotidiennement avec 99,9% de disponibilité. Réduit les coûts d'infrastructure de 40% grâce à l'optimisation des ressources et construit une plateforme de données en libre-service permettant aux équipes du monde entier.",
-        
-        company_sncf: "Groupe SNCF",
-        industry_transport: "Transport et Logistique",
-        metric_sncf: "Amélioration des Performances x10 • 60% d'Amélioration du Temps de Réponse API • Plus d'1M de Requêtes Quotidiennes",
-        description_sncf: "Architecturé des microservices traitant 500 Go quotidiens de données d'exploitation ferroviaire. Implémenté une architecture événementielle réduisant le couplage système de 80%. Économisé 200K€ annuellement grâce à l'optimisation AWS - évolutif mondialement.",
-        
-        company_stellantis: "Stellantis",
-        industry_automotive: "Automobile et Fabrication",
-        metric_stellantis: "Capacité de Montee en Charge 500% • 2 To de Traitement Quotidien • Plus de 10M d'Événements/Heure",
-        description_stellantis: "Construit une plateforme d'analyse en temps réel pour plus de 500K véhicules connectés sur plusieurs continents. Réduit les coûts de traitement de 45% et implémenté la maintenance prédictive avec 87% de précision, améliorant la disponibilité des véhicules de 23% mondialement.",
-        
-        company_seloger: "Groupe SeLoger",
-        industry_realestate: "Immobilier et PropTech",
-        metric_seloger: "60% Plus Rapide Mise sur Marché • Plus de 50M d'Annonces Immobilières • Plus de 10M d'Utilisateurs Mensuels",
-        description_seloger: "Construit un lac de données traitant plus de 50M d'annonces immobilières avec 99,9% de fiabilité. Réduit le traitement par lots de 8 heures à 45 minutes. Implémenté un pipeline ML pour l'évaluation immobilière améliorant la précision de 35% - applicable à tout marché.",
-        
-        company_laposte: "Le Groupe La Poste",
-        industry_postal: "Services Postaux et Logistique",
-        metric_laposte: "99,9% de Temps de Fonctionnement Système • Plus de 300M d'Événements de Colis Quotidiens • Amélioration des Performances x10",
-        description_laposte: "Développé une plateforme d'ingestion de données générique avec confidentialité dès la conception garantissant la conformité mondiale (RGPD, réglementations locales). Réduit les coûts de stockage de 60% et atteint une amélioration x10 de la vitesse d'ingestion.",
-        
-        company_bein: "BeIN Sports",
-        industry_media: "Médias et Divertissement (Streaming)",
-        metric_bein: "100% de Réussite en Conformité • Streaming en Direct et Optimisation des Pipelines de Données",
-        description_bein: "Contribué à la mise à l'échelle de la plateforme de streaming en direct BeIN Sports pour supporter des millions de spectateurs simultanés dans la région Europe/MENA. Optimisé les pipelines de données et systèmes de surveillance pour assurer des performances en temps réel et la fiabilité lors de diffusions à fort trafic.",
-        
-        // Recommendations
-        section_recommendations: "Ce que disent les clients et collègues",
-        rec_role_head_data: "Responsable Data",
-        rec_role_senior_architect: "Architecte Senior",
-        rec_role_senior_engineer: "Ingénieur Senior",
-        rec_role_sales: "Professionnel Commercial",
-        rec_arnauld: "Très bon freelance. Il a construit toute l'architecture Data AWS, Terraform inclus 👌",
-        rec_amine: "C'est tout simplement l'un des ingénieurs les plus talentueux avec qui j'aie jamais travaillé. Je le recommande vivement.",
-        rec_antoine: "Ghazi est un véritable ingénieur data senior avec de solides connaissances pour résoudre tout problème de big data. C'est un plaisir de travailler avec lui, et je n'hésiterais pas à le faire à nouveau. Je le recommande vivement.",
-        rec_maryline: "Je le recommande vivement, Respecte les délais et les budgets, offrant une expertise pour la livraison réussie de vos projets.",
-        linkedin_link: "Lire l'intégralité sur LinkedIn →",
-        
-        recommendations_cta: "Entrer en Contact →",
-        
-        // Skills
-        section_skills: "Expertise Technique",
-        skill_multicloud: "Multi-Cloud et Infrastructure",
-        skill_bigdata: "Big Data et Analytique",
-        skill_programming: "Programmation et Bases de Données",
-        skill_architecture: "Architecture et Conception de Solutions",
-        skill_devops: "DevOps et Infrastructure",
-        skill_datatools: "Outils d'Ingénierie de Données",
-        skill_ml: "Apprentissage Automatique et IA",
-        skill_leadership: "Leadership et Communication",
-        
+
         // Contact
         section_contact: "Disponible pour des appels découverte de 15 min",
         contact_form_btn: "Formulaire de Contact",
-        
+
         // Footer
-        footer_text: "Magicien de l'Architecture Data • Transformant les entreprises dans le monde entier ⚡",
-        
+        footer_text: "Architecte de Solutions de Données Entreprise • Livrant des infrastructures évolutives mondialement",
+
         // Cookie Banner
         cookie_text: "Nous utilisons des cookies pour analyser le trafic du site web et optimiser votre expérience. En acceptant, vous consentez à notre utilisation de cookies à des fins d'analyse et de marketing.",
         cookie_accept: "Accepter Tout",
@@ -392,25 +311,12 @@ const translations = {
         rec_maryline: "أوصي به بشدة، يحترم المواعيد النهائية والميزانيات، ويقدم الخبرة للتسليم الناجح لمشاريعكم.",
         linkedin_link: "← اقرأ كاملاً على لينكد إن",
         
-        recommendations_cta: "← تواصل معي",
-        
-        // Skills
-        section_skills: "الخبرة التقنية",
-        skill_multicloud: "متعدد الكلاود والبنية التحتية",
-        skill_bigdata: "البيانات الضخمة والتحليلات",
-        skill_programming: "البرمجة وقواعد البيانات",
-        skill_architecture: "هندسة الحلول والتصميم",
-        skill_devops: "DevOps والبنية التحتية",
-        skill_datatools: "أدوات هندسة البيانات",
-        skill_ml: "التعلم الآلي والذكاء الاصطناعي",
-        skill_leadership: "القيادة والتواصل",
-        
         // Contact
         section_contact: "متاح لمكالمات استكشاف لمدة 15 دقيقة",
         contact_form_btn: "نموذج التواصل",
         
         // Footer
-        footer_text: "مهندس معماري لحلول البيانات المؤسسية • تحويل الشركات عالمياً ⚡",
+        footer_text: "مهندس معماري لحلول البيانات المؤسسية • تقديم بنية تحتية قابلة للتوسع عالمياً",
         
         // Cookie Banner
         cookie_text: "نستخدم الكوكيز لتحليل حركة مرور الموقع وتحسين تجربتك. بالقبول، توافق على استخدامنا للكوكيز لأغراض التحليل والتسويق.",
@@ -428,6 +334,7 @@ const translations = {
         
         // Hero Section
         hero_title: "Arquitecto de Soluciones de Datos Empresariales",
+        hero_subtitle: "Architecting scalable, compliant data platforms for enterprise growth",
         hero_description: "Entregando infraestructura de datos crítica para empresas Fortune 500. Especializado en gobernanza, cumplimiento y soluciones impulsadas por ROI en entornos multi-nube e híbridos. Historial comprobado de reducción de costos operacionales mientras garantiza seguridad y escalabilidad de nivel empresarial.",
         hero_cta: "PROGRAMAR CONSULTA →",
         
@@ -548,7 +455,7 @@ const translations = {
         contact_form_btn: "Formulario de Contacto",
         
         // Footer
-        footer_text: "Mago de Arquitectura de Datos • Transformando empresas mundialmente ⚡",
+        footer_text: "Arquitecto de Soluciones de Datos Empresariales • Entregando infraestructura escalable mundialmente",
         
         // Cookie Banner
         cookie_text: "Usamos cookies para analizar el tráfico del sitio web y optimizar tu experiencia. Al aceptar, consientes nuestro uso de cookies para propósitos de análisis y marketing.",
