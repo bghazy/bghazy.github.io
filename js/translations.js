@@ -9,9 +9,9 @@ const translations = {
         nav_hire_me: "SCHEDULE CONVERSATION",
 
         // Hero Section
-        hero_title: "Enterprise Data Solutions Architect",
-        hero_subtitle: "Architecting scalable, compliant data platforms for enterprise growth",
-        hero_description: "Delivering mission-critical data infrastructure for global enterprises. Specialized in governance, compliance, and ROI-driven solutions across multi-cloud and hybrid environments. Proven track record of reducing operational costs while ensuring enterprise-grade security and scalability.",
+        hero_title: "Data Engineering & Software Architecture Expert",
+        hero_subtitle: "Data Engineering • Software Development • DevOps • Cloud Architecture",
+        hero_description: "Data engineer & software architect delivering comprehensive solutions across the technology stack. Expertise in data engineering, software development, DevOps automation, and cloud architecture. Proven track record with Fortune 500 companies including EDF, SNCF, Stellantis, and BeIN Sports.",
         hero_cta: "SCHEDULE STRATEGIC CONSULTATION →",
 
         // Certifications
@@ -20,26 +20,6 @@ const translations = {
         cert_epfl: "EPFL Functional Programming",
 
         // Results & Outcomes
-        section_results: "Strategic Achievements & Proven Outcomes",
-        results_subtitle: "Quantifiable Business Impact Delivered Through Strategic Data Initiatives",
-
-        result_cost_reduction: "Substantial Cost Optimization",
-        result_cost_desc: "Consistently delivered through strategic infrastructure optimization and cloud-native architectural excellence across enterprise implementations",
-
-        result_performance: "Exponential Performance Enhancement",
-        result_performance_desc: "Real-time data processing capabilities with sub-second latency for mission-critical enterprise applications",
-
-        result_compliance: "100% Compliance Achievement",
-        result_compliance_desc: "GDPR, SOX, and industry-specific regulations across global enterprise implementations",
-
-        result_scaling: "300% Scaling Capability",
-        result_scaling_desc: "Seamless horizontal scaling from startup to enterprise-grade data volumes",
-
-        result_uptime: "99.2% System Uptime",
-        result_uptime_desc: "Enterprise-grade reliability with automated failover and disaster recovery",
-
-        result_time_to_market: "35% Faster Time-to-Market",
-        result_time_to_market_desc: "Accelerated data product development through automation and DevOps best practices",
 
         // Trusted By
         trusted_by_title: "Trusted by Industry Leaders",
@@ -49,19 +29,19 @@ const translations = {
         approach_description: "I deliver enterprise-grade data solutions through a strategic, business-first approach. Every technical decision is driven by your ROI, compliance requirements, and scalability needs.",
 
         capability_strategic: "Strategic Architecture",
-        capability_strategic_desc: "I start by understanding your business objectives, then design data architectures that directly support your growth goals and competitive advantages.",
+        capability_strategic_desc: "I craft enterprise-grade solutions across data engineering, software architecture, and DevOps that directly align with your business objectives and competitive advantages.",
 
         capability_execution: "Rapid Execution",
-        capability_execution_desc: "From concept to production in weeks, not months. I leverage proven patterns and modern tools to deliver working solutions quickly.",
+        capability_execution_desc: "Comprehensive software craftsmanship from concept to production. I deliver scalable data pipelines, robust software systems, and automated DevOps workflows using proven engineering patterns.",
 
         capability_compliance: "Enterprise Compliance",
-        capability_compliance_desc: "Built-in security, governance, and regulatory compliance from day one. Your data stays secure and audit-ready.",
+        capability_compliance_desc: "Enterprise-grade security, data governance, and regulatory compliance (GDPR, HIPAA, SOC2, CCPA) engineered into every solution from architecture to deployment.",
 
         capability_cost: "Cost Optimization",
-        capability_cost_desc: "I optimize your infrastructure spend while maximizing performance. Clients typically see 15-25% cost reductions.",
+        capability_cost_desc: "Strategic FinOps and infrastructure optimization across cloud platforms. Engineering efficiency that delivers 25-40% cost reductions while improving system performance.",
 
         // Testimonials
-        section_testimonials: "What clients & colleagues say",
+
         section_recommendations: "What clients & colleagues say",
         rec_role_head_data: "Head of Data",
         rec_role_senior_architect: "Senior Architect",
@@ -79,27 +59,12 @@ const translations = {
         linkedin_link: "Read full on LinkedIn →",
 
         // My Approach
-        section_my_approach: "My Approach & Capabilities",
-        approach_subtitle: "I deliver enterprise-grade data solutions through a strategic, business-first methodology. Every technical decision is aligned with your ROI objectives, compliance requirements, and scalability imperatives.",
-
-        approach_strategic: "Strategic Architecture",
-        approach_strategic_desc: "I begin with comprehensive analysis of your business objectives, then architect data solutions that directly advance your strategic goals and competitive positioning.",
-
-        approach_execution: "Rapid Execution",
-        approach_execution_desc: "From strategic vision to production deployment within accelerated timelines. I leverage industry-proven methodologies and cutting-edge technologies to deliver operational solutions efficiently.",
-
-        approach_compliance: "Enterprise Compliance",
-        approach_compliance_desc: "Comprehensive security, governance, and regulatory compliance frameworks integrated from inception. Your data infrastructure maintains enterprise-grade security and audit readiness.",
-
-        approach_cost: "Cost Optimization",
-        approach_cost_desc: "I optimize infrastructure investments while maximizing operational performance. Organizations consistently achieve substantial cost reductions through strategic architecture decisions.",
 
         // Case Studies
         section_case_studies: "Work & Portfolio",
         company_edf: "EDF",
         company_sncf: "Groupe SNCF",
         company_stellantis: "Stellantis",
-        company_societe_generale: "Société Générale",
 
         // SeLoger Case Study Details
         company_seloger: "Groupe SeLoger",
@@ -125,14 +90,12 @@ const translations = {
         industry_energy: "Energy & Utilities",
         industry_transport: "Transportation & Logistics",
         industry_automotive: "Automotive & Manufacturing",
-        industry_banking: "Banking & Financial Services",
+
         industry_realestate: "Real Estate & PropTech",
         industry_logistics: "Postal & Logistics Services",
         industry_media: "Media & Entertainment (Streaming)",
 
         // Contact
-        section_contact: "Available for 15-min discovery calls",
-        contact_form_btn: "Contact Form",
 
         // Footer
         footer_text: "Enterprise Data Solutions Architect • Delivering scalable infrastructure worldwide",
@@ -151,13 +114,13 @@ const translations = {
         cost_feature_2: "Auto-scaling & rightsizing",
         cost_feature_3: "Performance monitoring & tuning",
         capability_enablement: "Data-Driven Enablement",
-        capability_enablement_desc: "I build solutions that empower your entire organization to make confident, data-informed decisions, fostering a true data culture.",
+        capability_enablement_desc: "Engineering self-service data platforms, automated ETL/ELT pipelines, and real-time analytics that enable data-driven decision making across your organization. Includes data lineage and governance frameworks.",
         enablement_feature_1: "Self-service analytics platforms",
         enablement_feature_2: "Data lineage, catalogs & governance",
         enablement_feature_3: "MLOps pipelines for AI/ML",
         enablement_feature_4: "Change management & training",
         capability_ownership: "End-to-End Ownership",
-        capability_ownership_desc: "I provide seamless leadership from initial strategy through to long-term evolution, ensuring your data ecosystem continuously delivers value.",
+        capability_ownership_desc: "End-to-end software craftsmanship ownership from architectural design through DevOps automation, ensuring your systems scale, perform, and evolve with your business needs.",
         ownership_feature_1: "Program management & stakeholder alignment",
         ownership_feature_2: "CI/CD for data pipelines",
         ownership_feature_3: "Proactive maintenance & support",
@@ -167,8 +130,6 @@ const translations = {
         slide_challenge: "📊 Challenge",
         slide_solution: "⚙️ Solution",
         slide_results: "🏆 Results",
-        case_study_expand: "View Full Case Study",
-        case_study_collapse: "Show Summary",
 
         // EDF Case Study
         company_edf_desc: "Leading European energy company serving 38 million customers across multiple countries with critical infrastructure requirements.",
@@ -240,22 +201,6 @@ const translations = {
         stellantis_results_desc: "The platform processes 10M+ vehicle events per hour with 87% accuracy in predicting component failures. This resulted in 23% reduction in warranty claims, 15% improvement in vehicle uptime, and $50M annual savings across the global fleet through optimized maintenance scheduling.",
 
         // Société Générale Case Study Details
-        company_societe_generale_desc: "Leading European bank serving 25 million customers worldwide with critical financial infrastructure requiring high security and compliance.",
-        sg_challenge_desc: "Société Générale needed to modernize their core banking infrastructure to handle millions of daily transactions while maintaining strict regulatory compliance and zero-downtime requirements for critical financial operations.",
-        sg_challenge_1: "Legacy monolithic banking systems",
-        sg_challenge_2: "Millions of daily financial transactions",
-        sg_challenge_3: "Strict regulatory compliance requirements",
-        sg_challenge_4: "Zero-downtime operational constraints",
-        sg_solution_desc: "Architected modern, resilient banking infrastructure with event-driven architecture:",
-        sg_solution_1: "Designed event-driven microservices for core banking operations",
-        sg_solution_2: "Implemented real-time fraud detection and risk management",
-        sg_solution_3: "Built compliance-first data architecture with audit trails",
-        sg_solution_4: "Deployed multi-region disaster recovery capabilities",
-        sg_tech_stack: "Kafka • Spring Boot • PostgreSQL • Redis • Kubernetes • Terraform • Java",
-        sg_metric_uptime: "System Uptime",
-        sg_metric_processing: "Faster Processing",
-        sg_metric_compliance: "Compliance",
-        sg_results_desc: "Achieved 99.2% uptime for critical banking operations with 25% improvement in transaction processing speed while maintaining full regulatory compliance and zero security incidents.",
 
         // La Poste Case Study Details
         company_laposte_desc: "France's postal service managing data for 60M users and processing 300M+ daily package events with strict privacy compliance requirements across multiple countries.",
@@ -325,9 +270,9 @@ const translations = {
         nav_hire_me: "PLANIFIER CONVERSATION",
 
         // Hero Section
-        hero_title: "Architecte de Solutions Data Entreprise",
-        hero_subtitle: "Architecting scalable, compliant data platforms for enterprise growth",
-        hero_description: "Fournissant des infrastructures data critiques pour les entreprises mondiales. Spécialisé en gouvernance, conformité et solutions axées ROI dans des environnements multi-cloud et hybrides. Historique prouvé d'optimisation des coûts opérationnels tout en garantissant sécurité et évolutivité de niveau entreprise.",
+        hero_title: "Expert en Ingénierie Data & Architecture Logicielle",
+        hero_subtitle: "Ingénierie Data • Développement Logiciel • DevOps • Architecture Cloud",
+        hero_description: "Ingénieur data & architecte logiciel livrant des solutions complètes sur toute la pile technologique. Expertise en ingénierie data, développement logiciel, automatisation DevOps et architecture cloud. Track record prouvé avec les entreprises Fortune 500 incluant EDF, SNCF, Stellantis et BeIN Sports.",
         hero_cta: "PLANIFIER CONSULTATION STRATÉGIQUE →",
 
         // Certifications
@@ -336,26 +281,6 @@ const translations = {
         cert_epfl: "EPFL Programmation Fonctionnelle",
 
         // Results & Outcomes
-        section_results: "Réalisations Récentes & Résultats Prouvés",
-        results_subtitle: "Impact Mesurable Livré en 2024-2025",
-
-        result_cost_reduction: "40% de Réduction des Coûts en Moyenne",
-        result_cost_desc: "Sur 15+ implémentations d'entreprise grâce à l'optimisation d'infrastructure et aux architectures cloud-natives",
-
-        result_performance: "10x d'Amélioration des Performances",
-        result_performance_desc: "Traitement de données en temps réel avec latence sub-seconde pour applications mission-critiques",
-
-        result_compliance: "100% de Conformité Atteinte",
-        result_compliance_desc: "RGPD, SOX et réglementations sectorielles spécifiques dans les implémentations entreprises mondiales",
-
-        result_scaling: "300% de Capacité d'Évolutivité",
-        result_scaling_desc: "Mise à l'échelle horizontale transparente du startup au niveau des volumes de données d'entreprise",
-
-        result_uptime: "99,2% de Disponibilité Système",
-        result_uptime_desc: "Fiabilité de niveau entreprise avec basculement automatique et récupération après sinistre",
-
-        result_time_to_market: "35% de Temps de Mise sur le Marché Plus Rapide",
-        result_time_to_market_desc: "Développement de produits data accéléré grâce à l'automatisation et aux meilleures pratiques DevOps",
 
         // Trusted By
         trusted_by_title: "Fait confiance par les leaders de l'industrie",
@@ -365,19 +290,19 @@ const translations = {
         approach_description: "Je livre des solutions data de niveau entreprise grâce à une approche stratégique, axée business. Chaque décision technique est alignée avec vos objectifs ROI, exigences de conformité et impératifs d'évolutivité.",
 
         capability_strategic: "Architecture Stratégique",
-        capability_strategic_desc: "Je commence par comprendre vos objectifs business, puis conçois des architectures data qui soutiennent directement vos objectifs de croissance et avantages concurrentiels.",
+        capability_strategic_desc: "Je conçois des solutions d'entreprise en ingénierie des données, architecture logicielle et DevOps qui s'alignent directement avec vos objectifs business et avantages concurrentiels.",
 
         capability_execution: "Exécution Rapide",
-        capability_execution_desc: "Du concept à la production en semaines, pas en mois. J'exploite des modèles éprouvés et outils modernes pour livrer des solutions fonctionnelles rapidement.",
+        capability_execution_desc: "Artisanat logiciel complet du concept à la production. Je livre des pipelines de données scalables, systèmes logiciels robustes et workflows DevOps automatisés avec des patterns d'ingénierie éprouvés.",
 
         capability_compliance: "Conformité Entreprise",
-        capability_compliance_desc: "Sécurité, gouvernance et conformité réglementaire intégrées dès le premier jour. Vos données restent sécurisées et prêtes pour l'audit.",
+        capability_compliance_desc: "Sécurité de niveau entreprise, gouvernance des données et conformité réglementaire (RGPD, HIPAA, SOC2, CCPA) intégrées dans chaque solution de l'architecture au déploiement.",
 
         capability_cost: "Optimisation des Coûts",
-        capability_cost_desc: "J'optimise vos dépenses d'infrastructure tout en maximisant les performances. Les clients voient typiquement 15-25% de réductions de coûts.",
+        capability_cost_desc: "FinOps stratégique et optimisation d'infrastructure sur les plateformes cloud. Efficacité d'ingénierie qui livre 25-40% de réductions de coûts tout en améliorant les performances système.",
 
         // Testimonials
-        section_testimonials: "Ce que disent les clients et collègues",
+
         rec_role_head_data: "Responsable Data",
         rec_role_senior_architect: "Architecte Senior",
         rec_role_senior_engineer: "Ingénieur Senior",
@@ -395,27 +320,12 @@ const translations = {
         linkedin_link: "Lire l'intégralité sur LinkedIn →",
 
         // My Approach
-        section_my_approach: "Mon Approche & Capacités",
-        approach_subtitle: "Je livre des solutions data de niveau entreprise grâce à une méthodologie stratégique, axée business. Chaque décision technique est alignée avec vos objectifs ROI, exigences de conformité et impératifs d'évolutivité.",
-
-        approach_strategic: "Architecture Stratégique",
-        approach_strategic_desc: "Je commence par comprendre vos objectifs business, puis conçois des architectures data qui soutiennent directement vos objectifs de croissance et avantages concurrentiels.",
-
-        approach_execution: "Exécution Rapide",
-        approach_execution_desc: "Du concept à la production en semaines, pas en mois. J'exploite des modèles éprouvés et outils modernes pour livrer des solutions fonctionnelles rapidement.",
-
-        approach_compliance: "Conformité Entreprise",
-        approach_compliance_desc: "Sécurité, gouvernance et conformité réglementaire intégrées dès le premier jour. Vos données restent sécurisées et prêtes pour l'audit.",
-
-        approach_cost: "Optimisation des Coûts",
-        approach_cost_desc: "J'optimise vos dépenses d'infrastructure tout en maximisant les performances. Les clients voient typiquement 40-60% de réductions de coûts.",
 
         // Case Studies
         section_case_studies: "Travail & Portfolio",
         company_edf: "EDF",
         company_sncf: "Groupe SNCF",
         company_stellantis: "Stellantis",
-        company_societe_generale: "Société Générale",
 
         // SeLoger Case Study Details (French)
         company_seloger: "Groupe SeLoger",
@@ -441,14 +351,12 @@ const translations = {
         industry_energy: "Énergie et Utilités",
         industry_transport: "Transport et Logistique",
         industry_automotive: "Automobile et Fabrication",
-        industry_banking: "Banque et Services Financiers",
+
         industry_realestate: "Immobilier et PropTech",
         industry_logistics: "Services Postaux et Logistiques",
         industry_media: "Médias et Divertissement (Streaming)",
 
         // Contact
-        section_contact: "Disponible pour des appels découverte de 15 min",
-        contact_form_btn: "Formulaire de Contact",
 
         // Footer
         footer_text: "Architecte de Solutions de Données Entreprise • Livrant des infrastructures évolutives mondialement",
@@ -467,13 +375,13 @@ const translations = {
         cost_feature_2: "Auto-scaling et dimensionnement optimal",
         cost_feature_3: "Surveillance et optimisation des performances",
         capability_enablement: "Activation Data-Driven",
-        capability_enablement_desc: "Je construis des solutions qui permettent à votre organisation entière de prendre des décisions éclairées et confiantes, favorisant une vraie culture data.",
+        capability_enablement_desc: "Ingénierie de plateformes de données en libre-service, pipelines ETL/ELT automatisés et analytiques temps réel qui permettent la prise de décision data-driven. Inclut la lignée et gouvernance des données.",
         enablement_feature_1: "Plateformes d'analytics en libre-service",
         enablement_feature_2: "Lignage de données, catalogues & gouvernance",
         enablement_feature_3: "Pipelines MLOps pour IA/ML",
         enablement_feature_4: "Gestion du changement et formation",
         capability_ownership: "Propriété de Bout en Bout",
-        capability_ownership_desc: "Je fournis un leadership sans faille de la stratégie initiale à l'évolution long terme, garantissant que votre écosystème data délivre continuellement de la valeur.",
+        capability_ownership_desc: "Propriété complète de l'artisanat logiciel de la conception architecturale à l'automatisation DevOps, garantissant que vos systèmes évoluent, performent et s'adaptent à vos besoins business.",
         ownership_feature_1: "Gestion de programme et alignement des parties prenantes",
         ownership_feature_2: "CI/CD pour pipelines de données",
         ownership_feature_3: "Maintenance proactive et support",
@@ -483,8 +391,6 @@ const translations = {
         slide_challenge: "📊 Défi",
         slide_solution: "⚙️ Solution",
         slide_results: "🏆 Résultats",
-        case_study_expand: "Voir l'Étude Complète",
-        case_study_collapse: "Afficher le Résumé",
 
         // EDF Case Study
         company_edf_desc: "Leader européen de l'énergie servant 38 millions de clients dans plusieurs pays avec des exigences d'infrastructure critiques.",
@@ -556,22 +462,6 @@ const translations = {
         stellantis_results_desc: "La plateforme traite plus de 10M événements/heure avec 15% d'amélioration du temps de disponibilité véhicule grâce à la maintenance prédictive, générant un impact significatif sur les revenus.",
 
         // Détails Étude de Cas Société Générale
-        company_societe_generale_desc: "Banque européenne leader servant 25 millions de clients dans le monde avec infrastructure financière critique nécessitant haute sécurité et conformité.",
-        sg_challenge_desc: "Société Générale devait moderniser son infrastructure bancaire centrale pour gérer des millions de transactions quotidiennes tout en maintenant une conformité réglementaire stricte et des exigences de disponibilité continue pour les opérations financières critiques.",
-        sg_challenge_1: "Systèmes bancaires monolithiques hérités",
-        sg_challenge_2: "Millions de transactions financières quotidiennes",
-        sg_challenge_3: "Exigences strictes de conformité réglementaire",
-        sg_challenge_4: "Contraintes opérationnelles de disponibilité continue",
-        sg_solution_desc: "Architecture d'infrastructure bancaire moderne et résiliente avec architecture événementielle :",
-        sg_solution_1: "Conception microservices événementiels pour opérations bancaires centrales",
-        sg_solution_2: "Implémentation détection fraude temps réel et gestion des risques",
-        sg_solution_3: "Construction architecture données conformité-first avec pistes d'audit",
-        sg_solution_4: "Déploiement capacités récupération après sinistre multi-régions",
-        sg_tech_stack: "Kafka • Spring Boot • PostgreSQL • Redis • Kubernetes • Terraform • Java",
-        sg_metric_uptime: "Disponibilité Système",
-        sg_metric_processing: "Traitement Plus Rapide",
-        sg_metric_compliance: "Conformité",
-        sg_results_desc: "Atteinte de 99,2% de disponibilité pour opérations bancaires critiques avec 25% d'amélioration de la vitesse de traitement des transactions tout en maintenant une conformité réglementaire complète et zéro incident de sécurité.",
 
         // Détails Étude de Cas La Poste
         company_laposte_desc: "Service postal français traitant plus de 300M événements de colis quotidiens avec exigences strictes de conformité à la vie privée dans plusieurs pays.",
@@ -587,7 +477,7 @@ const translations = {
         laposte_solution_4: "Assurance conformité complète aux réglementations mondiales de la vie privée",
         laposte_tech_stack: "Apache Kafka • Spark • Mesos • Scala • Matryoshka • HDFS • Cassandra",
         laposte_metric_uptime: "Disponibilité Système",
-        laposte_metric_storage: "Économies de Stockage",
+
         laposte_metric_performance: "Gain de Performance",
         laposte_results_desc: "La plateforme traite plus de 300M événements de colis quotidiens avec 99,5% de disponibilité, réduisant les coûts de stockage de 45% tout en réalisant une amélioration 4x de la vitesse d'ingestion et assurant une conformité mondiale complète à la vie privée.",
 
@@ -641,9 +531,9 @@ const translations = {
         nav_hire_me: "جدولة محادثة",
         
         // Hero Section
-        hero_title: "مهندس حلول البيانات المؤسسية",
-        hero_subtitle: "بناء منصات بيانات قابلة للتوسع ومتوافقة مع متطلبات النمو المؤسسي",
-        hero_description: "تقديم البنية التحتية للبيانات الحيوية للمؤسسات العالمية. متخصص في الحوكمة والامتثال والحلول المدفوعة بعائد الاستثمار عبر البيئات السحابية المتعددة والهجينة. سجل حافل مُثبت في تحسين التكاليف التشغيلية مع ضمان الأمان والقابلية للتوسع على المستوى المؤسسي.",
+        hero_title: "خبير هندسة البيانات وهندسة البرمجيات",
+        hero_subtitle: "هندسة بيانات • تطوير برمجيات • DevOps • هندسة سحابية",
+        hero_description: "مهندس بيانات ومهندس برمجيات يقدم حلول شاملة عبر المكدس التقني. خبرة في هندسة البيانات، تطوير البرمجيات، أتمتة DevOps، وهندسة السحابة. سجل مُثبت مع شركات Fortune 500 مثل EDF، SNCF، Stellantis، وBeIN Sports.",
         hero_cta: "← جدولة استشارة استراتيجية",
         
         // Certifications
@@ -659,23 +549,23 @@ const translations = {
         approach_description: "أقدم حلول بيانات على مستوى المؤسسات من خلال نهج استراتيجي يركز على الأعمال. كل قرار تقني يوجه بعائد الاستثمار ومتطلبات الامتثال واحتياجات قابلية التوسع.",
 
         capability_strategic: "الهندسة الاستراتيجية",
-        capability_strategic_desc: "أبدأ بفهم أهدافك التجارية، ثم أصمم هندسة بيانات تدعم بشكل مباشر أهداف نموك وميزاتك التنافسية.",
+        capability_strategic_desc: "أصمم حلول مؤسسية في هندسة البيانات وهندسة البرمجيات وDevOps تتماشى مباشرة مع أهدافك التجارية وميزاتك التنافسية.",
 
         capability_execution: "التنفيذ السريع",
-        capability_execution_desc: "من المفهوم إلى الإنتاج في أسابيع وليس شهور. أستفيد من الأنماط المُثبتة والأدوات الحديثة لتقديم حلول عملية بسرعة.",
+        capability_execution_desc: "حرفية برمجيات متكاملة من المفهوم إلى الإنتاج. أقدم خطوط أنابيب بيانات قابلة للتوسع وأنظمة برمجيات قوية وسير عمل DevOps مؤتمت باستخدام أنماط هندسية مُثبتة.",
 
         capability_compliance: "الامتثال المؤسسي",
-        capability_compliance_desc: "أمان وحوكمة وامتثال تنظيمي مُدمج من اليوم الأول. بياناتك تبقى آمنة وجاهزة للتدقيق.",
+        capability_compliance_desc: "أمان مؤسسي وحوكمة بيانات وامتثال تنظيمي (GDPR، HIPAA، SOC2، CCPA) مهندس في كل حل من الهندسة المعمارية إلى النشر.",
 
         capability_cost: "تحسين التكاليف",
-        capability_cost_desc: "أحسن إنفاقك على البنية التحتية مع تعظيم الأداء. يرى العملاء عادة تخفيضات تكاليف 40-60%.",
+        capability_cost_desc: "FinOps استراتيجي وتحسين البنية التحتية عبر منصات السحابة. كفاءة هندسية تحقق 25-40% تخفيضات تكاليف مع تحسين أداء النظام.",
 
         // دراسات الحالة
         section_case_studies: "العمل ومعرض الأعمال",
         company_edf: "EDF",
         company_sncf: "Groupe SNCF",
         company_stellantis: "Stellantis",
-        company_societe_generale: "Société Générale",
+
         company_seloger: "Groupe SeLoger",
         company_laposte: "Le Groupe La Poste",
         company_beinsports: "BeIN Sports",
@@ -683,25 +573,12 @@ const translations = {
         industry_energy: "الطاقة والمرافق",
         industry_transport: "النقل واللوجستيات",
         industry_automotive: "السيارات والتصنيع",
-        industry_banking: "الخدمات المصرفية والمالية",
+
         industry_realestate: "العقارات والتكنولوجيا",
         industry_logistics: "الخدمات البريدية واللوجستية",
         industry_media: "الإعلام والترفيه (البث المباشر)",
 
         // النتائج والإنجازات
-        results_title: "الإنجازات الحديثة والنتائج المثبتة",
-        result_cost_reduction: "متوسط تقليل التكاليف 40%",
-        result_cost_reduction_desc: "تحقيق وفورات كبيرة في التكاليف باستمرار من خلال هندسة البيانات المحسنة وتدفقات العمل المؤتمتة عبر العملاء المؤسسيين.",
-        result_performance: "تحسن الأداء 10 أضعاف",
-        result_performance_desc: "تسريع سرعات معالجة البيانات من خلال تقنيات التحسين المتقدمة وتنفيذ البنية التحتية السحابية الحديثة.",
-        result_compliance: "تحقيق الامتثال بنسبة 100%",
-        result_compliance_desc: "التنفيذ الناجح لأطر الامتثال GDPR و CCPA والمتطلبات التنظيمية الصناعية المحددة دون انتهاكات.",
-        result_scaling: "قدرة التوسع 500%",
-        result_scaling_desc: "هندسة منصات البيانات القادرة على التعامل مع النمو الهائل في حجم البيانات وحمولة المستخدمين دون تدهور الأداء.",
-        result_uptime: "وقت التشغيل 99.9%",
-        result_uptime_desc: "الحفاظ على موثوقية استثنائية للنظام من خلال تصميم الهندسة المعمارية القوية وحلول المراقبة الشاملة.",
-        result_time_to_market: "وقت أسرع للوصول للسوق بنسبة 60%",
-        result_time_to_market_desc: "تسريع تسليم المشاريع من خلال المنهجيات السريعة وتنفيذات خطوط أنابيب البيانات الفعالة.",
 
         // Case Studies
         section_case_studies: "دراسات الحالة",
@@ -721,9 +598,7 @@ const translations = {
         edf_solution_3: "بناء بيئة تشغيل معبأة في حاويات باستخدام Docker وKubernetes",
         edf_solution_4: "إعداد تدفقات عمل GitOps باستخدام ArgoCD",
         edf_results_desc: "تم تسليم منصة موثوقة بنسبة 99%، خفضت عبء الصيانة بنسبة 75%، ووفرت نسب بيانات كاملة لدعم الحوكمة وتحليل الأثر.",
-        metric_edf: "تقليل التكاليف 18% • تقليل وقت النشر بنسبة 35%",
-        description_edf: "صممت ونفذت أكثر من 15 خط أنابيب بيانات إنتاجي يعالج 200 جيجابايت يومياً بنسبة توفر 98.5%. خفضت تكاليف البنية التحتية بنسبة 18% من خلال تحسين الموارد وبناء منصة بيانات ذاتية الخدمة تمكن الفرق في جميع أنحاء العالم.",
-        
+
         // SNCF Case Study
         company_sncf: "مجموعة SNCF",
         industry_transport: "النقل والخدمات اللوجستية",
@@ -739,9 +614,7 @@ const translations = {
         sncf_solution_3: "بناء بث بيانات لحظي باستخدام AWS MSK",
         sncf_solution_4: "تحسين البنية السحابية لزيادة التوسع",
         sncf_results_desc: "تحسّن الأداء 10 أضعاف، تسريع واجهات API بنسبة 60%، وتوفير 200 ألف يورو سنوياً من خلال تحسين AWS.",
-        metric_sncf: "تحسن الأداء 10 أضعاف • تحسن وقت استجابة API بنسبة 60% • أكثر من مليون طلب يومي",
-        description_sncf: "هندست خدمات مصغرة تعالج 500 جيجابايت يومياً من بيانات عمليات السكك الحديدية. نفذت هندسة معمارية موجهة بالأحداث قللت اقتران النظام بنسبة 80%. وفرت 200 ألف يورو سنوياً من خلال تحسين AWS - قابل للتوسع عالمياً.",
-        
+
         // Stellantis Case Study
         company_stellantis: "Stellantis",
         industry_automotive: "السيارات والتصنيع",
@@ -756,24 +629,8 @@ const translations = {
         stellantis_solution_3: "تصميم بنية لمعالجة الأحداث اللحظية",
         stellantis_solution_4: "نشر بنية تحتية منخفضة التكلفة عبر مناطق متعددة",
         stellantis_results_desc: "تعالج المنصة أكثر من 10 ملايين حدث في الساعة، مع تحسين وقت تشغيل المركبات بنسبة 15% عبر الصيانة التنبؤية.",
-        metric_stellantis: "قدرة التوسع 500% • معالجة 2 تيرابايت يومياً • أكثر من 10 مليون حدث/ساعة",
-        description_stellantis: "بنيت منصة تحليلات في الوقت الفعلي لأكثر من 500 ألف مركبة متصلة عبر قارات متعددة. قللت تكاليف المعالجة بنسبة 45% ونفذت صيانة تنبؤية بدقة 87%، محسنة توفر المركبات بنسبة 23% عالمياً.",
 
         // Société Générale Case Study
-        company_societe_generale: "Société Générale",
-        industry_banking: "الخدمات المصرفية والمالية",
-        company_societe_generale_desc: "أحد أكبر البنوك الأوروبية يخدم أكثر من 25 مليون عميل حول العالم مع بنية تحتية مالية حساسة تتطلب أعلى مستويات الأمان والامتثال.",
-        sg_challenge_desc: "احتاج البنك إلى تحديث بنيته الأساسية لمعالجة ملايين المعاملات اليومية مع ضمان الامتثال التنظيمي الصارم وعدم توقف العمليات الحرجة.",
-        sg_challenge_1: "أنظمة مصرفية أحادية قديمة",
-        sg_challenge_2: "ملايين المعاملات المالية اليومية",
-        sg_challenge_3: "متطلبات امتثال صارمة",
-        sg_challenge_4: "الحاجة لعمليات بدون توقف",
-        sg_solution_desc: "صممت بنية مصرفية حديثة ومرنة قائمة على هندسة موجهة بالأحداث:",
-        sg_solution_1: "تصميم خدمات مصغرة موجهة بالأحداث للعمليات المصرفية",
-        sg_solution_2: "تنفيذ نظام لحظي للكشف عن الاحتيال وإدارة المخاطر",
-        sg_solution_3: "بناء بنية بيانات تركز على الامتثال مع سجلات تدقيق كاملة",
-        sg_solution_4: "نشر قدرات تعافي من الكوارث متعددة المناطق",
-        sg_results_desc: "تحقيق وقت تشغيل 99.2% وتحسين سرعة معالجة المعاملات بنسبة 25% مع امتثال تنظيمي كامل.",
 
         company_seloger: "مجموعة SeLoger",
         industry_realestate: "العقارات والتكنولوجيا العقارية",
@@ -793,9 +650,7 @@ const translations = {
         seloger_metric_listings: "الإعلانات العقارية",
         seloger_metric_users: "المستخدمون الشهريون",
         seloger_results_desc: "تعالج المنصة أكثر من 50 مليون إعلان عقاري بموثوقية 98.5%، قللت معالجة الدفعات من 8 ساعات إلى ساعتين، وحققت تحسناً بنسبة 20% في دقة تقييم العقارات.",
-        metric_seloger: "60% أسرع في الوصول للسوق • أكثر من 50 مليون قائمة عقارية • أكثر من 10 مليون مستخدم شهرياً",
-        description_seloger: "بنيت بحيرة بيانات تعالج أكثر من 50 مليون قائمة عقارية بموثوقية 98.5%. قللت معالجة الدفع من 8 ساعات إلى 2 ساعة. نفذت خط أنابيب ML لتقييم العقارات محسنة الدقة بنسبة 20% - قابل للتطبيق على أي سوق.",
-        
+
         // La Poste Case Study
         company_laposte: "Le Groupe La Poste",
         industry_logistics: "الخدمات البريدية واللوجستية",
@@ -811,9 +666,7 @@ const translations = {
         laposte_solution_3: "تصميم معالجة قائمة على Spark وScala للبيانات المهيكلة",
         laposte_solution_4: "ضمان الامتثال الكامل للوائح الخصوصية العالمية",
         laposte_results_desc: "المنصة تعالج 300 مليون حدث يومياً بوقت تشغيل 99.2%، خفضت تكاليف التخزين بنسبة 25%، وضاعفت سرعة الاستيعاب.",
-        metric_laposte: "وقت التشغيل 99.9% • أكثر من 300 مليون حدث طرد يومي • تحسن الأداء 10 أضعاف",
-        description_laposte: "طورت منصة استيعاب بيانات عامة مع الخصوصية بالتصميم ضمان الامتثال العالمي (GDPR، اللوائح المحلية). قللت تكاليف التخزين بنسبة 60% وحققت تحسن 10 أضعاف في سرعة الاستيعاب.",
-        
+
         // BeIN Sports Case Study
         company_beinsports: "BeIN Sports",
         industry_media: "الإعلام والترفيه (تطوير المواقع)",
@@ -833,23 +686,19 @@ const translations = {
         beinsports_metric_uptime: "وقت تشغيل النظام",
         beinsports_metric_performance: "تحسن الأداء",
         beinsports_results_desc: "البنية التحتية الخلفية الجديدة تدعم أكثر من 500 ألف مستخدم متزامن مع أوقات استجابة API أسرع بنسبة 95%. تحسين قاعدة البيانات قلل أوقات الاستعلام بنسبة 80%.",
-        metric_bein: "100% تحقيق الامتثال • البث المباشر وتحسين خطوط أنابيب البيانات",
-        description_bein: "ساهمت في توسيع منصة البث المباشر لبي إن سبورتس لدعم ملايين المشاهدين المتزامنين عبر منطقة أوروبا/الشرق الأوسط وشمال أفريقيا. حسنت خطوط أنابيب البيانات وأنظمة المراقبة لضمان الأداء في الوقت الفعلي والموثوقية أثناء البث عالي الحركة.",
 
         // Strategic Features
         strategic_feature_1: "قرارات تقنية مدفوعة بالأعمال",
         strategic_feature_2: "حلول قابلة للتطوير ومرنة",
         strategic_feature_3: "الامتثال والأمان أولاً",
-        strategic_feature_4: "نقل المعرفة والتمكين",
 
         // Capabilities
         capability_enablement: "التمكين المدفوع بالبيانات",
-        capability_enablement_desc: "تمكين الفرق والمؤسسات لاتخاذ قرارات مدفوعة بالبيانات من خلال أتمتة خطوط أنابيب البيانات وأدوات التحليلات التفاعلية.",
-        capability_enablement_features: "منصات البيانات الذاتية الخدمة • أتمتة ETL/ELT • لوحات المعلومات في الوقت الفعلي",
+        capability_enablement_desc: "هندسة منصات بيانات الخدمة الذاتية وخطوط أنابيب ETL/ELT مؤتمتة وتحليلات فورية تمكن اتخاذ القرارات المدفوعة بالبيانات. تشمل نسب البيانات وأطر الحوكمة.",
 
         capability_ownership: "ملكية البيانات والحوكمة",
-        capability_ownership_desc: "ضمان جودة البيانات والامتثال والأمان من خلال أطر الحوكمة الشاملة وأنظمة إدارة البيانات الرئيسية.",
-        capability_ownership_features: "فهرسة البيانات • نسب البيانات • ضوابط الوصول القائمة على الأدوار",
+        capability_ownership_desc: "ملكية شاملة لحرفية البرمجيات من التصميم المعماري إلى أتمتة DevOps، ضماناً لتطور وأداء وتكيف أنظمتك مع احتياجاتك التجارية.",
+
         ownership_feature_1: "إدارة البرنامج وتنسيق أصحاب المصلحة",
         ownership_feature_2: "CI/CD لخطوط أنابيب البيانات",
         ownership_feature_3: "الصيانة الاستباقية والدعم",
@@ -857,33 +706,17 @@ const translations = {
 
         capability_cost: "تحسين التكلفة والأداء",
         capability_cost_desc: "تحقيق وفورات كبيرة في التكاليف من خلال الهندسة المعمارية المحسنة وتحسين استخدام الموارد السحابية واستراتيجيات التسعير الذكية.",
-        capability_cost_features: "تحسين السحابة المتعددة • تحجيم تلقائي ذكي • مراقبة التكلفة في الوقت الفعلي",
 
         // Case Study Elements
         slide_challenge: "📊 التحدي",
         slide_solution: "⚡ الحل",
         slide_results: "🎯 النتائج",
-        case_study_expand: "عرض دراسة الحالة كاملة",
-        case_study_collapse: "إظهار الملخص",
 
         // EDF Case Study Slides
-        edf_slide_1_challenge: "EDF تحتاج لمعالجة 200 جيجابايت من بيانات الطاقة يومياً عبر 15+ نظام متباين مع ضمان توفر 99.9% لعمليات الشبكة الحرجة.",
-        edf_slide_1_solution: "صممت بنية بيانات موحدة مع خطوط أنابيب في الوقت الفعلي، وأتمتة ETL، ومنصة ذاتية الخدمة تمكن الفرق العالمية من الوصول للبيانات المنقاة.",
-        edf_slide_1_results: "تقليل التكاليف 18% • توفر 98.5% • تقليل وقت النشر 35% • معالجة 200 جيجابايت يومياً",
-
-        edf_slide_2_challenge: "معالجة أكثر من 50 مصدر بيانات مع ضمان الامتثال للوائح GDPR الصارمة وسياسات أمان البيانات الداخلية لقطاع الطاقة.",
-        edf_slide_2_solution: "نفذت فهرسة بيانات مؤسسية مع تصنيف تلقائي للحساسية، وضوابط وصول دقيقة، وحلول تقنيع البيانات للبيئات غير الإنتاجية.",
-        edf_slide_2_results: "امتثال GDPR كامل • تحسن أمان البيانات 45% • تقليل وقت تدقيق البيانات 50% • حوكمة بيانات موحدة",
-
-        edf_slide_3_challenge: "تمكين آلاف المهندسين والمحللين من الوصول للبيانات دون إشراك فرق البيانات المركزية، مع الحفاظ على الجودة والاتساق.",
-        edf_slide_3_solution: "طورت منصة بيانات ذاتية الخدمة مع واجهات برمجة تطبيقات موحدة، وقوالب قابلة لإعادة الاستخدام، وأدوات تحضير البيانات بدون كود لاستخدام الأعمال.",
-        edf_slide_3_results: "استقلالية البيانات 60% • تقليل طلبات البيانات اليدوية 45% • تسريع الأفكار 30% • تحسن اعتماد أدوات BI",
 
         // Final CTA Section
         final_cta_title: "تحويل بنية البيانات المؤسسية",
         final_cta_subtitle: "استعد لتحويل بياناتك إلى ميزة تنافسية استراتيجية",
-        final_cta_description: "بخبرة مثبتة في بناء حلول بيانات ذات مقياس مؤسسي للمنظمات العالمية، أحقق نتائج قابلة للقياس تدفع النمو التجاري والابتكار المؤسسي. دعنا نناقش كيف يمكننا تحويل بنية البيانات الخاصة بك.",
-        final_cta_button: "ابدأ المحادثة",
 
         // تفاصيل دراسات الحالة الإضافية
         // تفاصيل دراسة حالة SNCF
@@ -922,22 +755,6 @@ const translations = {
         stellantis_results_desc: "تعالج المنصة أكثر من 10 مليون حدث/ساعة مع تحسن 15% في وقت تشغيل المركبات من خلال الصيانة التنبؤية، مما يولد تأثيراً كبيراً على الإيرادات.",
 
         // تفاصيل دراسة حالة Société Générale
-        company_societe_generale_desc: "بنك أوروبي رائد يخدم 25 مليون عميل حول العالم مع بنية تحتية مالية حرجة تتطلب أماناً عالياً وامتثالاً.",
-        sg_challenge_desc: "احتاجت Société Générale لتحديث بنيتها التحتية المصرفية الأساسية للتعامل مع ملايين المعاملات اليومية مع الحفاظ على الامتثال التنظيمي الصارم ومتطلبات عدم التوقف للعمليات المالية الحرجة.",
-        sg_challenge_1: "أنظمة مصرفية أحادية الكتلة موروثة",
-        sg_challenge_2: "ملايين المعاملات المالية اليومية",
-        sg_challenge_3: "متطلبات امتثال تنظيمي صارمة",
-        sg_challenge_4: "قيود تشغيلية لعدم التوقف",
-        sg_solution_desc: "هندسة بنية تحتية مصرفية حديثة ومرنة مع هندسة مدفوعة بالأحداث:",
-        sg_solution_1: "تصميم خدمات مصغرة مدفوعة بالأحداث للعمليات المصرفية الأساسية",
-        sg_solution_2: "تنفيذ اكتشاف الاحتيال في الوقت الفعلي وإدارة المخاطر",
-        sg_solution_3: "بناء هندسة بيانات الامتثال أولاً مع مسارات التدقيق",
-        sg_solution_4: "نشر قدرات التعافي من الكوارث متعددة المناطق",
-        sg_tech_stack: "Kafka • Spring Boot • PostgreSQL • Redis • Kubernetes • Terraform • Java",
-        sg_metric_uptime: "وقت تشغيل النظام",
-        sg_metric_processing: "معالجة أسرع",
-        sg_metric_compliance: "الامتثال",
-        sg_results_desc: "تحقيق 99.9% وقت تشغيل للعمليات المصرفية الحرجة مع تحسن 60% في سرعة معالجة المعاملات مع الحفاظ على امتثال تنظيمي كامل وصفر حوادث أمنية.",
 
         // تفاصيل دراسة حالة La Poste
         company_laposte_desc: "خدمة البريد الفرنسية تعالج أكثر من 300 مليون حدث طرد يومي مع متطلبات امتثال صارمة للخصوصية عبر بلدان متعددة.",
@@ -954,7 +771,7 @@ const translations = {
         laposte_tech_stack: "Apache Kafka • Spark • Mesos • Scala • Matryoshka • HDFS • Cassandra",
         laposte_metric_uptime: "وقت تشغيل النظام",
         laposte_metric_users: "عدد المستخدمين",
-        laposte_metric_storage: "وفورات التخزين",
+
         laposte_metric_performance: "مكسب الأداء",
         laposte_results_desc: "تعالج المنصة أكثر من 300 مليون حدث طرد يومي مع وقت تشغيل 99.5%، مما يقلل تكاليف التخزين بنسبة 45% مع تحقيق تحسن 4 أضعاف في سرعة الاستيعاب وضمان الامتثال الكامل للخصوصية العالمية.",
 
@@ -995,7 +812,7 @@ const translations = {
 
         // Recommendations
         section_recommendations: "ما يقوله العملاء والزملاء",
-        section_testimonials: "ما يقوله العملاء والزملاء",
+
         rec_role_head_data: "رئيس البيانات",
         rec_role_senior_architect: "كبير مهندسي هندسة البيانات",
         rec_role_senior_engineer: "مهندس أول",
@@ -1012,27 +829,13 @@ const translations = {
         linkedin_link: "← اقرأ كاملاً على لينكد إن",
         
         // Contact
-        section_contact: "متاح لمكالمات استكشاف لمدة 15 دقيقة",
-        contact_form_btn: "نموذج التواصل",
-        
+
         // Footer
         footer_text: "مهندس معماري لحلول البيانات المؤسسية • تقديم بنية تحتية قابلة للتوسع عالمياً",
         
         // الإنجازات والنتائج - المفقودة
-        section_results: "الإنجازات الحديثة والنتائج المثبتة",
-        results_subtitle: "تأثير قابل للقياس تم تحقيقه في 2024-2025",
 
         // المقاربة المفقودة
-        section_my_approach: "نهجي وقدراتي",
-        approach_subtitle: "أقدم حلول بيانات على مستوى المؤسسات من خلال منهجية استراتيجية تركز على الأعمال أولاً. كل قرار تقني متوائم مع أهداف عائد الاستثمار ومتطلبات الامتثال والحتميات التوسعية.",
-        approach_strategic: "الهندسة الاستراتيجية",
-        approach_strategic_desc: "أبدأ بفهم أهدافك التجارية، ثم أصمم هندسة بيانات تدعم بشكل مباشر أهداف نموك وميزاتك التنافسية.",
-        approach_execution: "التنفيذ السريع",
-        approach_execution_desc: "من المفهوم إلى الإنتاج في أسابيع وليس شهور. أستفيد من الأنماط المُثبتة والأدوات الحديثة لتقديم حلول عملية بسرعة.",
-        approach_compliance: "الامتثال المؤسسي",
-        approach_compliance_desc: "أمان وحوكمة وامتثال تنظيمي مُدمج من اليوم الأول. بياناتك تبقى آمنة وجاهزة للتدقيق.",
-        approach_cost: "تحسين التكلفة",
-        approach_cost_desc: "أحسّن إنفاقك على البنية التحتية مع تعظيم الأداء. يرى العملاء عادة تخفيضات تكلفة 15-25%.",
 
         // Case Studies Content - المحتوى الأصلي المفقود
         slide_challenge: "📊 التحدي",
@@ -1104,9 +907,9 @@ const translations = {
         nav_hire_me: "PROGRAMAR CONVERSACIÓN",
         
         // Hero Section
-        hero_title: "Arquitecto de Soluciones de Datos Empresariales",
-        hero_subtitle: "Architecting scalable, compliant data platforms for enterprise growth",
-        hero_description: "Entregando infraestructura de datos crítica para empresas globales. Especializado en gobernanza, cumplimiento y soluciones impulsadas por ROI en entornos multi-nube e híbridos. Historial comprobado de optimización de costos operacionales mientras garantiza seguridad y escalabilidad de nivel empresarial.",
+        hero_title: "Arquitecto de Datos y Artesanía de Software",
+        hero_subtitle: "Ingeniería de Datos • Desarrollo de Software • DevOps • Arquitectura Cloud",
+        hero_description: "Ingeniero de datos y arquitecto de software entregando soluciones comprehensivas a través del stack tecnológico. Experiencia en ingeniería de datos, desarrollo de software, automatización DevOps y arquitectura cloud. Track record comprobado con empresas Fortune 500 incluyendo EDF, SNCF, Stellantis y BeIN Sports.",
         hero_cta: "PROGRAMAR CONSULTA ESTRATÉGICA →",
         
         // Certifications
@@ -1122,23 +925,23 @@ const translations = {
         approach_description: "Entrego soluciones de datos de nivel empresarial a través de un enfoque estratégico centrado en el negocio. Cada decisión técnica se guía por su ROI, requisitos de cumplimiento y necesidades de escalabilidad.",
 
         capability_strategic: "Arquitectura Estratégica",
-        capability_strategic_desc: "Comienzo entendiendo sus objetivos de negocio, luego diseño arquitecturas de datos que apoyan directamente sus metas de crecimiento y ventajas competitivas.",
+        capability_strategic_desc: "Diseño soluciones empresariales en ingeniería de datos, arquitectura de software y DevOps que se alinean directamente con sus objetivos de negocio y ventajas competitivas.",
 
         capability_execution: "Ejecución Rápida",
-        capability_execution_desc: "Del concepto a producción en semanas, no meses. Aprovecho patrones probados y herramientas modernas para entregar soluciones funcionales rápidamente.",
+        capability_execution_desc: "Artesanía de software comprehensiva del concepto a producción. Entrego pipelines de datos escalables, sistemas de software robustos y flujos DevOps automatizados usando patrones de ingeniería probados.",
 
         capability_compliance: "Cumplimiento Empresarial",
-        capability_compliance_desc: "Seguridad, gobernanza y cumplimiento regulatorio integrados desde el día uno. Sus datos permanecen seguros y listos para auditoría.",
+        capability_compliance_desc: "Seguridad empresarial, gobernanza de datos y cumplimiento regulatorio (GDPR, HIPAA, SOC2, CCPA) integrados en cada solución desde arquitectura hasta despliegue.",
 
         capability_cost: "Optimización de Costos",
-        capability_cost_desc: "Optimizo su gasto en infraestructura mientras maximizo el rendimiento. Los clientes típicamente ven reducciones de costos del 40-60%.",
+        capability_cost_desc: "FinOps estratégico y optimización de infraestructura en plataformas cloud. Eficiencia de ingeniería que entrega 25-40% reducciones de costos mientras mejora el rendimiento del sistema.",
 
         // Casos de Estudio
         section_case_studies: "Trabajo y Portafolio",
         company_edf: "EDF",
         company_sncf: "Groupe SNCF",
         company_stellantis: "Stellantis",
-        company_societe_generale: "Société Générale",
+
         company_seloger: "Groupe SeLoger",
         company_laposte: "Le Groupe La Poste",
         company_beinsports: "BeIN Sports",
@@ -1146,43 +949,24 @@ const translations = {
         industry_energy: "Energía y Servicios Públicos",
         industry_transport: "Transporte y Logística",
         industry_automotive: "Automotriz y Manufactura",
-        industry_banking: "Banca y Servicios Financieros",
+
         industry_realestate: "Bienes Raíces y PropTech",
         industry_logistics: "Servicios Postales y Logísticos",
         industry_media: "Medios y Entretenimiento (Streaming)",
 
         // Resultados y Logros
-        results_title: "Logros Recientes y Resultados Comprobados",
-        result_cost_reduction: "40% Reducción de Costos Promedio",
-        result_cost_reduction_desc: "Entrega consistente de ahorros significativos a través de arquitecturas de datos optimizadas y flujos de trabajo automatizados en clientes empresariales.",
-        result_performance: "10x Mejora de Rendimiento",
-        result_performance_desc: "Aceleración de velocidades de procesamiento de datos a través de técnicas avanzadas de optimización e implementaciones de infraestructura cloud moderna.",
-        result_compliance: "100% Cumplimiento Logrado",
-        result_compliance_desc: "Implementación exitosa de marcos de cumplimiento GDPR, CCPA y específicos de la industria sin violaciones.",
-        result_scaling: "300% Capacidad de Escalamiento",
-        result_scaling_desc: "Plataformas de datos diseñadas capaces de manejar crecimiento masivo en volumen de datos y carga de usuarios sin degradación del rendimiento.",
-        result_uptime: "99.2% Tiempo de Actividad del Sistema",
-        result_uptime_desc: "Mantenimiento de confiabilidad excepcional del sistema a través del diseño robusto de arquitectura y soluciones integrales de monitoreo.",
-        result_time_to_market: "35% Más Rápido Tiempo al Mercado",
-        result_time_to_market_desc: "Entrega acelerada de proyectos a través de metodologías ágiles e implementaciones eficientes de pipelines de datos.",
 
         // Case Studies
         section_case_studies: "Casos de Estudio",
         company_edf: "EDF",
         industry_energy: "Energía y Utilidades",
-        metric_edf: "18% Reducción de Costos • 35% de Reducción en Tiempo de Despliegue",
-        description_edf: "Diseñé e implementé más de 15 pipelines de datos de producción procesando 200GB diariamente con 98.5% de disponibilidad. Reduje costos de infraestructura en 18% a través de optimización de recursos y construí plataforma de datos autoservicio habilitando equipos mundialmente.",
-        
+
         company_sncf: "Groupe SNCF",
         industry_transport: "Transporte y Logística",
-        metric_sncf: "10x Mejora de Rendimiento • 60% Mejora en Tiempo de Respuesta API • Más de 1M Peticiones Diarias",
-        description_sncf: "Arquitecté microservicios procesando 500GB diarios de datos de operaciones ferroviarias. Implementé arquitectura dirigida por eventos reduciendo acoplamiento del sistema en 80%. Ahorré €200K anualmente a través de optimización AWS - escalable globalmente.",
-        
+
         company_stellantis: "Stellantis",
         industry_automotive: "Automotriz y Manufactura",
-        metric_stellantis: "500% Capacidad de Escalamiento • 2TB Procesamiento Diario • Más de 10M Eventos/Hora",
-        description_stellantis: "Construí plataforma de análisis en tiempo real para más de 500K vehículos conectados a través de múltiples continentes. Reduje costos de procesamiento en 45% e implementé mantenimiento predictivo con 87% de precisión, mejorando tiempo de actividad de vehículos en 23% globalmente.",
-        
+
         company_seloger: "Groupe SeLoger",
         industry_realestate: "Bienes Raíces y PropTech",
         company_seloger_desc: "Principal plataforma inmobiliaria de Francia procesando más de 50M de listados de propiedades con valuaciones complejas de ML y análisis de mercado en tiempo real.",
@@ -1201,14 +985,9 @@ const translations = {
         seloger_metric_listings: "Listados de Propiedades",
         seloger_metric_users: "Usuarios Mensuales",
         seloger_results_desc: "La plataforma procesa más de 50M de listados de propiedades con 98.5% de confiabilidad, redujo el procesamiento por lotes de 8 horas a 2 horas, y logró 20% de mejora en precisión de valuación de propiedades.",
-        metric_seloger: "60% Más Rápido Tiempo al Mercado • Más de 50M Listados Inmobiliarios • Más de 10M Usuarios Mensuales",
-        description_seloger: "Construí lago de datos procesando más de 50M listados inmobiliarios con 98.5% de confiabilidad. Reduje procesamiento por lotes de 8 horas a 2 horas. Implementé pipeline ML para valuación de propiedades mejorando precisión en 20% - aplicable a cualquier mercado.",
-        
+
         company_laposte: "Le Groupe La Poste",
-        industry_postal: "Servicios Postales y Logística",
-        metric_laposte: "99.9% Tiempo de Actividad del Sistema • Más de 300M Eventos de Paquetes Diarios • Mejora de Rendimiento 10x",
-        description_laposte: "Desarrollé plataforma genérica de ingesta de datos con privacidad por diseño asegurando cumplimiento global (GDPR, regulaciones locales). Reduje costos de almacenamiento en 60% y logré mejora 10x en velocidad de ingesta.",
-        
+
         company_beinsports: "BeIN Sports",
         industry_media: "Medios y Entretenimiento (Desarrollo Web)",
         company_beinsports_desc: "Empresa de medios deportivos global que requiere sistemas backend de alto rendimiento para sus plataformas digitales que sirven a millones de usuarios en Europa y la región MENA.",
@@ -1227,24 +1006,19 @@ const translations = {
         beinsports_metric_uptime: "Tiempo de Actividad del Sistema",
         beinsports_metric_performance: "Mejora de Rendimiento",
         beinsports_results_desc: "La nueva infraestructura backend soporta más de 500K usuarios concurrentes con tiempos de respuesta de API 95% más rápidos. La optimización de base de datos redujo los tiempos de consulta en 80%.",
-        company_bein: "BeIN Sports",
-        metric_bein: "100% Cumplimiento Logrado • Streaming en Vivo y Optimización de Pipelines de Datos",
-        description_bein: "Contribuí a escalar la plataforma de streaming en vivo de BeIN Sports para soportar millones de espectadores concurrentes a través de la región Europa/MENA. Optimicé pipelines de datos y sistemas de monitoreo para asegurar rendimiento en tiempo real y confiabilidad durante transmisiones de alto tráfico.",
 
         // Strategic Features
         strategic_feature_1: "Decisiones técnicas impulsadas por negocio",
         strategic_feature_2: "Soluciones escalables y resilientes",
         strategic_feature_3: "Cumplimiento y seguridad primero",
-        strategic_feature_4: "Transferencia de conocimiento y empoderamiento",
 
         // Capabilities
         capability_enablement: "Habilitación Impulsada por Datos",
-        capability_enablement_desc: "Empoderar equipos y organizaciones para tomar decisiones basadas en datos a través de pipelines de datos automatizados y herramientas de análisis interactivas.",
-        capability_enablement_features: "Plataformas de datos de autoservicio • Automatización ETL/ELT • Dashboards en tiempo real",
+        capability_enablement_desc: "Ingeniería de plataformas de datos autoservicio, pipelines ETL/ELT automatizados y analíticas en tiempo real que habilitan toma de decisiones basada en datos. Incluye linaje de datos y marcos de gobernanza.",
 
         capability_ownership: "Propiedad de Datos y Gobernanza",
-        capability_ownership_desc: "Asegurar la calidad, cumplimiento y seguridad de los datos a través de marcos de gobernanza integral y sistemas de gestión de datos maestros.",
-        capability_ownership_features: "Catálogo de datos • Linaje de datos • Controles de acceso basados en roles",
+        capability_ownership_desc: "Propiedad comprehensiva de artesanía de software desde diseño arquitectónico hasta automatización DevOps, asegurando que sus sistemas escalen, rindan y evolucionen con sus necesidades de negocio.",
+
         ownership_feature_1: "Gestión de programa y alineación de stakeholders",
         ownership_feature_2: "CI/CD para pipelines de datos",
         ownership_feature_3: "Mantenimiento proactivo y soporte",
@@ -1252,7 +1026,6 @@ const translations = {
 
         capability_cost: "Optimización de Costos y Rendimiento",
         capability_cost_desc: "Lograr ahorros significativos en costos a través de arquitectura optimizada, utilización de recursos en la nube mejorada y estrategias inteligentes de precios.",
-        capability_cost_features: "Optimización multi-nube • Escalado automático inteligente • Monitoreo de costos en tiempo real",
 
         // Case Study Elements
         slide_challenge: "📊 Desafío",
@@ -1260,23 +1033,10 @@ const translations = {
         slide_results: "🎯 Resultados",
 
         // EDF Case Study Slides
-        edf_slide_1_challenge: "EDF necesita procesar 200GB de datos energéticos diarios a través de 15+ sistemas dispares mientras garantiza 99.9% de disponibilidad para operaciones críticas de red.",
-        edf_slide_1_solution: "Diseñé arquitectura de datos unificada con pipelines en tiempo real, automatización ETL y plataforma autoservicio que permite a equipos globales acceder a datos curados.",
-        edf_slide_1_results: "18% reducción de costos • 98.5% disponibilidad • 35% reducción tiempo despliegue • 200GB procesados diariamente",
-
-        edf_slide_2_challenge: "Manejar 50+ fuentes de datos mientras asegura cumplimiento estricto de GDPR y políticas internas de seguridad de datos del sector energético.",
-        edf_slide_2_solution: "Implementé catálogo de datos empresarial con clasificación automática de sensibilidad, controles de acceso granulares y soluciones de enmascaramiento para entornos no productivos.",
-        edf_slide_2_results: "Cumplimiento GDPR completo • 45% mejora seguridad datos • 50% reducción tiempo auditoría • Gobernanza datos estandarizada",
-
-        edf_slide_3_challenge: "Habilitar miles de ingenieros y analistas para acceder datos sin involucrar equipos centrales de datos, manteniendo calidad y consistencia.",
-        edf_slide_3_solution: "Desarrollé plataforma datos autoservicio con APIs unificadas, plantillas reutilizables y herramientas preparación datos sin código para uso empresarial.",
-        edf_slide_3_results: "60% autonomía datos • 45% reducción solicitudes manuales • 30% aceleración insights • Mejora adopción herramientas BI",
 
         // Final CTA Section
         final_cta_title: "Transformación de Infraestructura de Datos Empresariales",
         final_cta_subtitle: "Prepárate para transformar tus datos en una ventaja competitiva estratégica",
-        final_cta_description: "Con experiencia comprobada construyendo soluciones de datos a escala empresarial para organizaciones globales, entrego resultados medibles que impulsan crecimiento empresarial e innovación estratégica. Discutamos cómo podemos transformar tu infraestructura de datos.",
-        final_cta_button: "Iniciar Conversación",
 
         // Detalles Adicionales de Estudios de Caso
         // Detalles Estudio de Caso SNCF
@@ -1315,22 +1075,6 @@ const translations = {
         stellantis_results_desc: "La plataforma procesa más de 10M eventos/hora con 15% de mejora en tiempo de actividad de vehículos a través de mantenimiento predictivo, generando impacto significativo en ingresos.",
 
         // Detalles Estudio de Caso Société Générale
-        company_societe_generale_desc: "Banco europeo líder sirviendo 25 millones de clientes mundialmente con infraestructura financiera crítica requiriendo alta seguridad y cumplimiento.",
-        sg_challenge_desc: "Société Générale necesitaba modernizar su infraestructura bancaria central para manejar millones de transacciones diarias mientras mantenía cumplimiento regulatorio estricto y requisitos de tiempo de actividad cero para operaciones financieras críticas.",
-        sg_challenge_1: "Sistemas bancarios monolíticos heredados",
-        sg_challenge_2: "Millones de transacciones financieras diarias",
-        sg_challenge_3: "Requisitos estrictos de cumplimiento regulatorio",
-        sg_challenge_4: "Restricciones operacionales de tiempo de actividad cero",
-        sg_solution_desc: "Arquitectura de infraestructura bancaria moderna y resiliente con arquitectura orientada a eventos:",
-        sg_solution_1: "Diseñé microservicios orientados a eventos para operaciones bancarias centrales",
-        sg_solution_2: "Implementé detección de fraude en tiempo real y gestión de riesgos",
-        sg_solution_3: "Construí arquitectura de datos con cumplimiento primero con pistas de auditoría",
-        sg_solution_4: "Desplegué capacidades de recuperación de desastres multi-región",
-        sg_tech_stack: "Kafka • Spring Boot • PostgreSQL • Redis • Kubernetes • Terraform • Java",
-        sg_metric_uptime: "Tiempo de Actividad del Sistema",
-        sg_metric_processing: "Procesamiento Más Rápido",
-        sg_metric_compliance: "Cumplimiento",
-        sg_results_desc: "Logré 99.9% tiempo de actividad para operaciones bancarias críticas con 60% de mejora en velocidad de procesamiento de transacciones mientras mantenía cumplimiento regulatorio completo y cero incidentes de seguridad.",
 
         // Detalles Estudio de Caso La Poste
         company_laposte_desc: "Servicio postal francés procesando más de 300M eventos de paquetes diarios con requisitos estrictos de cumplimiento de privacidad a través de múltiples países.",
@@ -1346,7 +1090,7 @@ const translations = {
         laposte_solution_4: "Aseguré cumplimiento completo con regulaciones globales de privacidad",
         laposte_tech_stack: "Apache Kafka • Spark • Mesos • Scala • Matryoshka • HDFS • Cassandra",
         laposte_metric_uptime: "Tiempo de Actividad del Sistema",
-        laposte_metric_storage: "Ahorros de Almacenamiento",
+
         laposte_metric_performance: "Ganancia de Rendimiento",
         laposte_results_desc: "La plataforma procesa más de 300M eventos de paquetes diarios con 99.5% tiempo de actividad, reduciendo costos de almacenamiento en 45% mientras logra mejora 4x en velocidad de ingesta y asegura cumplimiento completo de privacidad global.",
 
@@ -1369,27 +1113,13 @@ const translations = {
         beinsports_results_desc: "Escalé exitosamente la plataforma para soportar más de 2M espectadores concurrentes a través de regiones Europa y MENA mientras aseguré cumplimiento regulatorio completo y mejoré significativamente la confiabilidad del streaming durante eventos de tráfico pico.",
 
         // Logros y Resultados - Faltantes
-        section_results: "Logros Recientes y Resultados Comprobados",
-        results_subtitle: "Impacto Medible Entregado en 2024-2025",
 
         // Mi Enfoque - Faltante
-        section_my_approach: "Mi Enfoque y Capacidades",
-        approach_subtitle: "Entrego soluciones de datos de nivel empresarial a través de una metodología estratégica que prioriza el negocio. Cada decisión técnica está alineada con tus objetivos de ROI, requisitos de cumplimiento e imperativos de escalabilidad.",
-        approach_strategic: "Arquitectura Estratégica",
-        approach_strategic_desc: "Comienzo entendiendo tus objetivos de negocio, luego diseño arquitecturas de datos que apoyan directamente tus metas de crecimiento y ventajas competitivas.",
-        approach_execution: "Ejecución Rápida",
-        approach_execution_desc: "De concepto a producción en semanas, no meses. Aprovecho patrones probados y herramientas modernas para entregar soluciones funcionales rápidamente.",
-        approach_compliance: "Cumplimiento Empresarial",
-        approach_compliance_desc: "Seguridad, gobernanza y cumplimiento regulatorio integrados desde el día uno. Tus datos permanecen seguros y listos para auditoría.",
-        approach_cost: "Optimización de Costos",
-        approach_cost_desc: "Optimizo tu gasto en infraestructura mientras maximizo el rendimiento. Los clientes típicamente ven reducciones de costo del 15-25%.",
 
         // Case Studies Content - Contenido Original Faltante
         slide_challenge: "📊 Desafío",
         slide_solution: "⚙️ Solución",
         slide_results: "🏆 Resultados",
-        case_study_expand: "Ver Estudio Completo",
-        case_study_collapse: "Mostrar Resumen",
 
         // EDF Case Study - Detalles Originales Faltantes
         company_edf_desc: "Empresa energética europea líder sirviendo 38 millones de clientes a través de múltiples países con requisitos críticos de infraestructura.",
@@ -1434,7 +1164,7 @@ const translations = {
 
         // Recommendations
         section_recommendations: "Lo que dicen clientes y colegas",
-        section_testimonials: "Lo que dicen clientes y colegas",
+
         rec_role_head_data: "Jefe de Datos",
         rec_role_senior_architect: "Arquitecto Senior",
         rec_role_senior_engineer: "Ingeniero Senior",
@@ -1449,24 +1179,11 @@ const translations = {
         rec_antoine: "Ghazi es un verdadero ingeniero senior de datos con conocimiento sólido para resolver cualquier problema de big data. Es un placer trabajar con él, y no dudaría en hacerlo de nuevo. Lo recomiendo profundamente.",
         rec_maryline: "Lo recomiendo altamente, Respeta plazos y presupuestos, ofreciendo experiencia para la entrega exitosa de sus proyectos.",
         linkedin_link: "Leer completo en LinkedIn →",
-        
-        recommendations_cta: "Ponerse en Contacto →",
-        
+
         // Skills
-        section_skills: "Experiencia Técnica",
-        skill_multicloud: "Multi-Cloud e Infraestructura",
-        skill_bigdata: "Big Data y Analítica",
-        skill_programming: "Programación y Bases de Datos",
-        skill_architecture: "Arquitectura de Soluciones y Diseño",
-        skill_devops: "DevOps e Infraestructura",
-        skill_datatools: "Herramientas de Ingeniería de Datos",
-        skill_ml: "Aprendizaje Automático e IA",
-        skill_leadership: "Liderazgo y Comunicación",
-        
+
         // Contact
-        section_contact: "Disponible para llamadas de descubrimiento de 15 min",
-        contact_form_btn: "Formulario de Contacto",
-        
+
         // Footer
         footer_text: "Arquitecto de Soluciones de Datos Empresariales • Entregando infraestructura escalable mundialmente",
 
