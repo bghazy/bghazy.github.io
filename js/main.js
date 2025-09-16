@@ -51,6 +51,40 @@ function trackEvent(action, category, label = '') {
     }
 }
 
+// Analytics setup - moved from inline script
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+// Service Worker registration - moved from inline script
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+                // Service Worker registered successfully
+            }, function(err) {
+                // Service Worker registration failed
+            });
+    });
+}
+
+// Analytics loader - moved from inline script
+function loadAnalytics() {
+    // Google Analytics 4 - lightweight implementation
+    var ga4Script = document.createElement('script');
+    ga4Script.async = true;
+    ga4Script.src = 'https://www.googletagmanager.com/gtag/js?id=G-59JXX36JM2';
+    document.head.appendChild(ga4Script);
+
+    ga4Script.onload = function() {
+        gtag('js', new Date());
+        gtag('config', 'G-59JXX36JM2', {
+            'anonymize_ip': true,
+            'allow_google_signals': false,
+            'send_page_view': true
+        });
+    };
+}
+
 // Initialize on load
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize cookie banner
@@ -66,6 +100,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Add event listeners for language switcher - replace onclick handlers
+    document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            if (typeof changeLanguage === 'function') {
+                changeLanguage(lang);
+            }
+        });
+    });
+
+    // Add event listeners for cookie buttons - replace onclick handlers
+    const acceptBtn = document.querySelector('.cookie-btn.accept');
+    const declineBtn = document.querySelector('.cookie-btn.decline');
+
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', acceptCookies);
+    }
+    if (declineBtn) {
+        declineBtn.addEventListener('click', declineCookies);
+    }
+
     // Track scroll depth
     let maxScroll = 0;
     window.addEventListener('scroll', function() {
@@ -79,4 +134,35 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+});
+
+// Performance optimization - moved from inline script
+window.addEventListener('load', function() {
+    // Initialize background animation after page load
+    if (typeof initBackgroundAnimation === 'function') {
+        requestAnimationFrame(initBackgroundAnimation);
+    }
+
+    // Lazy load any remaining non-critical resources
+    const lazyElements = document.querySelectorAll('[data-lazy]');
+    if (lazyElements.length > 0 && 'IntersectionObserver' in window) {
+        const lazyObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    element.src = element.dataset.lazy;
+                    element.classList.remove('lazy');
+                    lazyObserver.unobserve(element);
+                }
+            });
+        });
+        lazyElements.forEach(function(element) {
+            lazyObserver.observe(element);
+        });
+    }
+
+    // Load analytics after critical content is visible (faster but still non-blocking)
+    setTimeout(function() {
+        loadAnalytics();
+    }, 1000);
 });
