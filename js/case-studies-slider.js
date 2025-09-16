@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const caseNavBtns = document.querySelectorAll('.case-nav-btn');
     const caseSliders = document.querySelectorAll('.case-study-slider');
 
-    let currentCase = null; // No case selected initially
+    let currentCase = null;
     let currentSlide = 0;
 
     // Case navigation (company switching)
@@ -32,36 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentCase = caseId;
         currentSlide = 0;
         updateSlideIndicators();
-
-        // Re-translate elements when case study changes
-        if (typeof window.retranslate === 'function') {
-            setTimeout(() => window.retranslate(), 50);
-        }
-    }
-
-    // Initialize event listeners for slide navigation
-    function initializeSlideListeners() {
-        // Slide indicators
-        const indicators = document.querySelectorAll('.indicator');
-        indicators.forEach(indicator => {
-            indicator.addEventListener('click', function() {
-                const slideIndex = parseInt(this.getAttribute('data-slide'));
-                goToSlide(slideIndex);
-            });
-        });
-
-        // Slide controls
-        const slideControls = document.querySelectorAll('.slide-btn');
-        slideControls.forEach(control => {
-            control.addEventListener('click', function() {
-                const direction = this.getAttribute('data-direction');
-                if (direction === 'next') {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-            });
-        });
     }
 
     function goToSlide(slideIndex) {
@@ -80,11 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
         indicators[slideIndex].classList.add('active');
 
         currentSlide = slideIndex;
-
-        // Re-translate elements when slide changes
-        if (typeof window.retranslate === 'function') {
-            setTimeout(() => window.retranslate(), 50);
-        }
     }
 
     function nextSlide() {
@@ -119,6 +84,28 @@ document.addEventListener('DOMContentLoaded', function() {
         if (slides[0]) slides[0].classList.add('active');
     }
 
+    // Initialize slide listeners
+    function initializeSlideListeners() {
+        // Slide indicators
+        document.querySelectorAll('.indicator').forEach(indicator => {
+            indicator.addEventListener('click', function() {
+                const slideIndex = parseInt(this.getAttribute('data-slide'));
+                goToSlide(slideIndex);
+            });
+        });
+
+        // Slide controls
+        document.querySelectorAll('.slide-btn').forEach(control => {
+            control.addEventListener('click', function() {
+                const direction = this.getAttribute('data-direction');
+                if (direction === 'next') {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            });
+        });
+    }
 
     // Keyboard navigation
     document.addEventListener('keydown', function(e) {
@@ -132,4 +119,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize slide listeners
     initializeSlideListeners();
 });
-
