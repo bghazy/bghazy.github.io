@@ -30,12 +30,6 @@
 
     <link rel="stylesheet" href="css/styles.css">
     
-    <!-- Minimal analytics setup - defer heavy scripts -->
-    <script>
-        // Minimal dataLayer setup
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-    </script>
     
 </head>
 <body>
@@ -59,10 +53,10 @@
             </ul>
             <div class="language-switcher">
                 <div class="language-selector">
-                    <button class="lang-option active" data-lang="en" onclick="changeLanguage('en')">EN</button>
-                    <button class="lang-option" data-lang="fr" onclick="changeLanguage('fr')">FR</button>
-                    <button class="lang-option" data-lang="ar" onclick="changeLanguage('ar')">AR</button>
-                    <button class="lang-option" data-lang="es" onclick="changeLanguage('es')">ES</button>
+                    <button class="lang-option" data-lang="en">EN</button>
+                    <button class="lang-option" data-lang="fr">FR</button>
+                    <button class="lang-option" data-lang="ar">AR</button>
+                    <button class="lang-option" data-lang="es">ES</button>
                 </div>
             </div>
             <a href="contact.html" class="contact-btn" data-translate="nav_hire_me"></a>
@@ -849,8 +843,8 @@
         <div class="cookie-content">
             <div class="cookie-text" data-translate="cookie_text"></div>
             <div class="cookie-buttons">
-                <button class="cookie-btn accept" onclick="acceptCookies()" data-translate="cookie_accept"></button>
-                <button class="cookie-btn decline" onclick="declineCookies()" data-translate="cookie_decline"></button>
+                <button class="cookie-btn accept" data-translate="cookie_accept"></button>
+                <button class="cookie-btn decline" data-translate="cookie_decline"></button>
             </div>
         </div>
     </div>
@@ -864,68 +858,5 @@
     <script src="js/main.js"></script>
     <script src="js/case-studies-slider.js" defer></script>
 
-    <!-- Performance optimization script -->
-    <script>
-    // Register service worker for caching
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/sw.js')
-                .then(function(registration) {
-                    // Service Worker registered successfully
-                }, function(err) {
-                    // Service Worker registration failed
-                });
-        });
-    }
-
-    // Defer non-critical animations and features
-    window.addEventListener('load', function() {
-        // Initialize background animation after page load
-        if (typeof initBackgroundAnimation === 'function') {
-            requestAnimationFrame(initBackgroundAnimation);
-        }
-
-        // Lazy load any remaining non-critical resources
-        const lazyElements = document.querySelectorAll('[data-lazy]');
-        if (lazyElements.length > 0 && 'IntersectionObserver' in window) {
-            const lazyObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        const element = entry.target;
-                        element.src = element.dataset.lazy;
-                        element.classList.remove('lazy');
-                        lazyObserver.unobserve(element);
-                    }
-                });
-            });
-            lazyElements.forEach(function(element) {
-                lazyObserver.observe(element);
-            });
-        }
-
-        // Load analytics after critical content is visible (faster but still non-blocking)
-        setTimeout(function() {
-            loadAnalytics();
-        }, 1000);
-    });
-
-    // Minimal Google Analytics only
-    function loadAnalytics() {
-        // Google Analytics 4 - lightweight implementation
-        var ga4Script = document.createElement('script');
-        ga4Script.async = true;
-        ga4Script.src = 'https://www.googletagmanager.com/gtag/js?id=G-59JXX36JM2';
-        document.head.appendChild(ga4Script);
-
-        ga4Script.onload = function() {
-            gtag('js', new Date());
-            gtag('config', 'G-59JXX36JM2', {
-                'anonymize_ip': true,
-                'allow_google_signals': false,
-                'send_page_view': true
-            });
-        };
-    }
-    </script>
 </body>
 </html>

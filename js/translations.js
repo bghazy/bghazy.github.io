@@ -69,6 +69,14 @@ function updatePageTranslations(lang) {
         element.textContent = getTranslation(key, lang);
     });
 
+    // Update active language button
+    document.querySelectorAll('.lang-option').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        }
+    });
+
     document.documentElement.lang = lang;
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
 }
